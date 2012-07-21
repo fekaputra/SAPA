@@ -1,4 +1,4 @@
-SehatApp
+UMAR
 ========
 
-Aplikasi Sehat Jawa Barat
+Untuk Masyarakat jawa bARat
