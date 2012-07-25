@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/bg28">
+    
+    <TextView
+		android:layout_width="fill_parent"  
+		android:layout_height="wrap_content" 
+		android:gravity="center"
+		android:text=" ">
+	</TextView>
+
+    <TextView
+		android:layout_width="fill_parent"  
+		android:layout_height="wrap_content" 
+		android:gravity="center"
+		android:text=" ">
+	</TextView>
+
+    <TextView
+		android:layout_width="fill_parent"  
+		android:layout_height="wrap_content" 
+		android:gravity="center"
+		android:text=" ">
+	</TextView>
+	
+    <TextView
+		android:layout_width="fill_parent"  
+		android:layout_height="wrap_content" 
+		android:gravity="center"
+		android:text=" ">
+	</TextView>
+	    	    	
+	<TextView
+		android:layout_width="fill_parent"  
+		android:layout_height="wrap_content" 
+		android:text="">
+	</TextView>
+		
+	    <Button 
+			android:layout_width="fill_parent"  
+			android:layout_height="wrap_content" 
+			android:id="@+id/PPA" 
+			android:text="Pertumbuhan dan Perkembangan Anak">
+		</Button>
+
+	
+	<TextView
+		android:layout_width="fill_parent"  
+		android:layout_height="wrap_content" 
+		android:text="">
+	</TextView>
+
+		
+	    <Button 
+			android:layout_width="fill_parent"  
+			android:layout_height="wrap_content"
+			android:id="@+id/imunisasi" 
+			android:text="Pemberian Imunisasi">
+		</Button>
+	
+	<TextView
+		android:layout_width="fill_parent"  
+		android:layout_height="wrap_content" 
+		android:text="">
+	</TextView>
+	
+	<!-- Untuk menampilkan level user, apakah Admin atau Member -->
+	<!-- <TextView android:id="@+id/txtLevel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dip"
+            android:textSize="18dip"/> -->
+	
+		
+	    <Button 
+			android:layout_width="fill_parent"  
+			android:layout_height="wrap_content"
+			android:id="@+id/PKVDT" 
+			android:text="Pemberian Kapsul Vitamin A Dosis Tinggi ">
+		</Button>
+	
+	<TextView
+		android:layout_width="fill_parent"  
+		android:layout_height="wrap_content" 
+		android:text="">
+	</TextView>
+	
+	<TextView
+		android:layout_width="fill_parent"  
+		android:layout_height="wrap_content" 
+		android:text="">
+	</TextView>
+	
+	<TextView
+		android:layout_width="fill_parent"  
+		android:layout_height="wrap_content" 
+		android:text="">
+	</TextView>
+	
+	    <Button 
+			android:layout_width="150dp"
+			android:layout_height="40dp" 
+			android:id="@+id/home_childcare" 
+			android:text="Menu Childcare">
+		</Button>
+
+</LinearLayout>

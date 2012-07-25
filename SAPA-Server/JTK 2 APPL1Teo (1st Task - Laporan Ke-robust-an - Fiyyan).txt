@@ -1,0 +1,25 @@
+
+-----------------------------------------------------------------------------
+HAFIYYAN PUTRA PRATAMA
+101511009
+2 MARET 2012
+-----------------------------------------------------------------------------
+
+
+
+1. Pemahaman cara kerja source code
+  1. Aplikasi meminta jumlah account user
+  2. Aplikasi meminta user menambahkan umlah ammount
+  3. Aplikasi menampilkan jumlah ammount
+
+temuan pada non-robust:
+- jumlah account user bisa negatif, tidak
+- Ketika memasukan ammound lebih dari 9digit program mengalami crash
+- tidak ada pesan error dari program(kompiler yang menangani langsung)
+
+
+
+2.. Mengapa disebut robust dan non-robust
+   Pada file CommandLineCalculator.java non-robust ketika diinputkan yang tidak sesuai pesan error tidak di handle oleh program namun oleh mesin kompiler dan program langsung mengalami crash. Sedangkan pada file CommandLineCalculator most-robust ketika memasukan inputan yang tidak sesuai muncul pesan error dan dapat mengulangi input tanpa harus keluar program.
+
+

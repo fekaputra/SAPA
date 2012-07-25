@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+	android:background="@drawable/bg9">
+    
+    	
+	<!-- Untuk menampilkan level user, apakah Admin atau Member -->
+	<!-- <TextView android:id="@+id/txtLevel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dip"
+            android:textSize="18dip"/> -->
+            
+    <TextView
+		android:layout_width="fill_parent"  
+		android:layout_height="wrap_content" 
+		android:gravity="center"
+		android:text=" ">
+	</TextView>
+	
+	<TextView
+		android:layout_width="fill_parent"  
+		android:layout_height="wrap_content" 
+		android:text="">
+	</TextView>
+	
+	<LinearLayout
+        android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal">
+		
+	    <Button 
+			android:layout_width="150dp"
+			android:layout_height="40dp" 
+			android:id="@+id/penduduk" 
+			android:text="Kependudukan">
+		</Button>
+	</LinearLayout>
+	
+	<TextView
+		android:layout_width="fill_parent"  
+		android:layout_height="wrap_content" 
+		android:text="">
+	</TextView>
+	
+	<LinearLayout
+        android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal">
+		
+	    <Button 
+			android:layout_width="150dp"
+			android:layout_height="40dp" 
+			android:id="@+id/kolega" 
+			android:text="Kolega">
+		</Button>
+	</LinearLayout>
+	
+	<TextView
+		android:layout_width="fill_parent"  
+		android:layout_height="wrap_content" 
+		android:text="">
+	</TextView>
+	
+	<LinearLayout
+        android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal">
+		
+	    <Button 
+			android:layout_width="150dp"
+			android:layout_height="40dp" 
+			android:id="@+id/kesehatan" 
+			android:text="Kesehatan">
+		</Button>
+	</LinearLayout>
+	
+	<TextView
+		android:layout_width="fill_parent"  
+		android:layout_height="wrap_content" 
+		android:text="">
+	</TextView>
+	
+	<TextView
+		android:layout_width="fill_parent"  
+		android:layout_height="wrap_content" 
+		android:text="">
+	</TextView>
+	
+	<TextView
+		android:layout_width="fill_parent"  
+		android:layout_height="wrap_content" 
+		android:text="">
+	</TextView>
+	
+    <LinearLayout
+        android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal">
+		
+	    <Button 
+			android:layout_width="150dp"
+			android:layout_height="40dp" 
+			android:id="@+id/homePage" 
+			android:text="Menu Utama">
+		</Button>
+	</LinearLayout>
+
+</LinearLayout>

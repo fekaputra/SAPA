@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:background="@drawable/bg10">
+	
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text=""></TextView>
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text=""></TextView>
+	<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text=""></TextView>
+	<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text=""></TextView>
+	<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text=""></TextView>
+	<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text=""></TextView>
+	<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text=""></TextView>
+	<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text=""></TextView>
+	<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text=""></TextView>
+	<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text=""></TextView>
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" >
+		
+		<EditText 
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:hint="Username"
+			android:id="@+id/username">
+		</EditText>
+		
+	</LinearLayout>
+	
+	<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
+		
+		<EditText 
+		    android:layout_width="fill_parent" 
+			android:layout_height="wrap_content" 
+			android:hint="Password"
+			android:inputType="textPassword"
+			android:id="@+id/passwd_input" >
+		</EditText>
+	</LinearLayout>
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center">
+		
+		<Button 
+		    android:layout_width="100dp"
+			android:layout_height="wrap_content" 
+			android:id="@+id/masuk" 
+			android:text="LOGIN" 
+			android:layout_below="@+id/passwd_input">
+		</Button>
+		
+		<Button 
+		    android:layout_width="100dp"
+			android:layout_height="wrap_content" 
+			android:id="@+id/daftar" 
+			android:text="REGISTER">
+		</Button>
+		
+		<Button 
+		    android:layout_width="100dp"
+			android:layout_height="wrap_content" 
+			android:id="@+id/close" 
+			android:text="EXIT" >
+		</Button>
+	</LinearLayout>
+</LinearLayout>
+
+

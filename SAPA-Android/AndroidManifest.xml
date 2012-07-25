@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.halamanlogin"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <activity
+            android:name=".LoginMain"
+            android:label="Telemedicine" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".FileChooser"
+            android:label="@string/app_name" >
+           <intent-filter>
+            	<action android:name="com.halamanlogin.FileChooser" />
+            	<category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity 
+            android:name=".GagalLogin"
+            android:label="Telemedicine - Silahkan Login Kembali"
+        >
+            <intent-filter>
+            	<action android:name="com.halamanlogin.GagalLogin" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity 
+            android:name=".homeAdmin"
+            android:label="Telemedicine"
+        >
+            <intent-filter>
+            	<action android:name="com.halamanlogin.homeAdmin" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity 
+            android:name=".homeMember"
+            android:label="Telemedicine"
+        >
+            <intent-filter>
+            	<action android:name="com.halamanlogin.homeMember" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity 
+            android:name=".homePage"
+            android:label="Telemedicine - Home Page"
+        >
+            <intent-filter>
+            	<action android:name="com.halamanlogin.homePage" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity 
+            android:name=".insertUser"
+            android:label="Telemedicine - Registration"
+        >
+            <intent-filter>
+            	<action android:name="com.halamanlogin.insertUser" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity 
+            android:name=".chat"
+            android:label="Telemedicine - Conversation"
+        >
+            <intent-filter>
+            	<action android:name="com.halamanlogin.chat" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".TabLayoutActivity"
+            android:label="Telemedicine - List File" >
+            <intent-filter>
+                <action android:name="com.halamanlogin.TabLayoutActivity" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <!--  Songs Activity -->
+        <activity android:name=".SongsActivity" />
+        
+        <!--  Videos Activity -->
+        <activity android:name=".VideosActivity" />
+        
+        <!--  Photos Activity -->
+        <activity android:name=".PhotosActivity" />
+        
+         <!--  Document Activity -->
+        <activity android:name=".DocumentsActivity" />
+        
+        <activity
+            android:name=".gis"
+            android:label="Telemedicine - E-GIS" >
+            <intent-filter>
+                <action android:name="com.halamanlogin.gis" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".kependudukan"
+            android:label="Telemedicine - Kependudukan" >
+            <intent-filter>
+                <action android:name="com.halamanlogin.kependudukan" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".DPJenisKelamin"
+            android:label="Telemedicine - Data Penduduk Menurut Jenis Kelamin" >
+            <intent-filter>
+                <action android:name="com.halamanlogin.DPJenisKelamin" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".DPUsia"
+            android:label="Telemedicine - Data Penduduk Menurut Usia" >
+            <intent-filter>
+                <action android:name="com.halamanlogin.DPUsia" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".kolega"
+            android:label="Telemedicine - Kolega" >
+            <intent-filter>
+                <action android:name="com.halamanlogin.kolega" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".newKolega"
+            android:label="Telemedicine - Data Kolega Baru" >
+            <intent-filter>
+                <action android:name="com.halamanlogin.newKolega" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".report"
+            android:label="Telemedicine - E-Report" >
+            <intent-filter>
+                <action android:name="com.halamanlogin.report" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".childcare"
+            android:label="Telemedicine - Childcare" >
+            <intent-filter>
+                <action android:name="com.halamanlogin.childcare" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".newDataAnak"
+            android:label="Telemedicine - Daftar Data Baru" >
+            <intent-filter>
+                <action android:name="com.halamanlogin.newDataAnak" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".reportChildcare"
+            android:label="Telemedicine - Childcare" >
+            <intent-filter>
+                <action android:name="com.halamanlogin.reportChildcare" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".tumbuhKembangAnak"
+            android:label="Telemedicine - Childcare" >
+            <intent-filter>
+                <action android:name="com.halamanlogin.tumbuhKembangAnak" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".GrafikTumbuhKembang"
+            android:label="Telemedicine - Grafik" >
+            <intent-filter>
+                <action android:name="com.halamanlogin.GrafikTumbuhKembang" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>        
+        
+        <activity
+            android:name=".disease"
+            android:label="Telemedicine - Disease" >
+            <intent-filter>
+                <action android:name="com.halamanlogin.disease" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".SpecialOccasion"
+            android:label="Telemedicine - Special Occasion" >
+            <intent-filter>
+                <action android:name="com.halamanlogin.SpecialOccasion" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".imunisasi"
+            android:label="Telemedicine - Imunisasi" >
+            <intent-filter>
+                <action android:name="com.halamanlogin.imunisasi" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".pkvdt"
+            android:label="Telemedicine - Pemberian Kapsul Dosis Tinggi" >
+            <intent-filter>
+                <action android:name="com.halamanlogin.pkvdt" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".knowledge"
+            android:label="Telemedicine - E-Knowledge" >
+            <intent-filter>
+                <action android:name="com.halamanlogin.knowledge" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".Kesehatan"
+            android:label="Telemedicine" >
+            <intent-filter>
+                <action android:name="com.halamanlogin.Kesehatan" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+                
+        <activity android:name=".KnowledgeAll" />
+
+        <activity android:name=".KnowledgeLibrary" />
+        
+		<activity android:name=".KnowledgeNews" />
+		
+    	<activity android:name=".KnowledgeTutorial" />
+    	
+    	<activity android:name=".LoadImage"/>
+        
+        <activity android:name=".AVLoader"/>
+        
+        <activity android:name=".DownloadFile"/>
+        
+        <activity android:name=".DocLoader"/>
+        
+        <activity android:name=".LoadDoc"/>
+                
+    </application>
+
+</manifest>

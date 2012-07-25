@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="data_kesehatan">
+        <item>Jumlah Penderita TB Paru</item>
+        <item>Insiden Flu Burung (Avian Influenza)</item>
+        <item>Jumlah Penderita Flu Burung (Avian Influenza)</item>
+        <item>Insiden DBD</item>
+        <item>Jumlah Penderita DBD</item>
+        <item>Insiden Malaria </item>
+        <item>Jumlah Penderita Malaria </item>
+        <item>Jumlah Penderita Gizi Buruk</item>
+        <item>Persentase Penggunaan Air Bersih</item>
+        <item>Persentase Penggunaan Jamban</item>
+        <item>Kembali</item>
+    </string-array>
+</resources>

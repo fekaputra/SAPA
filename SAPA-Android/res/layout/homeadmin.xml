@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg25"
+    android:gravity="center">  
+	
+	<!-- Gambar untuk e-GIS dan e-Report -->
+	<TableRow>
+		<TextView
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:text=""
+			android:id="@+id/Txt05"/>
+		<Button
+			android:layout_width="100dp" 
+			android:layout_height="120dp" 
+			android:background="@drawable/gis2" 
+			android:id="@+id/gis"/>
+		<TextView
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"  
+			android:text="            "
+			android:id="@+id/Txt06"/>
+		<Button
+			android:layout_width="100dp" 
+			android:layout_height="120dp"  
+			android:background="@drawable/report1" 
+			android:id="@+id/report"/>
+	</TableRow>
+	
+	<TableRow>
+		<TextView
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:text="        " 
+			android:id="@+id/Txt09"/>
+	</TableRow>    
+	
+	<!-- Gambar untuk e-Knowledge dan e-Communication -->
+	<TableRow>
+		<TextView
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:text=""
+			android:id="@+id/Txt12"/>
+		<Button
+			android:layout_width="100dp" 
+			android:layout_height="120dp" 
+			android:background="@drawable/knowledge3" 
+			android:id="@+id/listfile"/>
+		<TextView
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"  
+			android:text="            "
+			android:id="@+id/Txt13"/>
+		<Button
+			android:layout_width="100dp" 
+			android:layout_height="120dp" 
+			android:background="@drawable/communication2" 
+			android:id="@+id/chat"/>
+	</TableRow>
+	
+	<TableRow>
+		<TextView
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:text="        " 
+			android:id="@+id/Txt09"/>
+	</TableRow>    	
+	
+	<!-- Gambar untuk Keluar/Logout -->
+	<TableRow android:gravity="center">
+		<TextView
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:text=""
+			android:id="@+id/Txt12"/>
+
+		<Button
+		    android:id="@+id/keluar"
+			android:layout_width="100dp" 
+			android:layout_height="120dp"   
+		    android:background="@drawable/keluar1" />
+
+		<TextView
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:text="    "/>
+	</TableRow>
+
+</TableLayout>

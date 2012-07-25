@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+   <TextView
+			android:layout_width="fill_parent"  
+			android:layout_height="wrap_content" 
+			android:gravity="center" 
+			android:textSize="18px"
+			android:text="Pertumbuhan dan Perkembangan Anak" >
+		</TextView>
+		
+    <TextView
+		android:layout_width="fill_parent"  
+		android:layout_height="15dp" 
+		android:gravity="center" 
+		android:text="" >
+	</TextView>
+	    
+    <LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" >
+	
+		<!-- <TextView
+			android:layout_width="90dp"  
+			android:layout_height="fill_parent" 
+			android:gravity="center_vertical"
+			android:textSize="18px"
+			android:text="Nama Anak" >
+		</TextView>
+		
+		<EditText 
+			android:layout_width="fill_parent" 
+			android:layout_height="30dp"
+			android:id="@+id/nama_anak">
+		</EditText> -->
+		
+		<TextView
+			android:layout_width="90dp"  
+			android:layout_height="wrap_content" 
+			android:gravity="center_vertical"
+			android:text="Nama Anak" >
+		</TextView>		
+		
+		<TextView
+			android:id="@+id/namaAnak"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content">
+		</TextView>
+	</LinearLayout>
+ 
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" >
+		
+		<TextView 
+			android:layout_width="90dp" 
+			android:layout_height="wrap_content" 
+			android:gravity="center_vertical"
+			android:text="Jenis Kelamin">
+		</TextView>
+		
+		<EditText 
+		    android:layout_width="fill_parent" 
+			android:layout_height="35dp"
+			android:id="@+id/jk" 
+			></EditText>
+			
+		<!-- <TextView
+			android:id="@+id/jenisKelamin"
+			android:layout_width="90dp"  
+			android:layout_height="fill_parent" 
+			android:gravity="center_vertical"
+			android:textSize="18px"> 
+		</TextView>	-->
+	</LinearLayout>  
+	 
+    <TextView
+		android:layout_width="fill_parent"  
+		android:layout_height="10dp" 
+		android:gravity="center" 
+		android:text="" >
+	</TextView>	
+	
+    <!-- Garis Pemisah -->
+	<View
+        android:layout_height="2dip"
+        android:background="#ffffff" />
+ 
+    <TextView
+		android:layout_width="fill_parent"  
+		android:layout_height="10dp" 
+		android:gravity="center" 
+		android:text="" >
+	</TextView>
+
+    <LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" >
+	
+		<TextView
+			android:layout_width="90dp"  
+			android:layout_height="fill_parent"
+			android:gravity="center_vertical"
+			android:text="Tanggal Pendataan" >
+		</TextView>
+	
+		<EditText 
+			android:layout_width="fill_parent" 
+			android:layout_height="40dp"
+			android:id="@+id/tgl_data">
+		</EditText>
+	</LinearLayout>
+	    	
+    <LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" >
+	
+		<TextView
+			android:layout_width="90dp"  
+			android:layout_height="fill_parent"
+			android:gravity="center_vertical"
+			android:text="Panjang Badan" >
+		</TextView>
+		
+		<EditText 
+			android:layout_width="70dp" 
+			android:layout_height="40dp"
+			android:id="@+id/panjang">
+		</EditText>
+		
+		<TextView 
+			android:layout_width="fill_parent" 
+			android:layout_height="fill_parent" 
+			android:gravity="center_vertical"
+			android:text=" Cm (*Posisi Telentang)">
+		</TextView>		
+	</LinearLayout>
+	
+    <LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" >
+	
+		<TextView
+			android:layout_width="90dp"  
+			android:layout_height="fill_parent"
+			android:gravity="center_vertical"
+			android:text="Tinggi Badan" >
+		</TextView>	
+				
+		<EditText 
+			android:layout_width="70dp" 
+			android:layout_height="40dp"
+			android:id="@+id/tinggi">
+		</EditText>
+		
+		<TextView 
+			android:layout_width="fill_parent" 
+			android:layout_height="fill_parent" 
+			android:gravity="center_vertical"
+			android:text=" Cm (* Posisi Berdiri)">
+		</TextView>			
+	</LinearLayout>
+		
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" >
+		
+		<TextView 
+			android:layout_width="90dp" 
+			android:layout_height="fill_parent" 
+			android:gravity="center_vertical"
+			android:text="Berat Badan">
+		</TextView>
+		
+		<EditText 
+		    android:layout_width="70dp" 
+			android:layout_height="40dp" 
+			android:id="@+id/berat" 
+			></EditText>
+		
+		<TextView 
+			android:layout_width="90dp" 
+			android:layout_height="fill_parent" 
+			android:gravity="center_vertical"
+			android:text=" Kg">
+		</TextView>		
+	</LinearLayout>
+
+    <TextView
+		android:layout_width="fill_parent"  
+		android:layout_height="10dp" 
+		android:gravity="center" 
+		android:text="" >
+	</TextView>	
+					
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center">
+	
+		<Button 
+			android:layout_width="100dp"
+			android:layout_height="wrap_content"
+			android:id="@+id/kirim" 
+			android:text="Kirim">
+		</Button>
+		
+		<Button 
+			android:layout_width="100dp"
+			android:layout_height="wrap_content"
+			android:id="@+id/grafik" 
+			android:text="Lihat Grafik">
+	    </Button>
+					
+		<Button 
+			android:layout_width="100dp"
+			android:layout_height="wrap_content"
+			android:id="@+id/kembali" 
+			android:text="Kembali">
+		</Button>
+	</LinearLayout>
+
+</TableLayout>
