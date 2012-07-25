@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+				
+	<LinearLayout
+        android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center">
+    	
+    	<Button 
+		    android:layout_width="wrap_content"
+			android:layout_height="45dp" 
+			android:id="@+id/data_posyandu" 
+			android:text="Input Data Posyandu">
+		</Button>
+		
+    	<Button 
+	    android:layout_width="150dp"
+		android:layout_height="45dp" 
+		android:id="@+id/kembali" 
+		android:text="e-Report">
+	</Button>
+	</LinearLayout>
+	
+	<TextView 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content" 
+		android:text="">
+	</TextView>
+	
+	<TextView 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content" 
+		android:text="Pilih Kelurahan/ Desa">
+	</TextView>
+	
+	<LinearLayout
+        android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal">
+		
+		<Spinner
+			android:id="@+id/spinner1"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
+			<!-- Preview: listitem=@android:layout/simple_spinner_item -->
+		</Spinner>
+		
+	</LinearLayout>
+	
+	<TextView 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content" 
+		android:text="">
+	</TextView>
+	
+	<TextView 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:textStyle="italic"
+		android:textSize="12px" 
+		android:text="Pilih kelurahan/desa sebelum melakukan input strata, kader atau program pokok">
+	</TextView>
+	
+	<TextView 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content" 
+		android:text="">
+	</TextView>
+	
+	<Button 
+	    android:layout_width="250dp"
+		android:layout_height="45dp" 
+		android:layout_gravity="center"
+		android:id="@+id/strata" 
+		android:text="Input Data Strata Posyandu">
+	</Button>
+	
+	<Button 
+	    android:layout_width="250dp"
+		android:layout_height="45dp" 
+		android:layout_gravity="center"
+		android:id="@+id/kader" 
+		android:text="Input Data Kader">
+	</Button>
+	
+	<Button 
+	    android:layout_width="250dp"
+		android:layout_height="45dp"
+		android:layout_gravity="center" 
+		android:id="@+id/prog_pokok" 
+		android:text="Input Data Program Pokok">
+	</Button>
+</LinearLayout>

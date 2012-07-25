@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <ScrollView
+        android:layout_width="fill_parent"
+    	android:layout_height="fill_parent">
+        <LinearLayout
+            android:layout_width="fill_parent"
+    		android:layout_height="fill_parent" 
+            android:orientation="vertical">
+            <!-- Kecamatan -->
+		    <TextView
+		        android:id="@+id/textKec"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:paddingLeft="10dip"
+		        android:paddingRight="10dip"
+		        android:paddingTop="10dip"
+		        android:textSize="17dip"
+		        android:text="Kecamatan" />
+		
+		    <EditText
+		        android:id="@+id/editKec"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:ems="10" >
+		    </EditText>
+		    
+		    <!--Bulan  -->
+		    <TextView
+		        android:id="@+id/textBulan"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:paddingLeft="10dip"
+		        android:paddingRight="10dip"
+		        android:paddingTop="10dip"
+		        android:textSize="17dip"
+		        android:text="Bulan (* isi dengan angka)" />
+		
+		    <EditText
+		        android:id="@+id/editBulan"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:numeric="integer"
+		        android:maxLength="2"
+		        android:ems="10" >
+		    </EditText>
+		
+		    <!-- Tanggal -->
+		    <TextView
+		        android:id="@+id/textTanggal"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:paddingLeft="10dip"
+		        android:paddingRight="10dip"
+		        android:paddingTop="10dip"
+		        android:textSize="17dip"
+		        android:text="Tanggal" />
+		
+		    <DatePicker
+		        android:id="@+id/dateTanggal"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" />
+		    
+		    <!-- Uraian Kegiatan -->
+		    <TextView
+		        android:id="@+id/textUraianKeg"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:paddingLeft="10dip"
+		        android:paddingRight="10dip"
+		        android:paddingTop="10dip"
+		        android:textSize="17dip"
+		        android:text="Uraian Kegiatan" />
+		    
+		    <EditText 
+		        android:id="@+id/editUraianKeg"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_margin="5dip"
+		        android:layout_marginBottom="15dip"
+		        android:lines="4"
+		        android:gravity="top"/>
+		    
+		    <!-- Tempat -->
+		    <TextView
+		        android:id="@+id/textTempat"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:paddingLeft="10dip"
+		        android:paddingRight="10dip"
+		        android:paddingTop="10dip"
+		        android:textSize="17dip"
+		        android:text="Tempat" />
+		
+		    <EditText
+		        android:id="@+id/editTempat"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:ems="10" >
+		    </EditText>
+		    
+		    <!-- Unsur Terlibat -->
+		    <TextView
+		        android:id="@+id/textUnsur"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:paddingLeft="10dip"
+		        android:paddingRight="10dip"
+		        android:paddingTop="10dip"
+		        android:textSize="17dip"
+		        android:text="Unsur Terlibat" />
+		    
+		    <EditText 
+		        android:id="@+id/editUnsur"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_margin="5dip"
+		        android:layout_marginBottom="15dip"
+		        android:lines="4"
+		        android:gravity="top"/>
+		    
+		    <!-- Masalah Yang Dihadapi -->
+		    <TextView
+		        android:id="@+id/textMasalah"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:paddingLeft="10dip"
+		        android:paddingRight="10dip"
+		        android:paddingTop="10dip"
+		        android:textSize="17dip"
+		        android:text="Masalah Yang Dihadapi" />
+		    
+		    <EditText 
+		        android:id="@+id/editMasalah"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_margin="5dip"
+		        android:layout_marginBottom="15dip"
+		        android:lines="4"
+		        android:gravity="top"/>
+		    
+		    <!-- RTL -->
+		    <TextView
+		        android:id="@+id/textRTL"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:paddingLeft="10dip"
+		        android:paddingRight="10dip"
+		        android:paddingTop="10dip"
+		        android:textSize="17dip"
+		        android:text="RTL Text	Bulan" />
+		
+		    <EditText
+		        android:id="@+id/editRTL"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:ems="10" >
+		    </EditText>
+		    
+		    <!-- Button Create Content -->
+		    <Button 
+		        android:id="@+id/btnCreate"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:text="Insert"/>
+        </LinearLayout>
+	</ScrollView>
+</LinearLayout>

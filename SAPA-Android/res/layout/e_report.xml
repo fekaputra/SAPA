@@ -12,13 +12,6 @@
             android:layout_height="wrap_content"
             android:layout_margin="15dip"
             android:textSize="18dip"/> -->
-            
-    <TextView
-		android:layout_width="fill_parent"  
-		android:layout_height="wrap_content" 
-		android:gravity="center"
-		android:text=" ">
-	</TextView>
 	
 	<TextView
 		android:layout_width="fill_parent"  
@@ -32,7 +25,7 @@
 		android:gravity="center_horizontal">
 		
 	    <Button 
-			android:layout_width="150dp"
+			android:layout_width="250dp"
 			android:layout_height="40dp" 
 			android:id="@+id/childcare" 
 			android:text="Childcare">
@@ -51,7 +44,7 @@
 		android:gravity="center_horizontal">
 		
 	    <Button 
-			android:layout_width="150dp"
+			android:layout_width="250dp"
 			android:layout_height="40dp" 
 			android:id="@+id/disease" 
 			android:text="Disease">
@@ -70,10 +63,48 @@
 		android:gravity="center_horizontal">
 		
 	    <Button 
-			android:layout_width="150dp"
+			android:layout_width="250dp"
 			android:layout_height="40dp" 
 			android:id="@+id/specoccasion" 
 			android:text="Special Occasion">
+		</Button>
+	</LinearLayout>
+	
+	<TextView
+		android:layout_width="fill_parent"  
+		android:layout_height="wrap_content" 
+		android:text="">
+	</TextView>
+	
+	<LinearLayout
+        android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal">
+		
+	    <Button 
+			android:layout_width="250dp"
+			android:layout_height="wrap_content" 
+			android:id="@+id/perkembangan_posyandu" 
+			android:text="Perkembangan Posyandu">
+		</Button>
+	</LinearLayout>
+	
+	<TextView
+		android:layout_width="fill_parent"  
+		android:layout_height="wrap_content" 
+		android:text="">
+	</TextView>
+	
+	<LinearLayout
+        android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal">
+		
+	    <Button 
+			android:layout_width="250dp"
+			android:layout_height="wrap_content" 
+			android:id="@+id/pkp_kecamatan" 
+			android:text="Kegiatan PKP Kecamatan">
 		</Button>
 	</LinearLayout>
 	
