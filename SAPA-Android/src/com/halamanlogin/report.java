@@ -1,36 +1,14 @@
 package com.halamanlogin;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.util.EntityUtils;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
 
 public class report extends Activity
 {
-	Button report_childcare, report_disease, report_specoccasion, home;
+	Button report_childcare, report_disease, report_specoccasion, perkembangan_posyandu, pkp_kecamatan, home;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) 
@@ -75,6 +53,34 @@ public class report extends Activity
 				String admin = i.getStringExtra("admin");
 				
 				Intent special_occasion = new Intent(report.this, SpecialOccasion.class);
+				special_occasion.putExtra("admin", admin);
+		    	startActivity(special_occasion);
+	        }
+		});
+		
+		perkembangan_posyandu = (Button) findViewById(R.id.perkembangan_posyandu);
+		perkembangan_posyandu.setOnClickListener(new Button.OnClickListener()
+		{
+			public void onClick(View v)
+	        {
+				Intent i = getIntent();
+				String admin = i.getStringExtra("admin");
+				
+				Intent special_occasion = new Intent(report.this, PerkembanganPosyandu.class);
+				special_occasion.putExtra("admin", admin);
+		    	startActivity(special_occasion);
+	        }
+		});
+		
+		pkp_kecamatan = (Button) findViewById(R.id.pkp_kecamatan);
+		pkp_kecamatan.setOnClickListener(new Button.OnClickListener()
+		{
+			public void onClick(View v)
+	        {
+				Intent i = getIntent();
+				String admin = i.getStringExtra("admin");
+				
+				Intent special_occasion = new Intent(report.this, LaporanKegPKPKecActivity.class);
 				special_occasion.putExtra("admin", admin);
 		    	startActivity(special_occasion);
 	        }

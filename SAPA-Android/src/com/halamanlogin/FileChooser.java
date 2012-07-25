@@ -9,23 +9,19 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.halamanlogin.R;
-
 import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-
 import android.view.View;
-import android.webkit.MimeTypeMap;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.TextView;;
+import android.widget.TextView;
 
 public class FileChooser extends ListActivity 
 {
@@ -42,9 +38,7 @@ public class FileChooser extends ListActivity
     
     ArrayList<HashMap<String, String>> fileList;
     
-    private static String url_all_files = "http://fajarjuang.com/android/listfile.php";
-    //private static String url = "http://167.205.34.196/";//use lan itb
-    //private static String url = "http://192.168.107.1/";//in home
+    private static String url_all_files = Referensi.url + "/listfile.php";
     
     //JSON Node Names
     private static final String TAG_ListFile = "listfile";
@@ -71,56 +65,24 @@ public class FileChooser extends ListActivity
         
         // on seleting single product
         // launching Edit Product Screen
-        lv.setOnItemClickListener(new OnItemClickListener() 
-        {
+        lv.setOnItemClickListener(new OnItemClickListener() {
+ 
             //@Override
             public void onItemClick(AdapterView<?> parent, View view,
                     int position, long id) {
-                //getting values from selected ListItem
-                //String fileId = ((TextView)view.findViewById(R.id.fileid)).getText().toString();
-                //String fileName = ((TextView)view.findViewById(R.id.TextView01)).getText().toString();
-                String filePath = ((TextView) view.findViewById(R.id.filepath)).getText().toString();
+                String filePath = ((TextView)view.findViewById(R.id.filepath)).getText().toString();
                 
                 Intent in = null;
                 
                 //replace all white space
                 filePath = filePath.replaceAll(" ", "%20");
                 
-                String type = mimeName(filePath);
+                in = new Intent(getApplicationContext(), FileLoader.class);
                 
-                Intent i = getIntent();
-        		String admin = i.getStringExtra("admin");
-                
-                if (type.contains("image"))
-                {
-                	in = new Intent(getApplicationContext(), LoadImage.class);
-                	in.putExtra("admin", admin);
-                }
-                else if (type.contains("audio") || type.contains("video"))
-                {
-                	in = new Intent(getApplicationContext(), AVLoader.class);
-                	in.putExtra("admin", admin);
-                }
-                else if (type.contains("application"))
-                {
-                	in = new Intent(getApplicationContext(), DocLoader.class);
-                	in.putExtra("admin", admin);
-                }
-
                 in.putExtra(TAG_FilePath, filePath);
                 startActivityForResult(in, 100);
             }
         });
-    }
-    
-    private String mimeName(String name)
-    {
-    	String fileName = name;
-    	MimeTypeMap mime = MimeTypeMap.getSingleton();
-		String filenameArray[] = fileName.split("\\.");
-		fileName = filenameArray[filenameArray.length-1];
-        String type = mime.getMimeTypeFromExtension(fileName.toLowerCase());
-    	return type;
     }
     
     class LoadAllFiles extends AsyncTask<String, String, String>
@@ -178,7 +140,7 @@ public class FileChooser extends ListActivity
 			catch (JSONException e)
 			{
 				e.printStackTrace();
-
+				//Toast.makeText(this, e.printStackTrace(), Toast.LENGTH_SHORT).show();
 			}
 			
 			return null;
@@ -207,7 +169,5 @@ public class FileChooser extends ListActivity
                 }
             });
         }
-    }
-    
-    
+    }    
 }

@@ -1,17 +1,13 @@
 package com.halamanlogin;
 
-import java.util.ArrayList;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 public class childcare extends Activity implements	OnClickListener 
 {
@@ -20,7 +16,6 @@ public class childcare extends Activity implements	OnClickListener
 	String[] namaAnak = { "Ary", "Bintang", "Hana", "Tisa" };
 	
 	private ArrayAdapter<String> mAdapter;
-	private ArrayList<String> mPresets = new ArrayList<String>();
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) 
@@ -88,7 +83,7 @@ public class childcare extends Activity implements	OnClickListener
 		});
 	}
 
-	@Override
+	//@Override
 	public void onClick(View v) 
 	{
 		// TODO Auto-generated method stub

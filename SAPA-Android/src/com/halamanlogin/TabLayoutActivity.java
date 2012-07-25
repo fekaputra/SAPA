@@ -43,48 +43,10 @@ public class TabLayoutActivity extends TabActivity
         libraryspec.setContent(libraryIntent);
         
         // Adding all TabSpec to TabHost
-        tabHost.addTab(allspec);
-        tabHost.addTab(newsspec); // Adding photos tab
-        tabHost.addTab(tutorialspec); // Adding songs tab
-        tabHost.addTab(libraryspec); // Adding videos tab
+        tabHost.addTab(allspec); // Adding all tab
+        tabHost.addTab(newsspec); // Adding news tab
+        tabHost.addTab(tutorialspec); // Adding tutorial tab
+        tabHost.addTab(libraryspec); // Adding library tab
         
-        /*
-        // Tab for All Files
-        TabSpec allspec = tabHost.newTabSpec("All");
-        allspec.setIndicator("All", getResources().getDrawable(R.drawable.icon_all_tab));
-        Intent allIntent = new Intent(this, FileChooser.class);
-        allspec.setContent(allIntent);
-        
-        // Tab for Photos
-        TabSpec photospec = tabHost.newTabSpec("Photos");
-        photospec.setIndicator("Photos", getResources().getDrawable(R.drawable.icon_photos_tab));
-        Intent photosIntent = new Intent(this, PhotosActivity.class);
-        photospec.setContent(photosIntent);
-        
-        // Tab for Audios
-        TabSpec songspec = tabHost.newTabSpec("Songs");
-        // setting Title and Icon for the Tab
-        songspec.setIndicator("Songs", getResources().getDrawable(R.drawable.icon_songs_tab));
-        Intent songsIntent = new Intent(this, SongsActivity.class);
-        songspec.setContent(songsIntent);
-        
-        // Tab for Videos
-        TabSpec videospec = tabHost.newTabSpec("Videos");
-        videospec.setIndicator("Videos", getResources().getDrawable(R.drawable.icon_videos_tab));
-        Intent videosIntent = new Intent(this, VideosActivity.class);
-        videospec.setContent(videosIntent);
-        
-        // Tab for Documents
-        TabSpec documentspec = tabHost.newTabSpec("Documents");
-        documentspec.setIndicator("Documents", getResources().getDrawable(R.drawable.icon_document_tab));
-        Intent documentsIntent = new Intent(this, DocumentsActivity.class);
-        documentspec.setContent(documentsIntent);
-        
-        // Adding all TabSpec to TabHost
-        tabHost.addTab(allspec);
-        tabHost.addTab(photospec); // Adding photos tab
-        tabHost.addTab(songspec); // Adding songs tab
-        tabHost.addTab(videospec); // Adding videos tab
-        tabHost.addTab(documentspec);*/
     }
 }

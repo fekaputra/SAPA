@@ -19,6 +19,12 @@ public class FileCache
         if(!cacheDir.exists())
             cacheDir.mkdirs();
     }
+    
+    public FileCache()
+    {
+        //Find the dir to save cached images
+        cacheDir=new File(android.os.Environment.getExternalStorageDirectory(),"Temp");
+    }
  
     public File getFile(String url)
     {

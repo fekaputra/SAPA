@@ -14,7 +14,6 @@ package com.halamanlogin;
 
 import java.io.IOException;
 import java.util.ArrayList;
-
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -25,9 +24,9 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
-
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
@@ -46,7 +45,6 @@ public class LoginMain extends Activity
 	ArrayList<NameValuePair> authentication;
 	String passIn, userIn;
 	
-	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) 
 	{
@@ -115,12 +113,10 @@ public class LoginMain extends Activity
 				} 
 				catch (ClientProtocolException e) 
 				{
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				} 
 				catch (IOException e) 
 				{
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
@@ -135,18 +131,13 @@ public class LoginMain extends Activity
 
 			/**
 			 * Method untuk memproses data username dan password untuk mencocokkan dengan data di database server 
-			 * dengan menggunakan file login.php sebagai perantara komunikasi antara android dan mysql, 
-			 * kemudian menerima hasil dari proses login.php dan menjalankan perintah yg harus dilakukan sesuai dengan hasil yg diterima.
-			 * Jika proses berhasil, maka file login.php akan mengirimkan TRUE.ADMIN (jika berhasil login sebagai admin) atau 
-			 * TRUE.MEMBER (jika berhasil login sebagai member)
-			 * Jika proses gagal, maka file login.php akan mengirimkan FALSE
 			 */
 			public void sendData(ArrayList<NameValuePair> data) throws ClientProtocolException, IOException 
 			{
 				readURL rL;	
 				String temp = "";
 				HttpClient httpclient = new DefaultHttpClient();
-				HttpPost httppost = new HttpPost("http://fajarjuang.com/android/login.php");
+				HttpPost httppost = new HttpPost(Referensi.url + "/login.php");
 				httppost.setEntity(new UrlEncodedFormEntity(data));
 				try
 				{
@@ -155,7 +146,7 @@ public class LoginMain extends Activity
 					temp = EntityUtils.toString(entity); 
 					try {
 						//mengirimkan username dan password yang diinput user untuk di proses oleh url http://10.0.2.2/Android/login.php
-						rL = new readURL("http://fajarjuang.com/android/login.php?username=" + user.getText().toString() + "&password=" + pass.getText().toString());
+						rL = new readURL(Referensi.url + "/login.php?username=" + user.getText().toString() + "&password=" + pass.getText().toString());
 						String auth=rL.getHTML();
 						
 						String filename = auth;
@@ -163,15 +154,16 @@ public class LoginMain extends Activity
 						String level = filenameArray[0]; //nilai 0 untuk TRUE, yaitu proses login berhasil
 						
 						if(level.equals("TRUE"))
-						{
-							/*String admin = filenameArray[1]; //nilai 1 untuk admin
+						{	
 							
-							Toast.makeText(getBaseContext(), "Selamat Datang " + user.getText(), Toast.LENGTH_LONG).show();
-							Intent s = new Intent(LoginMain.this, homePage.class); //memanggil activity/ class homePage
+							ProgressDialog dialog = new ProgressDialog(LoginMain.this);
+							// make the progress bar cancelable
+							dialog.setCancelable(true);
+							// set a message text
+							dialog.setMessage("Mohon Tunggu...");
+							// show it
+							dialog.show();
 							
-							//mengirimkan parameter, apakah user yang login itu Admin atau member, ke Class homePage
-							s.putExtra("admin", admin);
-							startActivity(s);*/
 							
 							String admin = filenameArray[1]; //nilai 1 untuk admin
 							if(admin.equals("ADMIN"))

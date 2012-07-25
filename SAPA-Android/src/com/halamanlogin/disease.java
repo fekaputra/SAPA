@@ -1,42 +1,17 @@
 package com.halamanlogin;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
-import java.util.ArrayList;
-
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.util.EntityUtils;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.Toast;
 
 public class disease extends Activity
 {
 	private EditText namaPelapor, gejala, Lokasi, laporan, tag;
 	private Button kirim, homeReport;
-	private ListView list;
-	private ArrayAdapter<String> mAdapter;
-	private ArrayList<String> mPresets = new ArrayList<String>();
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) 
@@ -48,18 +23,11 @@ public class disease extends Activity
 		Lokasi = (EditText) findViewById(R.id.lokasi);
 		gejala = (EditText) findViewById(R.id.gejala_keluhan);
 		laporan = (EditText) findViewById(R.id.laporan);
-		tag = (EditText) findViewById(R.id.tag);
-		
-		/*list = (ListView)findViewById(R.id.listView1);
-		mAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, mPresets);
-		list.setAdapter(mAdapter);*/
-		
+		tag = (EditText) findViewById(R.id.tag);		
 
 		kirim = (Button) findViewById(R.id.kirim);
-		// daftarkan even onClick pada btnSimpan
 		kirim.setOnClickListener(new Button.OnClickListener() 
 		{
-			@Override
 			public void onClick(View v) 
 			{
 				// TODO Auto-generated method stub

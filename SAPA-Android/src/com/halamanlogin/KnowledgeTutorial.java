@@ -3,36 +3,26 @@ package com.halamanlogin;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
 import org.apache.http.NameValuePair;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import com.halamanlogin.KnowledgeTutorial.LoadAllFiles;
-
 import android.app.ListActivity;
 import android.app.ProgressDialog;
-import android.app.TabActivity;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.webkit.MimeTypeMap;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.TabHost;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.TabHost.TabSpec;
 
 public class KnowledgeTutorial extends ListActivity 
 {
@@ -49,9 +39,7 @@ public class KnowledgeTutorial extends ListActivity
     
     ArrayList<HashMap<String, String>> fileList;
     
-    private static String url_all_files = "http://fajarjuang.com/android/listtutorial.php";
-    //private static String url = "http://167.205.34.196/";//use lan itb
-    //private static String url = "http://192.168.107.1/";//in home
+    private static String url_all_files = Referensi.url + "/listtutorial.php";
     
     //JSON Node Names
     private static final String TAG_ListFile = "listfile";
@@ -78,56 +66,24 @@ public class KnowledgeTutorial extends ListActivity
         
         // on seleting single product
         // launching Edit Product Screen
-        lv.setOnItemClickListener(new OnItemClickListener() 
-        {
+        lv.setOnItemClickListener(new OnItemClickListener() {
+ 
             //@Override
             public void onItemClick(AdapterView<?> parent, View view,
                     int position, long id) {
-                //getting values from selected ListItem
-                //String fileId = ((TextView)view.findViewById(R.id.fileid)).getText().toString();
-                //String fileName = ((TextView)view.findViewById(R.id.TextView01)).getText().toString();
-                String filePath = ((TextView) view.findViewById(R.id.filepath)).getText().toString();
+                String filePath = ((TextView)view.findViewById(R.id.filepath)).getText().toString();
                 
                 Intent in = null;
                 
                 //replace all white space
                 filePath = filePath.replaceAll(" ", "%20");
                 
-                String type = mimeName(filePath);
+                in = new Intent(getApplicationContext(), FileLoader.class);
                 
-                Intent i = getIntent();
-        		String admin = i.getStringExtra("admin");
-                
-                if (type.contains("image"))
-                {
-                	in = new Intent(getApplicationContext(), LoadImage.class);
-                	in.putExtra("admin", admin);
-                }
-                else if (type.contains("audio") || type.contains("video"))
-                {
-                	in = new Intent(getApplicationContext(), AVLoader.class);
-                	in.putExtra("admin", admin);
-                }
-                else if (type.contains("application"))
-                {
-                	in = new Intent(getApplicationContext(), DocLoader.class);
-                	in.putExtra("admin", admin);
-                }
-
                 in.putExtra(TAG_FilePath, filePath);
                 startActivityForResult(in, 100);
             }
         });
-    }
-    
-    private String mimeName(String name)
-    {
-    	String fileName = name;
-    	MimeTypeMap mime = MimeTypeMap.getSingleton();
-		String filenameArray[] = fileName.split("\\.");
-		fileName = filenameArray[filenameArray.length-1];
-        String type = mime.getMimeTypeFromExtension(fileName.toLowerCase());
-    	return type;
     }
     
     class LoadAllFiles extends AsyncTask<String, String, String>
@@ -185,7 +141,7 @@ public class KnowledgeTutorial extends ListActivity
 			catch (JSONException e)
 			{
 				e.printStackTrace();
-
+				//Toast.makeText(this, e.printStackTrace(), Toast.LENGTH_SHORT).show();
 			}
 			
 			return null;
@@ -204,7 +160,7 @@ public class KnowledgeTutorial extends ListActivity
                      * Updating parsed JSON data into ListView
                      * */
                     ListAdapter adapter = new SimpleAdapter(
-                            KnowledgeTutorial.this, fileList,
+                    		KnowledgeTutorial.this, fileList,
                             R.layout.file_view, new String[] { TAG_FileId, TAG_FilePath, TAG_FileName,
                                     TAG_FileSize},
                             new int[] { R.id.fileid, R.id.filepath ,R.id.TextView01, R.id.TextView02 });

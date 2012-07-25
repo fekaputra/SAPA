@@ -1,212 +1,25 @@
-/*package com.halamanlogin;
-
-import android.app.Activity;
-import android.os.Bundle;
-
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
-import android.app.ListActivity;
-import android.content.ActivityNotFoundException;
-import android.content.ContentResolver;
-import android.content.ContextWrapper;
-import android.content.Intent;
-import android.net.Uri;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.View;
-import android.webkit.MimeTypeMap;
-import android.widget.ListView;
-import android.widget.Toast;
-
-public class PhotosActivity extends ListActivity 
-{
-    private File currentDir;
-    private FileArrayAdapter adapter;
-    
-    @Override
-    public void onCreate(Bundle savedInstanceState) 
-    {
-        super.onCreate(savedInstanceState);
-        currentDir = new File("/sdcard/");//initialize currentDir to the root of the SD card
-        fill(currentDir);
-    }
-    
-    //to get all the files and folder for current directory were in
-    //1. we're going to get an array of all the files and dirs in the current we're in
-    //2. we're going to create 2 ListArrays. One for folders and one for files
-    //3. we're going to sort files and dirs into the appropriate ListArray
-    private void fill(File f)
-    {
-    	 File[]dirs = f.listFiles();
-		 this.setTitle("Current Dir: "+f.getName());
-		 List<Option>dir = new ArrayList<Option>();
-		 List<Option>fls = new ArrayList<Option>();
-		 try
-		 {
-			 for(File ff: dirs)
-			 {
-				String filename = ff.getName();
-				String filenameArray[] = filename.split("\\.");
-				String extension = filenameArray[filenameArray.length-1]; 
-					
-				//fls.add(new Option(ff.getName(),"File Size: "+ff.length(),ff.getAbsolutePath()));
-				if (extension.contains("png") || extension.contains("gif") || extension.contains("jpg") || extension.contains("jpeg") || extension.contains("bmp"))
-				{
-					fls.add(new Option(ff.getName(),"File Size: "+ff.length(),ff.getAbsolutePath()));
-				}				
-			 }
-		 }
-		 catch(Exception e)
-		 {
-			 
-		 }
-		 Collections.sort(dir);
-		 Collections.sort(fls);
-		 dir.addAll(fls);
-		 if(!f.getName().equalsIgnoreCase("sdcard"))
-			 dir.add(0,new Option("..","Parent Directory",f.getParent()));
-		 adapter = new FileArrayAdapter(PhotosActivity.this,R.layout.photos_layout,dir);
-		 this.setListAdapter(adapter);
-    }
-    
-    @Override
-    //to handle user clicking on files and folders
-	protected void onListItemClick(ListView l, View v, int position, long id) 
-    {
-		// TODO Auto-generated method stub
-		super.onListItemClick(l, v, position, id);
-		Option o = adapter.getItem(position);
-		if(o.getData().equalsIgnoreCase("folder")||o.getData().equalsIgnoreCase("parent directory"))
-		{
-			currentDir = new File(o.getPath());
-			fill(currentDir);
-		}
-		else
-		{
-			onFileClick(o);
-		}
-	}
-    
-    private void onFileClick(Option o)
-    {
-		//differentiate file type
-    	String filename = o.getName();
-		String filenameArray[] = filename.split("\\.");
-		String extension = filenameArray[filenameArray.length-1];
-		
-		Intent intent = new Intent();
-    	intent.setAction(Intent.ACTION_VIEW);
-    	
-    	if (extension.contains("png") || extension.contains("gif") || extension.contains("jpg") 
-    			|| extension.contains("jpeg") || extension.contains("bmp"))
-		{
-			intent.setDataAndType(Uri.parse("file://" + o.getPath()), "image/*");
-		}
-		
-		try
-    	{
-    		startActivity(intent);
-    	}
-    	catch (ActivityNotFoundException e)
-    	{
-    		Toast.makeText(this, "No Application available to View this file", Toast.LENGTH_SHORT).show();
-    	}
-    }
-    
-    // Initiating Menu XML file (menu.xml) 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
-        MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(R.layout.menu, menu);
-        return true;
-    }
-    
-    /**
-     * Event Handling for Individual menu item selected
-     * Identify single menu item by it's id
-     * 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
-        switch (item.getItemId())
-        {
-        case R.id.menu_bookmark:
-        	// Single menu item is selected do something
-        	// Ex: launching new activity/screen or show alert message
-            Toast.makeText(PhotosActivity.this, "Bookmark is Selected", Toast.LENGTH_SHORT).show();
-            return true;
-        case R.id.menu_save:
-        	Toast.makeText(PhotosActivity.this, "Save is Selected", Toast.LENGTH_SHORT).show();
-            return true;
-        case R.id.menu_search:
-        	Toast.makeText(PhotosActivity.this, "Search is Selected", Toast.LENGTH_SHORT).show();
-            return true;
-        case R.id.menu_share:
-        	Toast.makeText(PhotosActivity.this, "Share is Selected", Toast.LENGTH_SHORT).show();
-            return true;
-        case R.id.menu_delete:
-        	Toast.makeText(PhotosActivity.this, "Delete is Selected", Toast.LENGTH_SHORT).show();
-            return true;
-        case R.id.menu_preferences:
-        	Toast.makeText(PhotosActivity.this, "Preferences is Selected", Toast.LENGTH_SHORT).show();
-            return true;
-        default:
-            return super.onOptionsItemSelected(item);
-        }
-    }
-}*/
-
 package com.halamanlogin;
 
-import java.io.File;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.NameValuePair;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import com.halamanlogin.PhotosActivity.LoadAllFiles;
-
-import android.app.Activity;
 import android.app.ListActivity;
 import android.app.ProgressDialog;
-import android.content.ActivityNotFoundException;
-import android.content.ContentResolver;
-import android.content.ContextWrapper;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
-//import android.provider.ContactsContract;
-//import android.sms.R;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
-import android.webkit.MimeTypeMap;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class PhotosActivity extends ListActivity 
 {
@@ -223,9 +36,7 @@ public class PhotosActivity extends ListActivity
     
     ArrayList<HashMap<String, String>> fileList;
     
-    private static String url_all_files = "http://fajarjuang.com/android/listimage.php";
-    //private static String url = "http://167.205.34.196/";//use lan itb
-    //private static String url = "http://192.168.107.1/";//in home
+    private static String url_all_files = Referensi.url + "/listimage.php";
     
     //JSON Node Names
     private static final String TAG_ListFile = "listfile";
@@ -252,50 +63,24 @@ public class PhotosActivity extends ListActivity
         
         // on seleting single product
         // launching Edit Product Screen
-        lv.setOnItemClickListener(new OnItemClickListener() 
-        {
+        lv.setOnItemClickListener(new OnItemClickListener() {
+ 
             //@Override
             public void onItemClick(AdapterView<?> parent, View view,
                     int position, long id) {
-                //getting values from selected ListItem
-                //String fileId = ((TextView)view.findViewById(R.id.fileid)).getText().toString();
-                //String fileName = ((TextView)view.findViewById(R.id.TextView01)).getText().toString();
-                String filePath = ((TextView) view.findViewById(R.id.filepath)).getText().toString();
+                String filePath = ((TextView)view.findViewById(R.id.filepath)).getText().toString();
                 
                 Intent in = null;
                 
                 //replace all white space
                 filePath = filePath.replaceAll(" ", "%20");
                 
-                String type = mimeName(filePath);
+                in = new Intent(getApplicationContext(), FileLoader.class);
                 
-                if (type.contains("image"))
-                {
-                	in = new Intent(getApplicationContext(), LoadImage.class);
-                }
-                else if (type.contains("audio") || type.contains("video"))
-                {
-                	in = new Intent(getApplicationContext(), AVLoader.class);
-                }
-                else if (type.contains("application"))
-                {
-                	in = new Intent(getApplicationContext(), DocLoader.class);
-                }
-
                 in.putExtra(TAG_FilePath, filePath);
                 startActivityForResult(in, 100);
             }
         });
-    }
-    
-    private String mimeName(String name)
-    {
-    	String fileName = name;
-    	MimeTypeMap mime = MimeTypeMap.getSingleton();
-		String filenameArray[] = fileName.split("\\.");
-		fileName = filenameArray[filenameArray.length-1];
-        String type = mime.getMimeTypeFromExtension(fileName.toLowerCase());
-    	return type;
     }
     
     class LoadAllFiles extends AsyncTask<String, String, String>
@@ -353,7 +138,7 @@ public class PhotosActivity extends ListActivity
 			catch (JSONException e)
 			{
 				e.printStackTrace();
-
+				//Toast.makeText(this, e.printStackTrace(), Toast.LENGTH_SHORT).show();
 			}
 			
 			return null;
@@ -372,7 +157,7 @@ public class PhotosActivity extends ListActivity
                      * Updating parsed JSON data into ListView
                      * */
                     ListAdapter adapter = new SimpleAdapter(
-                            PhotosActivity.this, fileList,
+                    		PhotosActivity.this, fileList,
                             R.layout.file_view, new String[] { TAG_FileId, TAG_FilePath, TAG_FileName,
                                     TAG_FileSize},
                             new int[] { R.id.fileid, R.id.filepath ,R.id.TextView01, R.id.TextView02 });
@@ -382,5 +167,5 @@ public class PhotosActivity extends ListActivity
                 }
             });
         }
-    }
+    }    
 }

@@ -13,8 +13,7 @@ public class tumbuhKembangAnak extends Activity
     TextView nama;
     Button kirim, grafik, back;
     EditText JK, tgl_data, panjang, tinggi, berat;
-	
-	/** Called when the activity is first created. */
+    
     @Override
     public void onCreate(Bundle savedInstanceState) 
     {
