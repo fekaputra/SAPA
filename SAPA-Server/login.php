@@ -1,14 +1,7 @@
 <?php
     session_start();
-
-	// $server="fajarjuang.com";
- //    $username="k8758334_root";
- //    $password="rootroot";
-	// $database="k8758334_umar";
 	
-	/*Membuat Koneksi Ke DB*/
-	$conn = mysql_connect("localhost","k8758334_umar","binkhattab");
-    $db = mysql_select_db("k8758334_umar");
+	include("koneksi.php");
 	
 	/*Menampung data username dan password yg diinput user dari aplikasi*/    
     $username = $_REQUEST['username'];

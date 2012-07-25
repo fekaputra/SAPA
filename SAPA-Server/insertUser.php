@@ -1,7 +1,13 @@
 <?php
 	session_start();
 	
-	include_once("koneksi.php");
+	$server="localhost";
+    $username="root";
+    $password="";
+	$database="dbfile";
+			
+	$Connect=mysql_connect($server, $username, $password) or die(mysql_error());
+	mysql_select_db($database, $Connect) or die(mysql_error());
 	
 	/*$username = $_GET['username'];
 	$password = $_GET['password'];
