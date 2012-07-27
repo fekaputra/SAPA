@@ -19,7 +19,7 @@ public class Kesehatan extends Activity
     public void onCreate(Bundle savedInstanceState) 
 	{
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.kesehatan);
+        setContentView(R.layout.list_menu_gis);
         
         data_kesehatan = getResources().getStringArray(R.array.data_kesehatan);
         

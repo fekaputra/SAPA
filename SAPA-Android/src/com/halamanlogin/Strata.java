@@ -26,12 +26,8 @@ public class Strata extends Activity {
 	private TextView jmlStrata;
 	private Button btnHitung, btnSubmit;
 	
-	// Seusuaikan url dengan nama domain yang anda gunakan
 	private String url = Referensi.url + "/insertStrata.php";
 	
-	/**
-	 * Method yang dipanggil pada saat aplikaasi dijalankan
-	 * */
 	@Override
 	public void onCreate(Bundle savedInstanceState) 
 	{
@@ -73,14 +69,9 @@ public class Strata extends Activity {
 		btnSubmit = (Button) findViewById(R.id.daftar);
 		btnSubmit.setOnClickListener(new Button.OnClickListener() 
 		{
-			//@Override
 			public void onClick(View v) 
 			{
-
 				try {
-					// setiap parameter yang akan dikirim melalui http
-					// harus encode agar
-					// dapat terbaca dengan baik oleh server
 					String idPosyandu = URLEncoder.encode(idKelurahan.getText().toString(), "utf-8");
 					String pratama = URLEncoder.encode(new_pratama.getText().toString(), "utf-8");
 					String madya = URLEncoder.encode(new_madya.getText().toString(), "utf-8");
@@ -112,12 +103,7 @@ public class Strata extends Activity {
 		HttpClient client = new DefaultHttpClient();
 		HttpGet request = new HttpGet(url);
 		try 
-		{
-			//Menampilkan data yang diinputkan user
-			/*String toastMessage = 
-					"Total Kader 	: " + new_totalKader.getText().toString() + "\n" +
-					"Kader Terlatih : " + new_kaderTerlatih.getText().toString();*/
-			
+		{	
 			HttpResponse response = client.execute(request);
 			Toast.makeText(this, "Tambah Data " + request(response), Toast.LENGTH_SHORT).show();
 			
@@ -130,7 +116,6 @@ public class Strata extends Activity {
 		{
 			Toast.makeText(this, "Tambah Data Gagal !", Toast.LENGTH_LONG).show();
 		}
-
 	}
 
 	/**

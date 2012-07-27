@@ -25,6 +25,8 @@ public class Kader extends Activity {
 	private Button btnSubmit;
 	
 	private String url = Referensi.url + "/insertKader.php";
+	
+	ValidasiInsert validasi = new ValidasiInsert();
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) 
@@ -41,8 +43,13 @@ public class Kader extends Activity {
 				
     	idKelurahan.setText(id);
 		
-		new_totalKader = (EditText) findViewById(R.id.jml_total);
+    	new_totalKader = (EditText) findViewById(R.id.jml_total);
+		validasi.message(new_totalKader);
 		new_kaderTerlatih = (EditText) findViewById(R.id.kader_terlatih);
+		validasi.message(new_kaderTerlatih);
+		
+		final EditText[] editText = new EditText[] {new_totalKader, new_kaderTerlatih};
+		
 		
 		btnSubmit = (Button) findViewById(R.id.daftar);
 		btnSubmit.setOnClickListener(new Button.OnClickListener() 
@@ -50,12 +57,21 @@ public class Kader extends Activity {
 			public void onClick(View v) 
 			{
 				try {
-					String idPosyandu = URLEncoder.encode(idKelurahan.getText().toString(), "utf-8");
-					String totalKader = URLEncoder.encode(new_totalKader.getText().toString(), "utf-8");
-					String kaderTerlatih = URLEncoder.encode(new_kaderTerlatih.getText().toString(), "utf-8");
-					url += "?idPosyandu="+ idPosyandu + "&totalKader=" + totalKader + "&kaderTerlatih=" + kaderTerlatih;
+					boolean check = validasi.validation(editText);//validation(editText);
+					if(check == false)
+					{
+						Toast.makeText(Kader.this, "There are some field(s) need to input", Toast.LENGTH_SHORT).show();
+						validasi.messages(editText);
+					}
+					else
+					{
+						String idPosyandu = URLEncoder.encode(idKelurahan.getText().toString(), "utf-8");
+						String totalKader = URLEncoder.encode(new_totalKader.getText().toString(), "utf-8");
+						String kaderTerlatih = URLEncoder.encode(new_kaderTerlatih.getText().toString(), "utf-8");
+						url += "?idPosyandu="+ idPosyandu + "&totalKader=" + totalKader + "&kaderTerlatih=" + kaderTerlatih;
 
-					getRequest(url);
+						getRequest(url);
+					}
 				} catch (UnsupportedEncodingException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -78,12 +94,7 @@ public class Kader extends Activity {
 		HttpClient client = new DefaultHttpClient();
 		HttpGet request = new HttpGet(url);
 		try 
-		{
-			//Menampilkan data yang diinputkan user
-			/*String toastMessage = 
-					"Total Kader 	: " + new_totalKader.getText().toString() + "\n" +
-					"Kader Terlatih : " + new_kaderTerlatih.getText().toString();*/
-			
+		{	
 			HttpResponse response = client.execute(request);
 			
 			Toast.makeText(this, "Tambah Data " + request(response), Toast.LENGTH_SHORT).show();

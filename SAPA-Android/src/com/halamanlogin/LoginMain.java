@@ -24,10 +24,14 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
+
+import com.halamanlogin.LaporanKegPKPKecActivity.InsertDataLapKegPKPKec;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -44,6 +48,7 @@ public class LoginMain extends Activity
 	Button btnlog, btnRegister, btnExit;
 	ArrayList<NameValuePair> authentication;
 	String passIn, userIn;
+	private ProgressDialog pDialog;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) 
@@ -79,7 +84,6 @@ public class LoginMain extends Activity
 					{
 						public void onClick(DialogInterface dialog, int id) 
 						{
-							// closeDialog.this.finish();
 							Intent exit = new Intent(Intent.ACTION_MAIN);
 							exit.addCategory(Intent.CATEGORY_HOME);
 							exit.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -104,100 +108,132 @@ public class LoginMain extends Activity
 		{
 			public void onClick(View tombol_login) 
 			{
-				user = (EditText) findViewById(R.id.username);
-				pass = (EditText) findViewById(R.id.passwd_input);
-					
-				try 
-				{
-					this.sendAuthenticationData(user.getText().toString(),pass.getText().toString() );
-				} 
-				catch (ClientProtocolException e) 
-				{
-					e.printStackTrace();
-				} 
-				catch (IOException e) 
-				{
-					e.printStackTrace();
-				}
+				new Login().execute();
 			}
-			
-			public void sendAuthenticationData(String username, String password) throws ClientProtocolException, IOException 
-			{
-				 authentication = new ArrayList<NameValuePair>();
-				 authentication.add(new BasicNameValuePair("username", username));
-				 authentication.add(new BasicNameValuePair("password", password));
-				 this.sendData(authentication);
-			}
+		});
+	}
+	
+	class Login extends AsyncTask <String, String, String>
+    {
+		@Override
+        protected void onPreExecute() 
+        {
+            super.onPreExecute();
+            pDialog = new ProgressDialog(LoginMain.this);
+            pDialog.setMessage("Mohon Tunggu...");
+            pDialog.setIndeterminate(false);
+            pDialog.setCancelable(true);
+            pDialog.show();
+        }
 
-			/**
-			 * Method untuk memproses data username dan password untuk mencocokkan dengan data di database server 
-			 */
-			public void sendData(ArrayList<NameValuePair> data) throws ClientProtocolException, IOException 
+		@Override
+		protected String doInBackground(String... arg0) 
+		{
+			user = (EditText) findViewById(R.id.username);
+			pass = (EditText) findViewById(R.id.passwd_input);
+				
+			try 
 			{
-				readURL rL;	
-				String temp = "";
-				HttpClient httpclient = new DefaultHttpClient();
-				HttpPost httppost = new HttpPost(Referensi.url + "/login.php");
-				httppost.setEntity(new UrlEncodedFormEntity(data));
-				try
-				{
-					HttpResponse response = httpclient.execute(httppost);
-					HttpEntity entity = response.getEntity();
-					temp = EntityUtils.toString(entity); 
-					try {
-						//mengirimkan username dan password yang diinput user untuk di proses oleh url http://10.0.2.2/Android/login.php
-						rL = new readURL(Referensi.url + "/login.php?username=" + user.getText().toString() + "&password=" + pass.getText().toString());
-						String auth=rL.getHTML();
-						
-						String filename = auth;
-						String filenameArray[] = filename.split("\\."); //memisahkan string yang diperoleh dengan tanda . 
-						String level = filenameArray[0]; //nilai 0 untuk TRUE, yaitu proses login berhasil
-						
-						if(level.equals("TRUE"))
+				this.sendAuthenticationData(user.getText().toString(),pass.getText().toString() );
+			} 
+			catch (ClientProtocolException e) 
+			{
+				e.printStackTrace();
+			} 
+			catch (IOException e) 
+			{
+				e.printStackTrace();
+			}
+			return null;
+		}
+		
+		private void sendAuthenticationData(String username, String password) throws ClientProtocolException, IOException
+		{
+			authentication = new ArrayList<NameValuePair>();
+			authentication.add(new BasicNameValuePair("username", username));
+			authentication.add(new BasicNameValuePair("password", password));
+			this.sendData(authentication);
+			
+		}
+
+		/**
+		 * Method untuk memproses data username dan password untuk mencocokkan dengan data di database server 
+		 */
+		public void sendData(ArrayList<NameValuePair> data) throws ClientProtocolException, IOException 
+		{
+			readURL rL;	
+			String temp = "";
+			HttpClient httpclient = new DefaultHttpClient();
+			HttpPost httppost = new HttpPost(Referensi.url + "/login.php");
+			httppost.setEntity(new UrlEncodedFormEntity(data));
+			
+			try
+			{
+				HttpResponse response = httpclient.execute(httppost);
+				HttpEntity entity = response.getEntity();
+				temp = EntityUtils.toString(entity); 
+				
+				try {
+					
+					//mengirimkan username dan password yang diinput user untuk di proses oleh url http://10.0.2.2/Android/login.php
+					rL = new readURL(Referensi.url + "/login.php?username=" + user.getText().toString() + "&password=" + pass.getText().toString());
+					String auth=rL.getHTML();
+					
+					String filename = auth;
+					String filenameArray[] = filename.split("\\."); //memisahkan string yang diperoleh dengan tanda . 
+					String level = filenameArray[0]; //nilai 0 untuk TRUE, yaitu proses login berhasil
+					
+					String username = user.getText().toString();
+					
+					if(level.equals("TRUE"))
+					{	
+						String admin = filenameArray[1]; //nilai 1 untuk admin
+						if(admin.equals("ADMIN"))
 						{	
-							
-							ProgressDialog dialog = new ProgressDialog(LoginMain.this);
-							// make the progress bar cancelable
-							dialog.setCancelable(true);
-							// set a message text
-							dialog.setMessage("Mohon Tunggu...");
-							// show it
-							dialog.show();
-							
-							
-							String admin = filenameArray[1]; //nilai 1 untuk admin
-							if(admin.equals("ADMIN"))
-							{	
-								Toast.makeText(getBaseContext(), "Selamat Datang " + user.getText(), Toast.LENGTH_LONG).show();
-								Intent s = new Intent(LoginMain.this, homeAdmin.class);
-								s.putExtra("admin", admin); //mengirimkan level user, admin atau member
-								startActivity(s);
-							}
-							else
-							{
-								Toast.makeText(getBaseContext(), "Selamat Datang " + user.getText(), Toast.LENGTH_LONG).show();
-								Intent s = new Intent(LoginMain.this, homeMember.class);
-								s.putExtra("admin", admin);
-							    startActivity(s);
-							}
+							//Toast.makeText(getBaseContext(), "Selamat Datang " + user.getText(), Toast.LENGTH_SHORT).show();
+							Intent s = new Intent(LoginMain.this, homeAdmin.class);
+							s.putExtra("admin", admin); //mengirimkan level user (admin atau member)
+							s.putExtra("username", username);
+							startActivity(s);
 						}
 						else
 						{
-							Toast.makeText(getBaseContext(), "Maaf Username atau Password Salah", Toast.LENGTH_LONG).show();						    	  
-						  	Intent s = new Intent (LoginMain.this, GagalLogin.class); //memanggil activity/ class GagalLogin
+							//Toast.makeText(getBaseContext(), "Selamat Datang " + user.getText(), Toast.LENGTH_SHORT).show();
+							Intent s = new Intent(LoginMain.this, homeMember.class);
+							s.putExtra("admin", admin);
+							s.putExtra("username", username);
 						    startActivity(s);
-						}      
+						}
 					}
-					catch(Exception ex)
+					else
 					{
-						System.out.println("Error=" + ex.getMessage());
-					}
+						//Toast.makeText(getBaseContext(), "Maaf Username atau Password Salah", Toast.LENGTH_LONG).show();						    	  
+					  	Intent s = new Intent (LoginMain.this, GagalLogin.class); //Kembali ke halaman login
+					    startActivity(s);
+					}      
 				}
-				catch(Exception e)
+				catch(Exception ex)
 				{
-					e.printStackTrace();
+					System.out.println("Error=" + ex.getMessage());
 				}
 			}
-		});
+			catch(Exception e)
+			{
+				e.printStackTrace();
+			}
+		}
+		
+		//after completing background task dismiss the progress dialog
+		protected void onPostExecute ()
+		{
+			//dismiss the dialog
+			pDialog.dismiss();
+		}
+    }
+	
+	@Override
+	public void onBackPressed() 
+	{
+		Toast.makeText(getBaseContext(), "Maaf anda sudah keluar, silahkan login kembali", Toast.LENGTH_LONG).show();
 	}
 }

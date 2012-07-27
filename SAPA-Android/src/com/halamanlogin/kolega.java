@@ -19,7 +19,7 @@ public class kolega extends Activity
     public void onCreate(Bundle savedInstanceState) 
 	{
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.kolega);
+        setContentView(R.layout.list_menu_gis);
         
         data_kolega = getResources().getStringArray(R.array.data_kolega);
         

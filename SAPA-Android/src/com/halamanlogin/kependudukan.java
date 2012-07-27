@@ -19,7 +19,7 @@ public class kependudukan extends Activity
     public void onCreate(Bundle savedInstanceState) 
 	{
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.kependudukan);
+        setContentView(R.layout.list_menu_gis);
         
         data_penduduk = getResources().getStringArray(R.array.data_penduduk);
         

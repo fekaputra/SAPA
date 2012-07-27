@@ -4,11 +4,10 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class homeMember extends Activity implements OnClickListener
+public class homeMember extends Activity
 {
 	Button gis, knowledge, communication, logout;
 	
@@ -18,6 +17,14 @@ public class homeMember extends Activity implements OnClickListener
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.homemember);
 		
+		Intent i = getIntent();
+		String username = i.getStringExtra("username");
+		
+		if(username != null)
+		{
+			Toast.makeText(getBaseContext(), "Selamat Datang " + username, Toast.LENGTH_SHORT).show();
+		}
+			
 		gis = (Button) findViewById(R.id.gis);
 		gis.setOnClickListener(new Button.OnClickListener()
 		{
@@ -75,8 +82,10 @@ public class homeMember extends Activity implements OnClickListener
 		});
 	}
 	
-	public void onClick(View v) 
+	//menonaktifkan tombol back di android
+	@Override
+	public void onBackPressed() 
 	{
-		// TODO Auto-generated method stub	
+		//tidak melakukan apa-apa
 	}
 }

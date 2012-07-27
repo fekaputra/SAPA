@@ -14,6 +14,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class GagalLogin extends Activity
 {
@@ -31,6 +32,7 @@ public class GagalLogin extends Activity
 			public void onClick(View v)
 	        {
 				//ketika button Login di tekan, maka akan kembali ke halaman utama
+				Toast.makeText(getBaseContext(), "Maaf Username atau Password Salah", Toast.LENGTH_LONG).show();
 				Intent home = new Intent (GagalLogin.this, LoginMain.class);
 		    	startActivity(home);
 	        }

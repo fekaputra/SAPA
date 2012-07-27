@@ -7,12 +7,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class tumbuhKembangAnak extends Activity 
 {
     TextView nama;
     Button kirim, grafik, back;
     EditText JK, tgl_data, panjang, tinggi, berat;
+    
+    ValidasiInsert validasi = new ValidasiInsert();
     
     @Override
     public void onCreate(Bundle savedInstanceState) 
@@ -28,19 +31,37 @@ public class tumbuhKembangAnak extends Activity
         nama.setText(namaAnak);
         
         JK = (EditText) findViewById(R.id.jk);
+        validasi.message(JK);
         tgl_data = (EditText) findViewById(R.id.tgl_data);
+        validasi.message(tgl_data);
         panjang = (EditText) findViewById(R.id.panjang);
+        validasi.message(panjang);
         tinggi = (EditText) findViewById(R.id.tinggi);
+        validasi.message(tinggi);
         berat = (EditText) findViewById(R.id.berat);
+        validasi.message(berat);
         
+        final EditText[] editText = new EditText[] {JK, tgl_data, panjang, tinggi, berat};
         
         kirim = (Button) findViewById(R.id.kirim);
         kirim.setOnClickListener(new Button.OnClickListener()
 		{			
 			public void onClick(View v)
 	        {
-				Intent start_kirim = new Intent(tumbuhKembangAnak.this, tumbuhKembangAnak.class);
-		    	startActivity(start_kirim);
+				boolean check = validasi.validation(editText);//validation(editText);
+				if(check == false)
+				{
+					Toast.makeText(tumbuhKembangAnak.this, "There are some field(s) need to input", Toast.LENGTH_SHORT).show();
+					validasi.messages(editText);
+				}
+				else
+				{
+					String admin = "ADMIN";
+					
+					Intent start_kirim = new Intent(tumbuhKembangAnak.this, tumbuhKembangAnak.class);
+					start_kirim.putExtra("admin", admin);
+			    	startActivity(start_kirim);
+				}
 	        }
 		});
         

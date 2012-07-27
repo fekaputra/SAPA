@@ -15,6 +15,8 @@ public class SpecialOccasion extends Activity
 	Button kirim, homeReport;
 	ListView list;
 	
+	ValidasiInsert validasi = new ValidasiInsert();
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) 
 	{
@@ -22,27 +24,44 @@ public class SpecialOccasion extends Activity
 		setContentView(R.layout.special_occasion);
 		
 		namaKegiatan = (EditText) findViewById(R.id.nama_kegiatan);
+        validasi.message(namaKegiatan);
 		namaPenyelenggara = (EditText) findViewById(R.id.nama_penyelenggara);
+        validasi.message(namaPenyelenggara);
 		waktuKegiatan = (EditText) findViewById(R.id.waktu_kegiatan);
+        validasi.message(waktuKegiatan);
 		Kota = (EditText) findViewById(R.id.kota);
+        validasi.message(Kota);
 		Topik = (EditText) findViewById(R.id.topik);
+        validasi.message(Topik);
 		tag = (EditText) findViewById(R.id.tag);
+        validasi.message(tag);
+        
+        final EditText[] editText = new EditText[] {namaKegiatan, namaPenyelenggara, waktuKegiatan, Kota, Topik, tag};		
 
 		kirim = (Button) findViewById(R.id.kirim);
 		kirim.setOnClickListener(new Button.OnClickListener() 
 		{
 			public void onClick(View v) 
 			{
-				String toastMessage =
-					"Nama Kegiatan 	 : " + namaKegiatan.getText().toString() + "\n" +
-					"Nama Penyelenggara : " + namaPenyelenggara.getText().toString() + "\n" +
-					"Waktu Kegiatan 	 : " + waktuKegiatan.getText().toString() + "\n" +
-					"Kota   			 : " + Kota.getText().toString() + "\n" +
-					"Topik      		 : " + Topik.getText().toString() + "\n" +
-					"Tag        		 : " + tag.getText().toString();
-				
-				Toast t = Toast.makeText(SpecialOccasion.this, toastMessage, Toast.LENGTH_LONG);
-				t.show();
+				//call class validation insert to insert new data
+				boolean check = validasi.validation(editText);//validation(editText);
+				if(check == false)
+				{
+					Toast.makeText(SpecialOccasion.this, "There are some field(s) need to input", Toast.LENGTH_SHORT).show();
+					validasi.messages(editText);
+				}
+				else
+				{
+					String toastMessage =
+							"Nama Kegiatan 	 : " + namaKegiatan.getText().toString() + "\n" +
+							"Nama Penyelenggara : " + namaPenyelenggara.getText().toString() + "\n" +
+							"Waktu Kegiatan 	 : " + waktuKegiatan.getText().toString() + "\n" +
+							"Kota   			 : " + Kota.getText().toString() + "\n" +
+							"Topik      		 : " + Topik.getText().toString() + "\n" +
+							"Tag        		 : " + tag.getText().toString();
+						
+						Toast.makeText(SpecialOccasion.this, toastMessage, Toast.LENGTH_LONG).show();
+				}
 			}
 		});
 		

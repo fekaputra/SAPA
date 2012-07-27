@@ -6,5 +6,6 @@ public class Referensi
 	public static String url="http://10.0.2.2/android";
 	
 	//setting ip
-	public static String ip = "http://192.168.107.1/";//in home
+	//public static String ip = "http://192.168.107.1/";//in home
+	public static String ip = "http://167.205.34.246/";
 }

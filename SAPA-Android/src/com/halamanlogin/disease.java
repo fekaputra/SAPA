@@ -13,6 +13,8 @@ public class disease extends Activity
 	private EditText namaPelapor, gejala, Lokasi, laporan, tag;
 	private Button kirim, homeReport;
 	
+	ValidasiInsert validasi = new ValidasiInsert();
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) 
 	{
@@ -20,26 +22,40 @@ public class disease extends Activity
 		setContentView(R.layout.report_disease);
 		
 		namaPelapor = (EditText) findViewById(R.id.nama_pelapor);
+		validasi.message(namaPelapor);
 		Lokasi = (EditText) findViewById(R.id.lokasi);
+        validasi.message(Lokasi);
 		gejala = (EditText) findViewById(R.id.gejala_keluhan);
+        validasi.message(gejala);
 		laporan = (EditText) findViewById(R.id.laporan);
-		tag = (EditText) findViewById(R.id.tag);		
+        validasi.message(laporan);
+		tag = (EditText) findViewById(R.id.tag);
+        validasi.message(tag);
+        
+        final EditText[] editText = new EditText[] {namaPelapor, Lokasi, gejala, laporan, tag};	
 
 		kirim = (Button) findViewById(R.id.kirim);
 		kirim.setOnClickListener(new Button.OnClickListener() 
 		{
 			public void onClick(View v) 
 			{
-				// TODO Auto-generated method stub
-				String toastMessage =
-					"Nama Pelapor   : " + namaPelapor.getText().toString() + "\n" +
-					"Lokasi         : " + Lokasi.getText().toString() + "\n" +
-					"Gejala/Keluhan : " + gejala.getText().toString() + "\n" +
-					"Laporan        : " + laporan.getText().toString() + "\n" +
-					"Tag            : " + tag.getText().toString();
-				
-				Toast t = Toast.makeText(disease.this, toastMessage, Toast.LENGTH_LONG);
-				t.show();
+				boolean check = validasi.validation(editText);//validation(editText);
+				if(check == false)
+				{
+					Toast.makeText(disease.this, "There are some field(s) need to input", Toast.LENGTH_SHORT).show();
+					validasi.messages(editText);
+				}
+				else
+				{
+					String toastMessage =
+							"Nama Pelapor   : " + namaPelapor.getText().toString() + "\n" +
+							"Lokasi         : " + Lokasi.getText().toString() + "\n" +
+							"Gejala/Keluhan : " + gejala.getText().toString() + "\n" +
+							"Laporan        : " + laporan.getText().toString() + "\n" +
+							"Tag            : " + tag.getText().toString();
+						
+						Toast.makeText(disease.this, toastMessage, Toast.LENGTH_LONG).show();
+				}
 			}
 		});
 		

@@ -34,6 +34,8 @@ public class LaporanKegPKPKecActivity extends Activity
     //json Node names
     private static final String TAG_SUCCESS = "success";
     
+    ValidasiInsert validasi = new ValidasiInsert();
+    
     @Override
     public void onCreate(Bundle savedInstanceState) 
     {
@@ -64,6 +66,8 @@ public class LaporanKegPKPKecActivity extends Activity
         textRTL  = (EditText) findViewById(R.id.editRTL);
         message(textRTL);
         
+        final EditText[] editText = new EditText[] {textKec, textBulan, textUraianKeg, textTempat, textUnsur, textMasalah, textRTL};
+        
         //button insert
         Button buttonInsert = (Button) findViewById(R.id.btnCreate);
         
@@ -72,8 +76,17 @@ public class LaporanKegPKPKecActivity extends Activity
         {
 			public void onClick(View v) 
 			{
-				//call class to insert new data
-				new InsertDataLapKegPKPKec().execute();
+				//call class validation insert to insert new data
+				boolean check = validasi.validation(editText);//validation(editText);
+				if(check == false)
+				{
+					Toast.makeText(LaporanKegPKPKecActivity.this, "There are some field(s) need to input", Toast.LENGTH_SHORT).show();
+					validasi.messages(editText);
+				}
+				else
+				{
+					new InsertDataLapKegPKPKec().execute();
+				}
 			}
 		});
     }
@@ -164,7 +177,6 @@ public class LaporanKegPKPKecActivity extends Activity
                 	Intent intent = getIntent();
     				String admin = intent.getStringExtra("admin");
     				
-    				
                 	this.onPostExecute("Success");
                     Intent i = new Intent(getApplicationContext(), PerkembanganPosyandu.class);
                     i.putExtra("admin", admin);
@@ -192,18 +204,6 @@ public class LaporanKegPKPKecActivity extends Activity
 		{
 			//dismiss the dialog
 			pDialog.dismiss();
-		}
-		
-		protected void onProgressUpdate (int status)
-		{
-			if(status == 1)
-			{
-				Toast.makeText(LaporanKegPKPKecActivity.this, "Data Telah Berhasil Disimpan", Toast.LENGTH_SHORT).show();
-			}
-			else
-			{
-				Toast.makeText(LaporanKegPKPKecActivity.this, "Data Gagal Disimpan, Silahkan Mencoba Lagi", Toast.LENGTH_SHORT).show();
-			}
 		}
     }
 }

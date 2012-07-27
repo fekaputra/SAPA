@@ -22,14 +22,6 @@ public class childcare extends Activity implements	OnClickListener
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.childcare);
-			
-		//Untuk menampilkan level user, apakah Admin atau Member
-		/*TextView txtLevel = (TextView) findViewById(R.id.txtLevel);
-		
-		Intent i = getIntent();
-		String admin = i.getStringExtra("admin");
-		
-		txtLevel.setText(admin);*/
 		
 		databaru = (Button) findViewById(R.id.daftar_data_anak);
 		databaru.setOnClickListener(new Button.OnClickListener()
@@ -86,7 +78,6 @@ public class childcare extends Activity implements	OnClickListener
 	//@Override
 	public void onClick(View v) 
 	{
-		// TODO Auto-generated method stub
 		if( v.equals(next) )
 		{
 			mAdapter.add(namaAnak[spin.getSelectedItemPosition()]);

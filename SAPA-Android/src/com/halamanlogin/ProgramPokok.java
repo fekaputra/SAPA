@@ -25,12 +25,10 @@ public class ProgramPokok extends Activity {
 	private EditText new_kb, new_kia, new_gizi, new_imunisasi, new_p2d;
 	private Button btnSubmit;
 	
-	// Seusuaikan url dengan nama domain yang anda gunakan
 	private String url = Referensi.url + "/insertProgramPokok.php";
 	
-	/**
-	 * Method yang dipanggil pada saat aplikaasi dijalankan
-	 * */
+	ValidasiInsert validasi = new ValidasiInsert();
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) 
 	{
@@ -46,39 +44,49 @@ public class ProgramPokok extends Activity {
 				
     	idKelurahan.setText(id);
 		
-		new_kb = (EditText) findViewById(R.id.new_kb);
+    	new_kb = (EditText) findViewById(R.id.new_kb);
+        validasi.message(new_kb);
 		new_kia = (EditText) findViewById(R.id.new_kia);
+        validasi.message(new_kia);
 		new_gizi =  (EditText) findViewById(R.id.new_gizi);
+        validasi.message(new_gizi);
 		new_imunisasi =  (EditText) findViewById(R.id.new_imunisasi);
+        validasi.message(new_imunisasi);
 		new_p2d =  (EditText) findViewById(R.id.new_p2d);
+        validasi.message(new_p2d);
+        
+        final EditText[] editText = new EditText[] {new_kb, new_kia, new_gizi, new_imunisasi, new_p2d};
 		
 		btnSubmit = (Button) findViewById(R.id.daftar);
 		btnSubmit.setOnClickListener(new Button.OnClickListener() 
 		{
-			//@Override
 			public void onClick(View v) 
 			{
-
 				try {
-					// setiap parameter yang akan dikirim melalui http
-					// harus encode agar
-					// dapat terbaca dengan baik oleh server
-					String idPosyandu = URLEncoder.encode(idKelurahan.getText().toString(), "utf-8");
-					String kb = URLEncoder.encode(new_kb.getText().toString(), "utf-8");
-					String kia = URLEncoder.encode(new_kia.getText().toString(), "utf-8");
-					String gizi = URLEncoder.encode(new_gizi.getText().toString(), "utf-8");
-					String imunisasi = URLEncoder.encode(new_imunisasi.getText().toString(), "utf-8");
-					String p2d = URLEncoder.encode(new_p2d.getText().toString(), "utf-8");
-					
-					url += "?idPosyandu="+ idPosyandu + "&kb=" + kb + "&kia=" + kia + "&gizi=" + gizi + "&imunisasi=" + imunisasi + "&p2d=" + p2d;
+					//call class validation insert to insert new data
+					boolean check = validasi.validation(editText);//validation(editText);
+					if(check == false)
+					{
+						Toast.makeText(ProgramPokok.this, "There are some field(s) need to input", Toast.LENGTH_SHORT).show();
+						validasi.messages(editText);
+					}
+					else
+					{
+						String idPosyandu = URLEncoder.encode(idKelurahan.getText().toString(), "utf-8");
+						String kb = URLEncoder.encode(new_kb.getText().toString(), "utf-8");
+						String kia = URLEncoder.encode(new_kia.getText().toString(), "utf-8");
+						String gizi = URLEncoder.encode(new_gizi.getText().toString(), "utf-8");
+						String imunisasi = URLEncoder.encode(new_imunisasi.getText().toString(), "utf-8");
+						String p2d = URLEncoder.encode(new_p2d.getText().toString(), "utf-8");
+						
+						url += "?idPosyandu="+ idPosyandu + "&kb=" + kb + "&kia=" + kia + "&gizi=" + gizi + "&imunisasi=" + imunisasi + "&p2d=" + p2d;
 
-					getRequest(url);
+						getRequest(url);
+					}
 				} catch (UnsupportedEncodingException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
-				}
-
-			}
+				}			}
 		});
 
 	}
