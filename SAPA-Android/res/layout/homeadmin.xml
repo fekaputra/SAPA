@@ -11,8 +11,7 @@
 		<TextView
 			android:layout_width="wrap_content" 
 			android:layout_height="wrap_content"
-			android:text=""
-			android:id="@+id/Txt05"/>
+			android:text=""/>
 		<Button
 			android:layout_width="100dp" 
 			android:layout_height="120dp" 
@@ -21,8 +20,7 @@
 		<TextView
 			android:layout_width="wrap_content" 
 			android:layout_height="wrap_content"  
-			android:text="            "
-			android:id="@+id/Txt06"/>
+			android:text="            "/>
 		<Button
 			android:layout_width="100dp" 
 			android:layout_height="120dp"  
@@ -34,8 +32,7 @@
 		<TextView
 			android:layout_width="wrap_content" 
 			android:layout_height="wrap_content"
-			android:text="        " 
-			android:id="@+id/Txt09"/>
+			android:text="        "/>
 	</TableRow>    
 	
 	<!-- Gambar untuk e-Knowledge dan e-Communication -->
@@ -43,8 +40,7 @@
 		<TextView
 			android:layout_width="wrap_content" 
 			android:layout_height="wrap_content"
-			android:text=""
-			android:id="@+id/Txt12"/>
+			android:text=""/>
 		<Button
 			android:layout_width="100dp" 
 			android:layout_height="120dp" 
@@ -53,8 +49,7 @@
 		<TextView
 			android:layout_width="wrap_content" 
 			android:layout_height="wrap_content"  
-			android:text="            "
-			android:id="@+id/Txt13"/>
+			android:text="            "/>
 		<Button
 			android:layout_width="100dp" 
 			android:layout_height="120dp" 
@@ -66,8 +61,7 @@
 		<TextView
 			android:layout_width="wrap_content" 
 			android:layout_height="wrap_content"
-			android:text="        " 
-			android:id="@+id/Txt09"/>
+			android:text="        "/>
 	</TableRow>    	
 	
 	<!-- Gambar untuk Keluar/Logout -->
@@ -75,8 +69,7 @@
 		<TextView
 			android:layout_width="wrap_content" 
 			android:layout_height="wrap_content"
-			android:text=""
-			android:id="@+id/Txt12"/>
+			android:text=""/>
 
 		<Button
 		    android:id="@+id/keluar"

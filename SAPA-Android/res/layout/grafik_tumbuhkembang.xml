@@ -39,7 +39,7 @@
 		android:layout_width="fill_parent"  
 		android:layout_height="wrap_content"
 		android:gravity="center"
-		android:text="Kondisi Anak : Sehat">
+		android:text="@string/kondisi_anak">
 	</TextView>
 	
     <!-- enter -->
@@ -55,7 +55,7 @@
 		android:layout_width="fill_parent"  
 		android:layout_height="wrap_content"
 		android:gravity="center"
-		android:text="Berat Badan : Ideal">
+		android:text="@string/berat_badan">
 	</TextView>
 	
     <!-- enter -->
@@ -71,7 +71,7 @@
 		android:layout_width="fill_parent"  
 		android:layout_height="wrap_content"
 		android:gravity="center"
-		android:text="Status Gizi : Baik">
+		android:text="@string/status_gizi">
 	</TextView>
 	
     <!-- enter -->
@@ -95,7 +95,7 @@
 		android:layout_width="150dp"
 		android:layout_height="40dp"
 		android:id="@+id/kembali" 
-		android:text="Kembali">
+		android:text="@string/btnKembali">
 	</Button>
  
 </LinearLayout>

@@ -6,106 +6,100 @@
     android:gravity="center"
     android:background="@drawable/bg28">
     
-    <TextView
-		android:layout_width="fill_parent"  
-		android:layout_height="wrap_content" 
-		android:gravity="center"
-		android:text=" ">
-	</TextView>
-
-    <TextView
-		android:layout_width="fill_parent"  
-		android:layout_height="wrap_content" 
-		android:gravity="center"
-		android:text=" ">
-	</TextView>
-
-    <TextView
-		android:layout_width="fill_parent"  
-		android:layout_height="wrap_content" 
-		android:gravity="center"
-		android:text=" ">
-	</TextView>
-	
-    <TextView
-		android:layout_width="fill_parent"  
-		android:layout_height="wrap_content" 
-		android:gravity="center"
-		android:text=" ">
-	</TextView>
-	    	    	
-	<TextView
-		android:layout_width="fill_parent"  
-		android:layout_height="wrap_content" 
-		android:text="">
-	</TextView>
-		
-	    <Button 
+	<!-- blank -->
+    	<TextView
 			android:layout_width="fill_parent"  
 			android:layout_height="wrap_content" 
-			android:id="@+id/PPA" 
-			android:text="Pertumbuhan dan Perkembangan Anak">
-		</Button>
-
+			android:text="">
+		</TextView>
 	
-	<TextView
-		android:layout_width="fill_parent"  
-		android:layout_height="wrap_content" 
-		android:text="">
-	</TextView>
-
-		
-	    <Button 
+	    <TextView
 			android:layout_width="fill_parent"  
 			android:layout_height="wrap_content"
-			android:id="@+id/imunisasi" 
-			android:text="Pemberian Imunisasi">
-		</Button>
+			android:text="">
+		</TextView>
 	
-	<TextView
-		android:layout_width="fill_parent"  
-		android:layout_height="wrap_content" 
-		android:text="">
-	</TextView>
-	
-	<!-- Untuk menampilkan level user, apakah Admin atau Member -->
-	<!-- <TextView android:id="@+id/txtLevel"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dip"
-            android:textSize="18dip"/> -->
-	
-		
-	    <Button 
+	    <TextView
 			android:layout_width="fill_parent"  
-			android:layout_height="wrap_content"
-			android:id="@+id/PKVDT" 
-			android:text="Pemberian Kapsul Vitamin A Dosis Tinggi ">
-		</Button>
+			android:layout_height="wrap_content" 
+			android:text="">
+		</TextView>
+		
+	    <TextView
+			android:layout_width="fill_parent"  
+			android:layout_height="wrap_content" 
+			android:text="">
+		</TextView>
+		    	    	
+		<TextView
+			android:layout_width="fill_parent"  
+			android:layout_height="wrap_content" 
+			android:text="">
+		</TextView>
 	
-	<TextView
+	<!-- Pertumbuhan dan Perkembangan Anak -->	
+	<Button 
 		android:layout_width="fill_parent"  
 		android:layout_height="wrap_content" 
-		android:text="">
-	</TextView>
-	
-	<TextView
+		android:id="@+id/PPA" 
+		android:text="@string/btnTumbuhKembang">
+	</Button>
+
+	<!-- blank -->
+		<TextView
+			android:layout_width="fill_parent"  
+			android:layout_height="wrap_content" 
+			android:text="">
+		</TextView>
+
+	<!-- Pemberian Imunisasi -->	
+	<Button 
+		android:id="@+id/imunisasi" 
 		android:layout_width="fill_parent"  
-		android:layout_height="wrap_content" 
-		android:text="">
-	</TextView>
+		android:layout_height="wrap_content"
+		android:text="@string/btnImunisasi">
+	</Button>
 	
-	<TextView
+	<!-- blank -->
+		<TextView
+			android:layout_width="fill_parent"  
+			android:layout_height="wrap_content" 
+			android:text="">
+		</TextView>
+	
+	<!-- Pemberian Kapsul Vitamin Dosis Tinggi -->	
+	<Button 
 		android:layout_width="fill_parent"  
-		android:layout_height="wrap_content" 
-		android:text="">
-	</TextView>
+		android:layout_height="wrap_content"
+		android:id="@+id/PKVDT" 
+		android:text="@string/pkvdt">
+	</Button>
 	
-	    <Button 
-			android:layout_width="150dp"
-			android:layout_height="40dp" 
-			android:id="@+id/home_childcare" 
-			android:text="Menu Childcare">
-		</Button>
+	<!-- blank -->
+		<TextView
+			android:layout_width="fill_parent"  
+			android:layout_height="wrap_content" 
+			android:text="">
+		</TextView>
+	
+		<TextView
+			android:layout_width="fill_parent"  
+			android:layout_height="wrap_content" 
+			android:text="">
+		</TextView>
+		
+		<TextView
+			android:layout_width="fill_parent"  
+			android:layout_height="wrap_content" 
+			android:text="">
+		</TextView>
+		
+	<!-- Kembali ke menu Childcare -->
+	<Button 
+		android:layout_width="150dp"
+		android:layout_height="40dp" 
+		android:id="@+id/home_childcare" 
+		android:text="@string/menu_childcare">
+	</Button>
 
 </LinearLayout>

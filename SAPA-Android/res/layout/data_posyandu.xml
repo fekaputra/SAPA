@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
-   
-    <ScrollView 
-        android:layout_width="fill_parent"
-		android:layout_height="fill_parent">
+<ScrollView 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
 		
-        <LinearLayout
-		    android:layout_width="match_parent"
-		    android:layout_height="match_parent"
-		    android:orientation="vertical" >
+    <LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical" >
 	    
-		    <TextView
-				android:layout_width="fill_parent"  
-				android:layout_height="wrap_content" 
-				android:gravity="center"
-				android:text="Data Posyandu" 
-				android:textStyle="bold">
-			</TextView>
-			
+        <!-- Title -->
+		<TextView
+			android:layout_width="fill_parent"  
+			android:layout_height="wrap_content" 
+			android:gravity="center"
+			android:text="@string/title" 
+			android:textStyle="bold">
+		</TextView>
+		
+		<!-- blank -->	
 		    <TextView
 				android:layout_width="fill_parent"  
 				android:layout_height="10dp" 
@@ -28,119 +26,124 @@
 				android:text="" >
 			</TextView>	
 			
-		    <LinearLayout
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content" >
+		<!-- Input data kecamatan -->
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
 				
-				<TextView 
-					android:layout_width="100dp" 
-					android:layout_height="wrap_content" 		
-					android:gravity="center_vertical"
-					android:text="*Kecamatan :">
-				</TextView>
+			<TextView 
+				android:layout_width="100dp" 
+				android:layout_height="wrap_content" 		
+				android:gravity="center_vertical"
+				android:text="@string/kecamatan">
+			</TextView>
 				
-				<EditText 
-				    android:layout_width="fill_parent" 
-					android:layout_height="40dp" 
-					android:id="@+id/new_kecamatan" 
-					></EditText>
-			</LinearLayout>
+			<EditText 
+			    android:layout_width="fill_parent" 
+			    android:hint=""
+				android:layout_height="40dp" 
+				android:id="@+id/new_kecamatan" >
+			</EditText>
+		</LinearLayout>
 		
-			<LinearLayout
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content" >
-				
-				<TextView 
-					android:layout_width="100dp" 
-					android:layout_height="wrap_content" 
-					android:text="*Desa :">
-				</TextView>
-				
-				<EditText 
-				    android:layout_width="fill_parent" 
-					android:layout_height="40dp" 
-					android:id="@+id/new_desa" 
-					></EditText>
-			</LinearLayout>
-		    
-		    <LinearLayout
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content" >
-			
-				<TextView
-					android:layout_width="100dp"  
-					android:layout_height="fill_parent" 
-					android:gravity="center_vertical"
-					android:text="* **Kelurahan :" >
-				</TextView>
-				
-				<EditText 
-					android:layout_width="fill_parent" 
-					android:layout_height="40dp"
-					android:id="@+id/nama_kelurahan">
-				</EditText>
-			</LinearLayout>
-			
-		    <TextView
-				android:layout_width="fill_parent"  
-				android:layout_height="wrap_content"
-				android:text="">
-			</TextView>
-		    
-		    <TextView
-				android:layout_width="fill_parent"  
-				android:layout_height="wrap_content" 
-				android:textStyle="italic"
-				android:textSize="12px"
-				android:text="* Wajib diisi">
-			</TextView>
-			
-		    <TextView
-				android:layout_width="fill_parent"  
-				android:layout_height="wrap_content" 
-				android:textStyle="italic"
-				android:textSize="12px"
-				android:text="** Jika tidak ada nama kelurahan, isi dengan nama desa">
-			</TextView>
-			
-		    <TextView
-				android:layout_width="fill_parent"  
-				android:layout_height="wrap_content"
-				android:text="">
-			</TextView>
-			
-			<LinearLayout
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content" >
-				
-				<TextView 
-					android:layout_width="190dp" 
-					android:layout_height="fill_parent" 
-					android:gravity="center_vertical"
-					android:text="Jumlah Posyandu yang Sudah Memiliki Bangunan :">
-				</TextView>
-				
-				<EditText 
-				    android:layout_width="fill_parent" 
-					android:layout_height="40dp" 
-					android:id="@+id/new_jml_bangunan" 
-					></EditText>
-			</LinearLayout>
-		    
-		    <TextView
-				android:layout_width="fill_parent"  
-				android:layout_height="10dp" 
-				android:gravity="center" 
-				android:text="" >
-			</TextView>
+		<!-- Input data desa -->
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
 			
 			<TextView 
-				android:layout_width="fill_parent" 
-				android:layout_height="wrap_content"
-				android:textStyle="bold" 
-				android:text="Data SKDN (Jiwa) ----------------------------------------">
+				android:layout_width="100dp" 
+				android:layout_height="wrap_content" 
+				android:text="@string/desa">
 			</TextView>
-		 
+				
+			<EditText 
+			    android:layout_width="fill_parent" 
+			    android:hint=""
+				android:layout_height="40dp" 
+				android:id="@+id/new_desa" >
+		    </EditText>
+		</LinearLayout>
+		    
+		<!-- Input data kelurahan -->
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
+		
+			<TextView
+				android:layout_width="100dp"  
+				android:layout_height="fill_parent" 
+				android:gravity="center_vertical"
+				android:text="@string/kelurahan" >
+			</TextView>
+				
+			<EditText 
+				android:layout_width="fill_parent" 
+				android:layout_height="40dp"
+				android:hint=""
+				android:id="@+id/nama_kelurahan">
+			</EditText>
+		</LinearLayout>
+			
+		<!-- blank -->	
+			<TextView
+				android:layout_width="fill_parent"  
+				android:layout_height="wrap_content"
+				android:text="">
+			</TextView>
+			
+		<!-- keterangan -->
+		<TextView
+			android:layout_width="fill_parent"  
+			android:layout_height="wrap_content" 
+			android:textStyle="italic"
+			android:textSize="12dp"
+			android:text="@string/keterangan">
+		</TextView>
+		
+		<!-- blank -->	
+		    <TextView
+				android:layout_width="fill_parent"  
+				android:layout_height="wrap_content"
+				android:text="">
+			</TextView>
+			
+		<!-- Input jumlah bangunan posyandu  -->
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
+			
+			<TextView 
+				android:layout_width="190dp" 
+				android:layout_height="fill_parent" 
+				android:gravity="center_vertical"
+				android:text="@string/jml_bangunan">
+			</TextView>
+				
+			<EditText 
+			    android:layout_width="fill_parent" 
+				android:layout_height="40dp" 
+				android:hint=""
+				android:id="@+id/new_jml_bangunan" >
+			</EditText>
+		</LinearLayout>
+		
+		<!-- blank -->
+		    <TextView
+				android:layout_width="fill_parent"  
+				android:layout_height="10dp" 
+				android:text="" >
+			</TextView>
+			
+		<!-- title SKDN -->	
+		<TextView 
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:textStyle="bold" 
+			android:text="@string/title_skdn">
+		</TextView>
+		
+		<!-- blank -->	
 		    <TextView
 				android:layout_width="fill_parent"  
 				android:layout_height="10dp" 
@@ -148,80 +151,85 @@
 				android:text="" >
 			</TextView>
 			
-			<LinearLayout
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content" >
+		<!-- Input S dan K-->	
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
+			
+			<TextView 
+				android:layout_width="30dp" 
+				android:layout_height="wrap_content" 
+				android:text="@string/s">
+			</TextView>
 				
-				<TextView 
-					android:layout_width="30dp" 
-					android:layout_height="wrap_content" 
-					android:text="  S :   ">
-				</TextView>
-				
-				<EditText 
-				    android:layout_width="90dp" 
-					android:layout_height="40dp" 
-					android:id="@+id/new_s" 
-					></EditText>
+			<EditText 
+			    android:layout_width="90dp" 
+				android:layout_height="40dp" 
+				android:hint=""
+				android:id="@+id/new_s"> 
+			</EditText>
 				
 				<TextView
 					android:layout_width="wrap_content"  
 					android:layout_height="10dp" 
 					android:gravity="center" 
-					android:text="                     " >
+					android:text="@string/space" >
 				</TextView>
 				
-				<TextView 
-					android:layout_width="30dp" 
-					android:layout_height="wrap_content" 
-					android:text="  K :   ">
-				</TextView>
+			<TextView 
+				android:layout_width="30dp" 
+				android:layout_height="wrap_content" 
+				android:text="@string/k">
+			</TextView>
 				
-				<EditText 
-				    android:layout_width="90dp" 
-					android:layout_height="40dp" 
-					android:id="@+id/new_k" 
-					></EditText>
-			</LinearLayout>
+			<EditText 
+			    android:layout_width="90dp" 
+				android:layout_height="40dp" 
+				android:hint=""
+				android:id="@+id/new_k" >
+			</EditText>
+		</LinearLayout>
 		
-			<LinearLayout
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content" >
+		<!-- Input D dan N -->
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
 				
-				<TextView 
-					android:layout_width="30dp" 
-					android:layout_height="wrap_content" 
-					android:text="  D :   ">
-				</TextView>
+			<TextView 
+				android:layout_width="30dp" 
+				android:layout_height="wrap_content" 
+				android:text="@string/d">
+			</TextView>
 				
-				<EditText 
-				    android:layout_width="90dp" 
-					android:layout_height="40dp" 
-					android:id="@+id/new_d" 
-					></EditText>
+			<EditText 
+			    android:layout_width="90dp" 
+				android:layout_height="40dp"
+				android:hint="" 
+				android:id="@+id/new_d"> 
+			</EditText>
 				
 				<TextView
 					android:layout_width="wrap_content"  
 					android:layout_height="10dp" 
 					android:gravity="center" 
-					android:text="                     " >
+					android:text="@string/space" >
 				</TextView>
 				
-				<TextView 
-					android:layout_width="30dp" 
-					android:layout_height="wrap_content" 
-					android:text="  N :   ">
-				</TextView>
+			<TextView 
+				android:layout_width="30dp" 
+				android:layout_height="wrap_content" 
+				android:text="@string/n">
+			</TextView>
 				
-				<EditText 
-				    android:layout_width="90dp" 
-					android:layout_height="40dp" 
-					android:id="@+id/new_n" 
-					></EditText>
-			</LinearLayout>
+			<EditText 
+			    android:layout_width="90dp" 
+				android:layout_height="40dp" 
+				android:hint=""
+				android:id="@+id/new_n"> 
+			</EditText>
+		</LinearLayout>
 			
-			<!-- Program Pokok -->
-			
+		<!-- blank -->	
 			<TextView
 				android:layout_width="fill_parent"  
 				android:layout_height="10dp" 
@@ -229,43 +237,44 @@
 				android:text="" >
 			</TextView>
 			
-			<LinearLayout
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content" >
+		<!-- Input Program Pengembangan/ Integrasi -->	
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
 				
-				<TextView 
-					android:layout_width="190dp" 
-					android:layout_height="fill_parent" 
-					android:gravity="center_vertical"
-					android:text="Program Pengembangan/ Integrasi :">
-				</TextView>
+			<TextView 
+				android:layout_width="190dp" 
+				android:layout_height="fill_parent" 
+				android:gravity="center_vertical"
+				android:text="@string/prog_pengembangan">
+			</TextView>
 				
-				<EditText 
-				    android:layout_width="fill_parent" 
-					android:layout_height="40dp" 
-					android:id="@+id/new_progPengembangan" 
-					></EditText>
-			</LinearLayout>
-			
+			<EditText 
+			    android:layout_width="fill_parent" 
+				android:layout_height="40dp" 
+				android:hint=""
+				android:id="@+id/new_progPengembangan" >
+			</EditText>
+		</LinearLayout>
+		
+		<!-- blank -->	
 			<TextView
 				android:layout_width="fill_parent"  
-				android:layout_height="10dp" 
-				android:gravity="center" 
+				android:layout_height="10dp"  
 				android:text="" >
 			</TextView>
 			
-			<LinearLayout
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:gravity="center">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center">
 				
-				<Button 
-				    android:layout_width="100dp"
-					android:layout_height="45dp" 
-					android:id="@+id/daftar" 
-					android:text="SUBMIT">
-				</Button>
-			</LinearLayout>
-		</LinearLayout>	
-	</ScrollView>
-</LinearLayout>
+			<Button 
+			    android:layout_width="100dp"
+				android:layout_height="45dp" 
+				android:id="@+id/daftar" 
+				android:text="@string/btnSubmit">
+			</Button>
+		</LinearLayout>
+	</LinearLayout>	
+</ScrollView>

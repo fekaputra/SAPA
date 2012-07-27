@@ -4,6 +4,7 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
     
+    <!-- Gambar Peta -->
     <ImageView
 	   	android:id="@+id/imageView1"
 	    android:layout_width="fill_parent"

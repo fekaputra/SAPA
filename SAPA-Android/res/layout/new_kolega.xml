@@ -5,17 +5,21 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="@drawable/bg22">
-		
-    <TextView 
-	    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
-		android:gravity="center" android:text="" >
-	</TextView>
 	
-	<TextView 
-	    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
-		android:gravity="center" android:text="" >
-	</TextView>
+    <!-- blank -->	
+	    <TextView 
+		    android:layout_width="fill_parent"  
+		    android:layout_height="wrap_content"
+		    android:text="" >
+		</TextView>
+		
+	 	<TextView 
+		    android:layout_width="fill_parent"  
+		    android:layout_height="wrap_content"
+		    android:text="" >
+		</TextView>
     
+	<!-- Nama -->
     <LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" >
@@ -25,16 +29,18 @@
 			android:layout_height="fill_parent" 
 			android:gravity="center_vertical"
 			android:textColor="#696969"
-			android:text="Nama" >
+			android:text="@string/nama" >
 		</TextView>
 		
 		<EditText 
 			android:layout_width="fill_parent" 
 			android:layout_height="40dp"
+			android:hint=""
 			android:id="@+id/nama_kolega">
 		</EditText>
 	</LinearLayout>
     
+    <!-- Ruang Lingkup/ Bidang -->
     <LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" >
@@ -44,17 +50,18 @@
 			android:layout_height="fill_parent"
 			android:gravity="center_vertical"
 			android:textColor="#696969"
-			android:text="Bidang/ Lingkup" >
+			android:text="@string/lingkup" >
 		</TextView>
 		
 		<EditText 
 			android:layout_width="fill_parent" 
 			android:layout_height="40dp"
+			android:hint=""
 			android:id="@+id/bidang_kolega">
-		</EditText>
-		
+		</EditText>	
 	</LinearLayout>
 
+	<!-- Lokasi -->
 	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" >
@@ -64,44 +71,49 @@
 			android:layout_height="fill_parent" 
 			android:gravity="center_vertical"
 			android:textColor="#696969"
-			android:text="Lokasi">
+			android:text="@string/lokasi">
 		</TextView>
 		
 		<EditText 
 		    android:layout_width="fill_parent" 
 			android:layout_height="40dp"
+			android:hint=""
 			android:id="@+id/lokasi_kolega" 
 			></EditText>
 	</LinearLayout>
 	
-	<TextView 
-	    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
-		android:gravity="center" android:text="" >
-	</TextView>
+	<!-- blank -->	
+	    <TextView 
+		    android:layout_width="fill_parent"  
+		    android:layout_height="wrap_content"
+		    android:text="" >
+		</TextView>
 	
-	<TextView 
-	    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
-		android:gravity="center" android:text="" >
-	</TextView>
-		
+		<TextView 
+		    android:layout_width="fill_parent"  
+		    android:layout_height="wrap_content"
+		    android:text="" >
+		</TextView>
+			
 	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:gravity="center">
 		
+		<!-- Submit -->
 		<Button 
 		    android:layout_width="100dp"
 			android:layout_height="wrap_content" 
 			android:id="@+id/kirim" 
-			android:text="Kirim">
+			android:text="@string/btnSubmit">
 		</Button>
 		
+		<!-- Kembali -->
 		<Button 
 		    android:layout_width="100dp"
 			android:layout_height="wrap_content" 
 			android:id="@+id/kembali" 
-			android:text="Kembali">
+			android:text="@string/btnKembali">
 		</Button>
 	</LinearLayout>
-
 </LinearLayout>

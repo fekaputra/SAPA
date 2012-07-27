@@ -4,14 +4,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/bg30">
-		
-    <TextView
-		android:layout_width="fill_parent"  
-		android:layout_height="wrap_content" 
-		android:gravity="center" 
-		android:text="" >
-	</TextView>
+	
+    <!-- blank -->	
+	    <TextView
+			android:layout_width="fill_parent"  
+			android:layout_height="wrap_content"
+			android:text="" >
+		</TextView>
     
+    <!-- Nama Posyandu -->
     <LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" >
@@ -21,16 +22,18 @@
 			android:layout_height="fill_parent" 
 			android:gravity="center_vertical"
 			android:textColor="#ffffff"
-			android:text="Nama Posyandu" >
+			android:text="@string/nama_posyandu" >
 		</TextView>
 		
 		<EditText 
 			android:layout_width="fill_parent" 
 			android:layout_height="40dp"
+			android:hint=""
 			android:id="@+id/nama_posyandu">
 		</EditText>
 	</LinearLayout>
     
+    <!-- Nama Anak -->
     <LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" >
@@ -40,17 +43,18 @@
 			android:layout_height="fill_parent"
 			android:gravity="center_vertical"
 			android:textColor="#ffffff"
-			android:text="Nama Anak" >
+			android:text="@string/nama_anak" >
 		</TextView>
 		
 		<EditText 
 			android:layout_width="fill_parent" 
 			android:layout_height="40dp"
+			android:hint=""
 			android:id="@+id/new_namaAnak">
 		</EditText>
-		
 	</LinearLayout>
 	
+	<!-- Jenis Kelamin -->
 	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" >
@@ -60,7 +64,7 @@
 			android:layout_height="fill_parent" 
 			android:gravity="center_vertical"
 			android:textColor="#ffffff"
-			android:text="Jenis Kelamin">
+			android:text="@string/jenis_kelamin">
 		</TextView>
 		
 		<RadioGroup 
@@ -69,22 +73,23 @@
 		    android:id="@+id/radioGroupSex">
 		    
 		    <RadioButton 
+		        android:id="@+id/radioMale"
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content" 
 		        android:checked="true"
-		        android:id="@+id/radioMale"
-		        android:text="laki-laki">   
+		        android:text="@string/men">   
 		    </RadioButton>
 		    
 		    <RadioButton 
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content" 
 		        android:id="@+id/radioFemale"
-		        android:text="Perempuan">
+		        android:text="@string/female">
 		    </RadioButton>
 		</RadioGroup>
 	</LinearLayout>
 
+	<!-- Tanggal Lahir -->
 	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" >
@@ -94,16 +99,18 @@
 			android:layout_height="fill_parent" 
 			android:gravity="center_vertical"
 			android:textColor="#ffffff"
-			android:text="Tanggal Lahir">
+			android:text="@string/tglLahir">
 		</TextView>
 		
 		<EditText 
 		    android:layout_width="fill_parent" 
 			android:layout_height="40dp"
+			android:hint=""
 			android:id="@+id/new_tglLahir" 
 			></EditText>
 	</LinearLayout>
 	
+	<!-- Berat Badan Saat Lahir -->
 	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" >
@@ -113,16 +120,18 @@
 			android:layout_height="fill_parent" 
 			android:gravity="center_vertical"
 			android:textColor="#ffffff"
-			android:text="Berat Badan Saat Lahir">
+			android:text="@string/berat_badan">
 		</TextView>
 		
 		<EditText 
 		    android:layout_width="fill_parent" 
-			android:layout_height="40dp" 
+			android:layout_height="40dp"
+			android:hint="" 
 			android:id="@+id/new_bbLahir" 
 			></EditText>
 	</LinearLayout>
 	
+	<!-- Nama Ibu -->
 	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" >
@@ -132,17 +141,19 @@
 			android:layout_height="fill_parent"
 			android:gravity="center_vertical"
 			android:textColor="#ffffff"
-			android:text="Nama Ibu">
+			android:text="@string/nama_ibu">
 		</TextView>
 		
 		<EditText 
 		    android:layout_width="fill_parent" 
 			android:layout_height="40dp" 
-			android:id="@+id/new_namaIbu" 
-			></EditText>
+			android:hint=""
+			android:id="@+id/new_namaIbu" >
+			</EditText>
 	</LinearLayout>
 	
-		<LinearLayout
+	<!-- Nama Ayah -->
+	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" >
 		
@@ -151,47 +162,41 @@
 			android:layout_height="fill_parent" 
 			android:gravity="center_vertical"
 			android:textColor="#ffffff"
-			android:text="Nama Ayah">
+			android:text="@string/nama_ayah">
 		</TextView>
 		
 		<EditText 
 		    android:layout_width="fill_parent" 
 			android:layout_height="40dp" 
+			android:hint=""
 			android:id="@+id/new_namaAyah" 
 			></EditText>
 	</LinearLayout>
 
-	<TextView
-		android:layout_width="fill_parent"  
-		android:layout_height="wrap_content" 
-		android:gravity="center" 
-		android:text="" >
-	</TextView>
+	<!-- blank -->
+		<TextView
+			android:layout_width="fill_parent"  
+			android:layout_height="wrap_content" 
+			android:text="" >
+		</TextView>
 	
 	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:gravity="center">
 		
-		<Button 
-		    android:layout_width="100dp"
-			android:layout_height="40dp" 
+		<Button  
 			android:id="@+id/daftar" 
-			android:text="Daftar">
+		    android:layout_width="100dp"
+			android:layout_height="40dp"
+			android:text="@string/btnDaftar">
 		</Button>
 		
 		<Button 
+			android:id="@+id/kembali"
 		    android:layout_width="100dp"
-			android:layout_height="40dp" 
-			android:id="@+id/kembali" 
-			android:text="Kembali">
+			android:layout_height="40dp"  
+			android:text="@string/btnKembali">
 		</Button>
 	</LinearLayout>
-	
-<!-- 	<ListView
-		android:id="@+id/listView1"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content" >
-	</ListView> -->
-
 </LinearLayout>

@@ -5,15 +5,19 @@
     android:orientation="vertical" 
     android:background="@drawable/bg30">
 		
-    <TextView 
-	    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
-		android:gravity="center" android:text="" >
-	</TextView>
-	<TextView 
-	    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
-		android:gravity="center" android:text="" >
-	</TextView>
+    <!-- blank -->
+	    <TextView 
+		    android:layout_width="fill_parent"  
+		    android:layout_height="wrap_content"  
+			android:text="" >
+		</TextView>
+		
+		<TextView 
+		    android:layout_width="fill_parent"  
+		    android:layout_height="wrap_content"  
+			android:text="" />
     
+	<!-- Nama Pelapor -->
     <LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" >
@@ -23,16 +27,18 @@
 			android:layout_height="fill_parent" 
 			android:gravity="center_vertical"
 			android:textColor="#ffffff"
-			android:text="Nama Pelapor" >
+			android:text="@string/namaPelapor" >
 		</TextView>
 		
 		<EditText 
 			android:layout_width="fill_parent" 
 			android:layout_height="40dp"
+			android:hint=""
 			android:id="@+id/nama_pelapor">
 		</EditText>
 	</LinearLayout>
 	
+	<!-- Lokasi -->
 	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" >
@@ -42,16 +48,18 @@
 			android:layout_height="fill_parent" 
 			android:gravity="center_vertical"
 			android:textColor="#ffffff"
-			android:text="Lokasi">
+			android:text="@string/lokasi">
 		</TextView>
 		
 		<EditText 
 		    android:layout_width="fill_parent" 
 			android:layout_height="40dp" 
-			android:id="@+id/lokasi" 
-			></EditText>
+			android:hint=""
+			android:id="@+id/lokasi" >
+		</EditText>
 	</LinearLayout>    
 	
+    <!-- Gejala/ Keluhan -->
     <LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" >
@@ -61,7 +69,7 @@
 			android:layout_height="fill_parent"
 			android:gravity="center_vertical"
 			android:textColor="#ffffff"
-			android:text="Gejala/ Keluhan" >
+			android:text="@string/gejala" >
 		</TextView>
 		
 		<EditText
@@ -75,6 +83,7 @@
 		</EditText>
 	</LinearLayout>   
 	
+	<!-- Laporan -->
 	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" >
@@ -84,7 +93,7 @@
 			android:layout_height="fill_parent"
 			android:gravity="center_vertical"
 			android:textColor="#ffffff"
-			android:text="Laporan">
+			android:text="@string/laporan">
 		</TextView>
 
 		<EditText
@@ -98,6 +107,7 @@
 		</EditText>
 	</LinearLayout>
 	
+    <!-- Tag -->
     <LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" >
@@ -106,66 +116,71 @@
 			android:layout_width="90dp"  
 			android:layout_height="wrap_content"
 			android:textColor="#ffffff"
-			android:text="Tag" >
+			android:text="@string/tag" >
 		</TextView>
 		
 		<EditText 
 			android:layout_width="fill_parent" 
 			android:layout_height="wrap_content"
+			android:hint=""
 			android:id="@+id/tag">
 		</EditText>				
 	</LinearLayout>
 
+	<!-- Keterangan -->
 	<TextView
 		android:layout_width="fill_parent"  
 		android:layout_height="wrap_content"
-			android:textColor="#ffffff"
+		android:textColor="#ffffff"
 		android:textStyle="italic"
-		android:text="* Pisahkan tag dengan titik koma (;)" >
+		android:text="@string/keterangan4" >
 	</TextView>
     
-	<TextView 
-	    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
-		android:gravity="center" android:text="" >
-	</TextView>
+	<!-- blank -->
+		<TextView 
+		    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
+			android:gravity="center" android:text="" >
+		</TextView>
+			
+		<TextView 
+		    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
+			android:gravity="center" android:text="" >
+		</TextView>
 		
-	<TextView 
-	    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
-		android:gravity="center" android:text="" >
-	</TextView>
-	
-	<TextView 
-	    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
-		android:gravity="center" android:text="" >
-	</TextView>
-	
-	<TextView 
-	    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
-		android:gravity="center" android:text="" >
-	</TextView>
-	
-	<TextView 
-	    android:layout_width="fill_parent"  android:layout_height="10dp" 
-		android:gravity="center" android:text="" >
-	</TextView>
+		<TextView 
+		    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
+			android:gravity="center" android:text="" >
+		</TextView>
+		
+		<TextView 
+		    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
+			android:gravity="center" android:text="" >
+		</TextView>
+		
+		<TextView 
+		    android:layout_width="fill_parent"  android:layout_height="10dp" 
+			android:gravity="center" android:text="" >
+		</TextView>
 	
 	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:gravity="center">
 		
+		<!-- Kirim -->
 		<Button 
 		    android:layout_width="100dp"
 			android:layout_height="wrap_content" 
 			android:id="@+id/kirim" 
-			android:text="Kirim">
+			android:text="@string/btnSubmit">
 		</Button>
 		
+		<!-- Kembali -->
 		<Button 
 		    android:layout_width="150dp"
 			android:layout_height="wrap_content" 
 			android:id="@+id/home_report" 
-			android:text="Kembali Ke Menu">
+			android:text="@string/btnKembali">
 		</Button>
 	</LinearLayout>	
 </LinearLayout>

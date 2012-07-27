@@ -5,6 +5,7 @@
 	android:orientation="vertical"
 	android:background="@drawable/bg10">
 	
+    <!-- blank -->
     <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text=""></TextView>
     <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text=""></TextView>
 	<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text=""></TextView>
@@ -16,29 +17,30 @@
 	<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text=""></TextView>
 	<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text=""></TextView>
 	
+	<!-- username -->
 	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" >
 		
 		<EditText 
+		    android:id="@+id/username"
 			android:layout_width="fill_parent" 
 			android:layout_height="wrap_content"
-			android:hint="Username"
-			android:id="@+id/username">
+			android:hint="@string/username">
 		</EditText>
-		
 	</LinearLayout>
 	
+	<!-- password -->
 	<LinearLayout
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content" >
 		
 		<EditText 
+			android:id="@+id/passwd_input"
 		    android:layout_width="fill_parent" 
 			android:layout_height="wrap_content" 
-			android:hint="Password"
-			android:inputType="textPassword"
-			android:id="@+id/passwd_input" >
+			android:hint="@string/password"
+			android:inputType="textPassword" >
 		</EditText>
 	</LinearLayout>
 	
@@ -47,26 +49,28 @@
 		android:layout_height="wrap_content"
 		android:gravity="center">
 		
+		<!-- Login -->
 		<Button 
-		    android:layout_width="100dp"
-			android:layout_height="wrap_content" 
 			android:id="@+id/masuk" 
-			android:text="LOGIN" 
-			android:layout_below="@+id/passwd_input">
-		</Button>
-		
-		<Button 
 		    android:layout_width="100dp"
 			android:layout_height="wrap_content" 
-			android:id="@+id/daftar" 
-			android:text="REGISTER">
+			android:text="@string/btnLogin">
 		</Button>
 		
+		<!-- Register -->
+		<Button 
+			android:id="@+id/daftar"
+		    android:layout_width="100dp"
+			android:layout_height="wrap_content"  
+			android:text="@string/register">
+		</Button>
+		
+		<!-- Exit -->
 		<Button 
 		    android:layout_width="100dp"
 			android:layout_height="wrap_content" 
 			android:id="@+id/close" 
-			android:text="EXIT" >
+			android:text="@string/exit" >
 		</Button>
 	</LinearLayout>
 </LinearLayout>

@@ -11,6 +11,7 @@
         android:layout_margin="10dip"
         android:layout_weight="0.46" />
 
+    <!-- Download -->
     <Button
         android:id="@+id/btnDownload"
         android:layout_width="wrap_content"

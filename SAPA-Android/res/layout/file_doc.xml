@@ -4,14 +4,13 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
-
     <WebView 
         android:id="@+id/webview"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.46"
-    />
+        android:layout_weight="0.46"/>
     
+    <!-- Download -->
     <Button
         android:id="@+id/btnDownload"
         android:layout_width="wrap_content"

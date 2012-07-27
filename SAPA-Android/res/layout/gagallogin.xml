@@ -4,11 +4,21 @@
 	android:layout_height="fill_parent"
 	android:orientation="vertical" >
 	
+		<TextView 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:text=""/>
+	
 	<TextView 
 		android:layout_width="fill_parent"
-		android:layout_height="wrap_content" 
-		android:text=""
-		/>
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:text="@string/warn_login"/>
+	
+		<TextView 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:text=""/>
 	
 	<LinearLayout
 		android:layout_width="match_parent"
@@ -16,11 +26,10 @@
 		android:gravity="center">
 		
 		<Button
-		android:layout_width="150dp"
-		android:layout_height="wrap_content"
-		android:text="LOGIN"
-		android:id="@+id/btnHome"
-		/>
+			android:id="@+id/btnHome"
+			android:layout_width="150dp"
+			android:layout_height="wrap_content"
+			android:text="@string/btnLogin"/>
 	</LinearLayout>
 </LinearLayout>
 

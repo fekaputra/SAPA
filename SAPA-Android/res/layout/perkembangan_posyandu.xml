@@ -9,33 +9,38 @@
 		android:layout_height="wrap_content"
 		android:gravity="center">
     	
+	    <!-- Input data baru -->
     	<Button 
 		    android:layout_width="wrap_content"
 			android:layout_height="45dp" 
 			android:id="@+id/data_posyandu" 
-			android:text="Input Data Posyandu">
+			android:text="@string/btnDataPosyandu">
 		</Button>
 		
-    	<Button 
-	    android:layout_width="150dp"
-		android:layout_height="45dp" 
-		android:id="@+id/kembali" 
-		android:text="e-Report">
-	</Button>
+    	<!-- Kembali ke menu e-report -->
+    	<Button  
+			android:id="@+id/kembali"
+		    android:layout_width="150dp"
+			android:layout_height="45dp" 
+			android:text="@string/btnKembali">
+		</Button>
 	</LinearLayout>
 	
+	<!-- blank -->
+		<TextView 
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content" 
+			android:text="">
+		</TextView>
+	
+	<!-- Pilih Kelurahan/ Desa -->
 	<TextView 
 		android:layout_width="fill_parent" 
 		android:layout_height="wrap_content" 
-		android:text="">
+		android:text="@string/pilih_kelurahan">
 	</TextView>
 	
-	<TextView 
-		android:layout_width="fill_parent" 
-		android:layout_height="wrap_content" 
-		android:text="Pilih Kelurahan/ Desa">
-	</TextView>
-	
+	<!-- Spinner Nama Kelurahan/ Desa -->
 	<LinearLayout
         android:layout_width="match_parent"
 		android:layout_height="wrap_content"
@@ -45,52 +50,55 @@
 			android:id="@+id/spinner1"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content" >
-			<!-- Preview: listitem=@android:layout/simple_spinner_item -->
 		</Spinner>
-		
 	</LinearLayout>
 	
-	<TextView 
-		android:layout_width="fill_parent" 
-		android:layout_height="wrap_content" 
-		android:text="">
-	</TextView>
+	<!-- blank -->
+		<TextView 
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content" 
+			android:text="">
+		</TextView>
 	
 	<TextView 
 		android:layout_width="fill_parent" 
 		android:layout_height="wrap_content"
 		android:textStyle="italic"
-		android:textSize="12px" 
-		android:text="Pilih kelurahan/desa sebelum melakukan input strata, kader atau program pokok">
+		android:textSize="12dp" 
+		android:text="@string/keterangan2">
 	</TextView>
 	
-	<TextView 
-		android:layout_width="fill_parent" 
-		android:layout_height="wrap_content" 
-		android:text="">
-	</TextView>
+	<!-- blank -->
+		<TextView 
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content" 
+			android:text="">
+		</TextView>
 	
+	<!-- Strata -->	
 	<Button 
+		android:id="@+id/strata"
 	    android:layout_width="250dp"
 		android:layout_height="45dp" 
-		android:layout_gravity="center"
-		android:id="@+id/strata" 
-		android:text="Input Data Strata Posyandu">
+		android:layout_gravity="center" 
+		android:text="@string/btnStrata">
 	</Button>
 	
+	<!-- Kader -->
 	<Button 
-	    android:layout_width="250dp"
-		android:layout_height="45dp" 
-		android:layout_gravity="center"
 		android:id="@+id/kader" 
-		android:text="Input Data Kader">
+	    android:layout_width="250dp"
+		android:layout_height="45dp" 
+		android:layout_gravity="center"
+		android:text="@string/btnKader">
 	</Button>
 	
+	<!-- Program Pokok -->
 	<Button 
+		android:id="@+id/prog_pokok"
 	    android:layout_width="250dp"
 		android:layout_height="45dp"
-		android:layout_gravity="center" 
-		android:id="@+id/prog_pokok" 
-		android:text="Input Data Program Pokok">
+		android:layout_gravity="center"  
+		android:text="@string/btnProgramPokok">
 	</Button>
 </LinearLayout>

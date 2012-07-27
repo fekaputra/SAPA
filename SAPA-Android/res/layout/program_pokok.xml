@@ -1,182 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
-   
-    <ScrollView 
-        android:layout_width="fill_parent"
-		android:layout_height="fill_parent">
-		
-        <LinearLayout
-		    android:layout_width="match_parent"
-		    android:layout_height="match_parent"
-		    android:orientation="vertical" >
+<ScrollView 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	
+    <!-- Title -->	
+    <LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical" >
 	    
-		    <TextView
-				android:layout_width="fill_parent"  
-				android:layout_height="wrap_content" 
-				android:gravity="center"
-				android:text="Program Pokok" 
-				android:textStyle="bold">
-			</TextView>
-			
-		    <TextView
-				android:layout_width="fill_parent"  
-				android:layout_height="10dp" 
-				android:gravity="center" 
-				android:text="" >
-			</TextView>	
-			
-		    <LinearLayout
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content" >
-				
-				<TextView
-					android:layout_width="wrap_content"  
-					android:layout_height="wrap_content" 
-					android:gravity="center_vertical"
-					android:text="Id Kelurahan/ Desa : " >
-				</TextView>		
-				
-				<TextView
-					android:id="@+id/idKelurahan"
-					android:layout_width="fill_parent" 
-					android:layout_height="wrap_content" android:text="">
-				</TextView>
-			</LinearLayout>
-		    
-		    <TextView
-				android:layout_width="fill_parent"  
-				android:layout_height="10dp" 
-				android:gravity="center" 
-				android:text="" >
-			</TextView>	
-			
-		    <LinearLayout
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content" >
-				
-				<TextView 
-					android:layout_width="90dp" 
-					android:layout_height="wrap_content" 		
-					android:gravity="center_vertical"
-					android:text="KB :">
-				</TextView>
-				
-				<EditText 
-				    android:layout_width="fill_parent" 
-					android:layout_height="40dp" 
-					android:id="@+id/new_kb" 
-					></EditText>
-			</LinearLayout>
+		<TextView
+			android:layout_width="fill_parent"  
+			android:layout_height="wrap_content" 
+			android:gravity="center"
+			android:text="@string/title_program_pokok" 
+			android:textStyle="bold">
+		</TextView>
 		
-			<LinearLayout
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content" >
+		<!-- blank -->	
+		    <TextView
+				android:layout_width="fill_parent"  
+				android:layout_height="10dp" 
+				android:gravity="center" 
+				android:text="" >
+			</TextView>	
+		
+		<!-- Id Kelurahan/ Desa -->	
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
 				
-				<TextView 
-					android:layout_width="90dp" 
-					android:layout_height="wrap_content" 
-					android:text="KIA :">
-				</TextView>
+			<TextView
+				android:layout_width="wrap_content"  
+				android:layout_height="wrap_content" 
+				android:gravity="center_vertical"
+				android:text="@string/id_kelurahan" >
+			</TextView>		
 				
-				<EditText 
-				    android:layout_width="fill_parent" 
-					android:layout_height="40dp" 
-					android:id="@+id/new_kia" 
-					></EditText>
-			</LinearLayout>
-		    
-		    <LinearLayout
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content" >
-			
-				<TextView
-					android:layout_width="90dp"  
-					android:layout_height="fill_parent" 
-					android:gravity="center_vertical"
-					android:text="Gizi :" >
-				</TextView>
-				
-				<EditText 
-					android:layout_width="fill_parent" 
-					android:layout_height="40dp"
-					android:id="@+id/new_gizi">
-				</EditText>
-				
-			</LinearLayout>
-			
-		    <LinearLayout
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content" >
-			
-				<TextView
-					android:layout_width="90dp"  
-					android:layout_height="fill_parent" 
-					android:gravity="center_vertical"
-					android:text="Imunisasi :" >
-				</TextView>
-				
-				<EditText 
-					android:layout_width="fill_parent" 
-					android:layout_height="40dp"
-					android:id="@+id/new_imunisasi">
-				</EditText>
-				
-			</LinearLayout>
-			
-		    <LinearLayout
-				android:layout_width="match_parent"
+			<TextView
+				android:id="@+id/idKelurahan"
+				android:layout_width="fill_parent" 
 				android:layout_height="wrap_content">
-				
-				<TextView
-					android:layout_width="90dp"  
-					android:layout_height="fill_parent" 
-					android:gravity="center_vertical"
-					android:text="P2D :" >
-				</TextView>
-				
-				<EditText 
-					android:layout_width="fill_parent" 
-					android:layout_height="40dp"
-					android:id="@+id/new_p2d">
-				</EditText>
-			</LinearLayout>
+			</TextView>
+		</LinearLayout>
+		
+		<!-- blank -->
+		    <TextView
+				android:layout_width="fill_parent"  
+				android:layout_height="10dp"  
+				android:text="" >
+			</TextView>	
 			
+		<!-- KB -->
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
+				
+			<TextView 
+				android:layout_width="90dp" 
+				android:layout_height="wrap_content" 		
+				android:gravity="center_vertical"
+				android:text="@string/kb">
+			</TextView>
+				
+			<EditText 
+			    android:layout_width="fill_parent" 
+				android:layout_height="40dp" 
+				android:hint=""
+				android:id="@+id/new_kb" >
+			</EditText>
+		</LinearLayout>
+		
+		<!-- KIA -->
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
+				
+			<TextView 
+				android:layout_width="90dp" 
+				android:layout_height="wrap_content" 
+				android:text="@string/kia">
+			</TextView>
+				
+			<EditText 
+			    android:layout_width="fill_parent" 
+				android:layout_height="40dp" 
+				android:hint=""
+				android:id="@+id/new_kia"> 
+			</EditText>
+		</LinearLayout>
+		    
+		<!-- Gizi -->
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
+			
+			<TextView
+				android:layout_width="90dp"  
+				android:layout_height="fill_parent" 
+				android:gravity="center_vertical"
+				android:text="@string/gizi" >
+			</TextView>
+			
+			<EditText 
+				android:layout_width="fill_parent" 
+				android:layout_height="40dp"
+				android:hint=""
+				android:id="@+id/new_gizi">
+			</EditText>				
+		</LinearLayout>
+			
+		<!-- Imunisasi -->
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
+			
+			<TextView
+				android:layout_width="90dp"  
+				android:layout_height="fill_parent" 
+				android:gravity="center_vertical"
+				android:text="@string/imunisasi" >
+			</TextView>
+				
+			<EditText 
+				android:layout_width="fill_parent" 
+				android:layout_height="40dp"
+				android:hint=""
+				android:id="@+id/new_imunisasi">
+			</EditText>
+		</LinearLayout>
+			
+		<!-- P2D -->
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+				
+			<TextView
+				android:layout_width="90dp"  
+				android:layout_height="fill_parent" 
+				android:gravity="center_vertical"
+				android:text="@string/p2d" >
+			</TextView>
+				
+			<EditText 
+				android:layout_width="fill_parent" 
+				android:layout_height="40dp"
+				android:hint=""
+				android:id="@+id/new_p2d">
+			</EditText>
+		</LinearLayout>
+		
+		<!-- blank -->	
 			<TextView
 				android:layout_width="fill_parent"  
 				android:layout_height="10dp" 
-				android:gravity="center" 
 				android:text="" >
 			</TextView>
-			
-			<TextView
-				android:layout_width="fill_parent"  
-				android:layout_height="wrap_content"  
-				android:textStyle="italic"
-				android:text=" * Setelah mengisi data, tekan tombol submit kemudian tekan tombol Perkembangan Posyandu untuk kembali" >
-			</TextView>
-			
+		
+		<!-- blank -->	
 			<TextView
 				android:layout_width="fill_parent"  
 				android:layout_height="10dp" 
-				android:gravity="center" 
 				android:text="" >
 			</TextView>
 			
-			<LinearLayout
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:gravity="center">
-				
-				<Button 
-				    android:layout_width="100dp"
-					android:layout_height="45dp" 
-					android:id="@+id/daftar" 
-					android:text="SUBMIT">
-				</Button>
-			</LinearLayout>
-		</LinearLayout>	
-	</ScrollView>
-</LinearLayout>
+		<!-- Submit -->
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center">
+			
+			<Button 
+			    android:layout_width="100dp"
+				android:layout_height="45dp" 
+				android:id="@+id/daftar" 
+				android:text="@string/btnSubmit">
+			</Button>
+		</LinearLayout>
+	</LinearLayout>	
+</ScrollView>

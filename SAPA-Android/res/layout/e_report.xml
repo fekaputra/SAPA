@@ -13,118 +13,129 @@
             android:layout_margin="15dip"
             android:textSize="18dip"/> -->
 	
-	<TextView
-		android:layout_width="fill_parent"  
-		android:layout_height="wrap_content" 
-		android:text="">
-	</TextView>
+	<!-- blank -->
+		<TextView
+			android:layout_width="fill_parent"  
+			android:layout_height="wrap_content" 
+			android:text="">
+		</TextView>
 	
+	<!-- Menu Childcare -->
 	<LinearLayout
         android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:gravity="center_horizontal">
 		
 	    <Button 
-			android:layout_width="250dp"
-			android:layout_height="40dp" 
 			android:id="@+id/childcare" 
-			android:text="Childcare">
+			android:layout_width="250dp"
+			android:layout_height="40dp" 
+			android:text="@string/btnChildcare">
 		</Button>
 	</LinearLayout>
 	
-	<TextView
-		android:layout_width="fill_parent"  
-		android:layout_height="wrap_content" 
-		android:text="">
-	</TextView>
+	<!-- blank -->
+		<TextView
+			android:layout_width="fill_parent"  
+			android:layout_height="wrap_content" 
+			android:text="">
+		</TextView>
 	
+	<!-- Menu Disease -->
 	<LinearLayout
         android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:gravity="center_horizontal">
 		
 	    <Button 
+	        android:id="@+id/disease"
 			android:layout_width="250dp"
-			android:layout_height="40dp" 
-			android:id="@+id/disease" 
-			android:text="Disease">
+			android:layout_height="40dp"  
+			android:text="@string/btnDisease">
 		</Button>
 	</LinearLayout>
 	
-	<TextView
-		android:layout_width="fill_parent"  
-		android:layout_height="wrap_content" 
-		android:text="">
-	</TextView>
+	<!-- blank -->
+		<TextView
+			android:layout_width="fill_parent"  
+			android:layout_height="wrap_content" 
+			android:text="">
+		</TextView>
 	
+	<!-- Menu Special Occasion -->
 	<LinearLayout
         android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:gravity="center_horizontal">
 		
 	    <Button 
-			android:layout_width="250dp"
-			android:layout_height="40dp" 
 			android:id="@+id/specoccasion" 
-			android:text="Special Occasion">
+			android:layout_width="250dp"
+			android:layout_height="40dp" 
+			android:text="@string/btnSpecialOcc">
 		</Button>
 	</LinearLayout>
 	
-	<TextView
-		android:layout_width="fill_parent"  
-		android:layout_height="wrap_content" 
-		android:text="">
-	</TextView>
+	<!-- blank -->
+		<TextView
+			android:layout_width="fill_parent"  
+			android:layout_height="wrap_content" 
+			android:text="">
+		</TextView>
 	
+	<!-- Menu Perkembangan Posyandu -->
 	<LinearLayout
         android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:gravity="center_horizontal">
 		
 	    <Button 
+			android:id="@+id/perkembangan_posyandu"
 			android:layout_width="250dp"
-			android:layout_height="wrap_content" 
-			android:id="@+id/perkembangan_posyandu" 
-			android:text="Perkembangan Posyandu">
+			android:layout_height="wrap_content"  
+			android:text="@string/btnPerkembanganPosyandu">
 		</Button>
 	</LinearLayout>
 	
-	<TextView
-		android:layout_width="fill_parent"  
-		android:layout_height="wrap_content" 
-		android:text="">
-	</TextView>
+	<!-- blank -->
+		<TextView
+			android:layout_width="fill_parent"  
+			android:layout_height="wrap_content" 
+			android:text="">
+		</TextView>
 	
+	<!--  -->	
 	<LinearLayout
         android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:gravity="center_horizontal">
 		
 	    <Button 
-			android:layout_width="250dp"
-			android:layout_height="wrap_content" 
 			android:id="@+id/pkp_kecamatan" 
-			android:text="Kegiatan PKP Kecamatan">
+			android:layout_width="250dp"
+			android:layout_height="wrap_content" 
+			android:text="@string/btnPKPKecamatan">
 		</Button>
 	</LinearLayout>
 	
-	<TextView
-		android:layout_width="fill_parent"  
-		android:layout_height="wrap_content" 
-		android:text="">
-	</TextView>
-	
-	<TextView
-		android:layout_width="fill_parent"  
-		android:layout_height="wrap_content" 
-		android:text="">
-	</TextView>
-	
-	<TextView
-		android:layout_width="fill_parent"  
-		android:layout_height="wrap_content" 
-		android:text="">
-	</TextView>
+	<!-- blank -->
+		<TextView
+			android:layout_width="fill_parent"  
+			android:layout_height="wrap_content" 
+			android:text="">
+		</TextView>
+		
+		<TextView
+			android:layout_width="fill_parent"  
+			android:layout_height="wrap_content" 
+			android:text="">
+		</TextView>
+		
+		<TextView
+			android:layout_width="fill_parent"  
+			android:layout_height="wrap_content" 
+			android:text="">
+		</TextView>
 	
     <LinearLayout
         android:layout_width="match_parent"
@@ -132,10 +143,10 @@
 		android:gravity="center_horizontal">
 		
 	    <Button 
+	        android:id="@+id/homePage"
 			android:layout_width="150dp"
-			android:layout_height="40dp" 
-			android:id="@+id/homePage" 
-			android:text="Menu Utama">
+			android:layout_height="40dp"  
+			android:text="@string/btnMenuUtama">
 		</Button>
 	</LinearLayout>
 

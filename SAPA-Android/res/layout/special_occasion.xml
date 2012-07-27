@@ -5,16 +5,18 @@
     android:orientation="vertical"
     android:background="@drawable/bg30">
     
-    <TextView 
-	    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
-		android:gravity="center" android:text="" >
-	</TextView>
-	
-    <TextView 
-	    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
-		android:gravity="center" android:text="" >
-	</TextView>
+    <!-- blank -->
+	    <TextView 
+		    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
+			android:gravity="center" android:text="" >
+		</TextView>
+		
+	    <TextView 
+		    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
+			android:gravity="center" android:text="" >
+		</TextView>
     
+    <!-- Nama Kegiatan -->
     <LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" >
@@ -24,16 +26,18 @@
 			android:layout_height="fill_parent" 
 			android:gravity="center_vertical"
 			android:textColor="#ffffff"
-			android:text="Nama Kegiatan" >
+			android:text="@string/namaKegiatan" >
 		</TextView>
 		
 		<EditText 
 			android:layout_width="fill_parent" 
 			android:layout_height="40dp"
+			android:hint=""
 			android:id="@+id/nama_kegiatan">
 		</EditText>
 	</LinearLayout>
     
+    <!-- Penyelenggara -->
     <LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" >
@@ -43,17 +47,18 @@
 			android:layout_height="fill_parent"
 			android:gravity="center_vertical"
 			android:textColor="#ffffff"
-			android:text="Penyelenggara" >
+			android:text="@string/penyelenggara" >
 		</TextView>
 		
 		<EditText 
 			android:layout_width="fill_parent" 
 			android:layout_height="40dp"
+			android:hint=""
 			android:id="@+id/nama_penyelenggara">
 		</EditText>
-		
 	</LinearLayout>
 	
+    <!-- Waktu Kegiatan -->
     <LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" >
@@ -63,16 +68,18 @@
 			android:layout_height="fill_parent" 
 			android:gravity="center_vertical"
 			android:textColor="#ffffff"
-			android:text="Waktu Kegiatan">
+			android:text="@string/waktuKegiatan">
 		</TextView>
 		
 		<EditText 
 		    android:layout_width="fill_parent" 
 			android:layout_height="40dp" 
-			android:id="@+id/waktu_kegiatan" 
-			></EditText>
+			android:hint=""
+			android:id="@+id/waktu_kegiatan" >
+		</EditText>
 	</LinearLayout>
 
+	<!-- Kota -->
 	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" >
@@ -82,16 +89,18 @@
 			android:layout_height="fill_parent" 
 			android:gravity="center_vertical"
 			android:textColor="#ffffff"
-			android:text="Kota">
+			android:text="@string/kota">
 		</TextView>
 		
 		<EditText 
 		    android:layout_width="fill_parent" 
 			android:layout_height="40dp"
-			android:id="@+id/kota" 
-			></EditText>
+			android:hint=""
+			android:id="@+id/kota"> 
+		</EditText>
 	</LinearLayout>
 	
+	<!-- Topik -->
 	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" >
@@ -101,17 +110,18 @@
 			android:layout_height="fill_parent"
 			android:gravity="center_vertical"
 			android:textColor="#ffffff"
-			android:text="Topik">
+			android:text="@string/topik">
 		</TextView>
 		
 		<EditText 
 		    android:layout_width="fill_parent" 
 			android:layout_height="40dp" 
-			android:id="@+id/topik" 
-			>
+			android:hint=""
+			android:id="@+id/topik" >
 		</EditText>
 	</LinearLayout>
 	
+    <!-- Tag -->
     <LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" >
@@ -120,62 +130,66 @@
 			android:layout_width="100dp"  
 			android:layout_height="wrap_content"
 			android:textColor="#ffffff"
-			android:text="Tag" >
+			android:text="@string/tag" >
 		</TextView>
 		
 		<EditText 
 			android:layout_width="fill_parent" 
 			android:layout_height="wrap_content"
+			android:hint=""
 			android:id="@+id/tag">
 		</EditText>				
 	</LinearLayout>
 
+	<!-- Keterangan -->
 	<TextView
 		android:layout_width="fill_parent"  
 		android:layout_height="wrap_content"
 		android:textColor="#ffffff"
 		android:textStyle="italic"
-		android:text="* Pisahkan tag dengan titik koma (;)" >
+		android:text="@string/keterangan4" >
 	</TextView>
 	
-	<TextView 
-	    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
-		android:gravity="center" android:text="" >
-	</TextView>
-	
-	<TextView 
-	    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
-		android:gravity="center" android:text="" >
-	</TextView>
-	
-	<TextView 
-	    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
-		android:gravity="center" android:text="" >
-	</TextView>
-	
-	<TextView 
-	    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
-		android:gravity="center" android:text="" >
-	</TextView>
-	
+	<!-- blank -->
+		<TextView 
+		    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
+			android:gravity="center" android:text="" >
+		</TextView>
+		
+		<TextView 
+		    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
+			android:gravity="center" android:text="" >
+		</TextView>
+		
+		<TextView 
+		    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
+			android:gravity="center" android:text="" >
+		</TextView>
+		
+		<TextView 
+		    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
+			android:gravity="center" android:text="" >
+		</TextView>
 		
 	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:gravity="center">
 		
+		<!-- Kirim -->
 		<Button 
 		    android:layout_width="100dp"
 			android:layout_height="wrap_content" 
 			android:id="@+id/kirim" 
-			android:text="Kirim">
+			android:text="@string/btnKirim">
 		</Button>
 		
+		<!-- Kembali -->
 		<Button 
 		    android:layout_width="150dp"
 			android:layout_height="wrap_content" 
 			android:id="@+id/home_report" 
-			android:text="Kembali Ke Menu">
+			android:text="@string/btnKembali">
 		</Button>
 	</LinearLayout>
 </LinearLayout>
