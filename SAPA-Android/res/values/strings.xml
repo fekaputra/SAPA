@@ -1,10 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- Global -->
     <string name="hello">Hello World, LoginMain!</string>
-    <string name="app_name">LoginPage</string>
-    <string name="namaAnak">Nama Anak :</string>
+    <string name="app_name">Telemedis</string>
+    <string name="btnKembali">Kembali</string>
+    <string name="btnSubmit">Submit</string>
+    <string name="btnDaftar">Daftar</string>
+    <string name="id_kelurahan">Id Kelurahan/ Desa</string>
+    
+    <!-- main.xml -->
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="btnLogin">LOGIN</string>
+    <string name="register">REGISTER</string>
+    <string name="exit">EXIT</string>
+    
+    <!-- gagallogin.xml -->
+    <string name="warn_login">Silahkan Login Kembali</string>
+    
+    <!-- Search -->
     <string name="search_hint">Type Your Search</string>
+    <string name="search">Search</string>
+    
+    <!-- Download -->
     <string name="download">Download</string>
+    
+    <!-- childcare.xml -->
+    <string name="btn_new_data_anak">Daftar Data Baru</string>
+    <string name="pilih_nama_anak">Pilih Nama Anak :</string>
+    <string name="btnNext">Lanjutkan</string>
+    
+    <!-- data_posyandu.xml -->
+    <string name="title">Data Posyandu</string>
+    <string name="kecamatan">Kecamatan</string>
+    <string name="desa">Desa</string>
+    <string name="kelurahan">* Kelurahan</string>
+    <string name="keterangan">*) Jika tidak ada nama kelurahan, isi dengan nama desa</string>
+    <string name="jml_bangunan">Jumlah Posyandu yang Sudah Memiliki Bangunan</string>
+    <string name="title_skdn">Data SKDN (Jiwa) ----------------------------------------</string>
+    <string name="s">  S     </string>
+    <string name="k">  K     </string>
+    <string name="d">  D     </string>
+    <string name="n">  N     </string>
+    <string name="space">                     </string>
+    <string name="prog_pengembangan">Program Pengembangan/ Integrasi</string>
+    
+    <!-- e_report.xml -->
+    <string name="btnChildcare">Childcare</string>
+    <string name ="btnDisease">Disease</string>
+    <string name="btnSpecialOcc">Special Occasion</string>
+    <string name="btnPerkembanganPosyandu">Perkembangan Posyandu</string>
+    <string name="btnPKPKecamatan">Kegiatan PKP Kecamatan</string>
+    <string name="btnMenuUtama">Menu Utama</string>
+    
+    <!-- grafik_tumbuhkembang.xml -->
+    <string name="kondisi_anak">Kondisi Anak : Sehat</string>
+    <string name="berat_badan">Berat Badan : Ideal</string>
+    <string name="status_gizi">Status Gizi : Baik</string>
+    
+    <!-- insertlapkegpkpkec.xml -->
+    <string name="title_bulan">Bulan (* isi dengan angka)</string>
+    <string name="tanggal">Tanggal</string>
+    <string name="uraian_kegiatan">Uraian Kegiatan</string>
+    <string name="tempat">Tempat</string>
+    <string name="unsur_terlibat">Unsur Terlibat</string>
+    <string name="masalah">Masalah Yang Dihadapi/string</string>
+    <string name="rtl">RTL Text	Bulan</string>
+    
+    <!-- kader.xml -->
+    <string name="title_kader">Kader</string>
+    <string name="jmlTotal">Jumlah Total</string>
+    <string name="kaderTerlatih">Kader Terlatih</string>
+    
+    <!-- kependudukan.xml -->
+    <string name="pilih">Pilih</string>
+    
+    <!-- list_menu.xml -->
+    <string name="btnTumbuhKembang">Pertumbuhan dan Perkembangan Anak</string>
+    <string name="btnImunisasi">Pemberian Imunisasi</string>
+    <string name="pkvdt">Pemberian Kapsul Vitamin A Dosis Tinggi</string>
+    <string name="menu_childcare">Menu Childcare</string>
+    
+    <!-- new_data_anak.xml -->
+    <string name="nama_posyandu">Nama Posyandu</string>
+    <string name="nama_anak">Nama Anak</string>
+    <string name="jenis_kelamin">Jenis Kelamin</string>
+    <string name="men">laki-laki</string>
+    <string name="female">Perempuan</string>
+    <string name="tglLahir">Tanggal Lahir</string>
+    <string name="bb_lahir">Berat Badan Saat Lahir</string>
+    <string name="nama_ibu">Nama Ibu</string>
+    <string name="nama_ayah">Nama Ayah</string>
+    
+    <!-- new_kolega.xml -->
+    <string name="nama">Nama</string>
+    <string name="lingkup">Bidang/ Lingkup</string>
+    <string name="lokasi">Lokasi</string>
+    
+    <!-- penduduk_jeniskelamin.xml -->
+    <string name="penduduk_JK">Jumlah Penduduk (jiwa)</string>
+    
+    <!-- perkembangan_posyandu -->
+    <string name="btnDataPosyandu">Input Data Posyandu</string>
+    <string name="pilih_kelurahan">Pilih Kelurahan/ Desa</string>
+    <string name="keterangan2">Pilih kelurahan/desa sebelum melakukan input strata, kader atau program pokok</string>
+    <string name="btnStrata">Input Data Strata Posyandu</string>
+    <string name="btnKader">Input Data Kader</string>
+    <string name="btnProgramPokok">Input Data Program Pokok</string>
+    
+    <!-- program_pokok.xml -->
+    <string name="title_program_pokok">Program Pokok</string>
+    <string name="kb">KB</string>
+    <string name="kia">KIA</string>
+    <string name="gizi">Gizi</string>
+    <string name="imunisasi">Imunisasi</string>
+    <string name="p2d">P2D</string>
+    <string name="keterangan3">*) Setelah mengisi data, tekan tombol submit kemudian tekan tombol Perkembangan Posyandu untuk kembali</string>
+    
+    <!-- register.xml -->
+    <string name="title_register">Register</string>
+    <string name="email">Email</string>
+    
+    <!-- report_disease.xml -->
+    <string name="namaPelapor">Nama Pelapor</string>
+    <string name="gejala">Gejala/ Keluhan</string>
+    <string name="laporan">Laporan</string>
+    <string name="tag">Tag</string>
+    <string name="keterangan4">*) Pisahkan tag dengan titik koma (;)</string>
+    
+    <!-- report_tumbuh_kembang.xml -->
+    <string name="title_tumbuh_kembang">Pertumbuhan dan Perkembangan Anak</string>
+    <string name="namaAnak">Nama Anak</string>
+    <string name="jk">Jenis Kelamin</string>
+    <string name="tgl_pendataan">Tanggal Pendataan</string>
+    <string name="panjang_badan">Panjang Badan</string>
+    <string name="keterangan5"> Cm (*Posisi Telentang)</string>
+    <string name="tinggi_badan">Tinggi Badan</string>
+    <string name="keterangan6"> Cm (* Posisi Berdiri)</string>
+    <string name="bb">Berat Badan</string>
+    <string name="kg"> Kg</string>
+    <string name="btnKirim">Kirim</string>
+    <string name="lihatGrafik">Lihat Grafik</string>
+    
+    <!-- special_occasion.xml -->
+    <string name="namaKegiatan">Nama Kegiatan</string>
+    <string name="penyelenggara">Penyelenggara</string>
+    <string name="waktuKegiatan">Waktu Kegiatan</string>
+    <string name="kota">Kota</string>
+    <string name="topik">Topik</string>
+    
+    <!-- strata.xml -->
+    <string name="title_strata">Strata Posyandu</string>
+    <string name="pratama">Pratama</string>
+    <string name="madya">Madya</string>
+    <string name="purnama">Purnama</string>
+    <string name="mandiri">Mandiri</string>
+    <string name="jumlah">Jumlah</string>
+    <string name="kalkulasi">Kalkulasi</string>
 
 </resources>
