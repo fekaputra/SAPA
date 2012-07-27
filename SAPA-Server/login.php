@@ -1,6 +1,10 @@
 <?php
     session_start();
 	
+	/*Membuat Koneksi Ke DB
+	$conn = mysql_connect("localhost","root","");
+    $db = mysql_select_db("Telemedis");*/
+	
 	include("koneksi.php");
 	
 	/*Menampung data username dan password yg diinput user dari aplikasi*/    
