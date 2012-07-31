@@ -26,6 +26,7 @@ public class gis extends Activity
 		Intent i = getIntent();
 		final String selected = i.getStringExtra("selected");
 		//int cntChoice = i.getIntExtra("cntChoice", 0);
+		//String[] array = selected.split("\n");
 		
 		if(selected != null)
 		{
@@ -33,7 +34,7 @@ public class gis extends Activity
 		}
 		else
 		{
-			Toast.makeText(gis.this, "Tekan menu untuk memilih menu yang anda inginkan",Toast.LENGTH_SHORT).show();
+			Toast.makeText(this, "Tekan menu untuk memilih menu yang anda inginkan",Toast.LENGTH_SHORT).show();
 		}
 	}
 		
@@ -45,11 +46,7 @@ public class gis extends Activity
 	    menuInflater.inflate(R.layout.menu_gis, menu);
 	    return true;
 	}
-	 
-	/**
-	  * Event Handling for Individual menu item selected
-	  * Identify single menu item by it's id
-	  */
+	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item)
 	{
@@ -79,14 +76,12 @@ public class gis extends Activity
 	    case R.id.homePage:        	
 	       	if(admin.equals("ADMIN"))
 			{
-				//ketika button Login di tekan, maka akan kembali ke halaman utama
 				Intent home = new Intent (gis.this, homeAdmin.class);
 				home.putExtra("admin", admin);
 		    	startActivity(home);
 			}
 			else
 			{
-				//ketika button Login di tekan, maka akan kembali ke halaman utama
 				Intent home = new Intent (gis.this, homeMember.class);
 				home.putExtra("admin", admin);
 		    	startActivity(home);

@@ -158,5 +158,7 @@
     <string name="mandiri">Mandiri</string>
     <string name="jumlah">Jumlah</string>
     <string name="kalkulasi">Kalkulasi</string>
+    
+    <string name="btnNewKolega">Insert Data Kolega Baru</string>
 
 </resources>

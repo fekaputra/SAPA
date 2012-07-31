@@ -14,19 +14,11 @@ package com.halamanlogin;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.util.EntityUtils;
-
-import com.halamanlogin.LaporanKegPKPKecActivity.InsertDataLapKegPKPKec;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -162,17 +154,11 @@ public class LoginMain extends Activity
 		public void sendData(ArrayList<NameValuePair> data) throws ClientProtocolException, IOException 
 		{
 			readURL rL;	
-			String temp = "";
-			HttpClient httpclient = new DefaultHttpClient();
 			HttpPost httppost = new HttpPost(Referensi.url + "/login.php");
 			httppost.setEntity(new UrlEncodedFormEntity(data));
 			
 			try
-			{
-				HttpResponse response = httpclient.execute(httppost);
-				HttpEntity entity = response.getEntity();
-				temp = EntityUtils.toString(entity); 
-				
+			{ 
 				try {
 					
 					//mengirimkan username dan password yang diinput user untuk di proses oleh url http://10.0.2.2/Android/login.php
@@ -223,17 +209,18 @@ public class LoginMain extends Activity
 			}
 		}
 		
-		//after completing background task dismiss the progress dialog
+		//setelah background task selesai, dismiss progress dialog
 		protected void onPostExecute ()
 		{
-			//dismiss the dialog
+			//dismiss dialog
 			pDialog.dismiss();
 		}
     }
 	
+	//Action untuk tombol back
 	@Override
 	public void onBackPressed() 
 	{
-		Toast.makeText(getBaseContext(), "Maaf anda sudah keluar, silahkan login kembali", Toast.LENGTH_LONG).show();
+		Toast.makeText(getBaseContext(), "Maaf anda belum login", Toast.LENGTH_LONG).show();
 	}
 }

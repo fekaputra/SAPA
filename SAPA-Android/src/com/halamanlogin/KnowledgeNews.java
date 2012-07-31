@@ -200,6 +200,7 @@ public class KnowledgeNews extends ListActivity
 
         	Intent all = new Intent(KnowledgeNews.this, FileChooser.class);
 			all.putExtra("admin", admin);
+			all.putExtra("category", "news");
 	    	startActivity(all);
             return true;
             
@@ -207,24 +208,28 @@ public class KnowledgeNews extends ListActivity
         	
         	Intent image = new Intent(KnowledgeNews.this, PhotosActivity.class);
 			image.putExtra("admin", admin);
+			image.putExtra("category", "news");
 	    	startActivity(image);
             return true;
             
         case R.id.audio:
         	Intent audio = new Intent(KnowledgeNews.this, SongsActivity.class);
 			audio.putExtra("admin", admin);
+			audio.putExtra("category", "news");
 	    	startActivity(audio);
             return true;
             
         case R.id.video:
         	Intent video = new Intent(KnowledgeNews.this, VideosActivity.class);
 			video.putExtra("admin", admin);
+			video.putExtra("category", "news");
 	    	startActivity(video);
             return true;
             
         case R.id.document:
         	Intent doc = new Intent(KnowledgeNews.this, DocumentsActivity.class);
 			doc.putExtra("admin", admin);
+			doc.putExtra("category", "news");
 	    	startActivity(doc);
             return true;
             

@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -101,8 +102,13 @@ public class FileChooser extends ListActivity
 		//@Override
 		protected String doInBackground(String... args) 
 		{
+			Intent intent = getIntent();
+		    String category = intent.getStringExtra("category");
+			
 			//building parameter
 			List<NameValuePair> params = new ArrayList<NameValuePair>();
+			
+			params.add(new BasicNameValuePair("category", category));
 			
 			//getting JSON string from url
 			JSONObject json = jParser.makeHttpRequest(url_all_files, "GET", params);
