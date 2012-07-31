@@ -2,7 +2,8 @@
 <ScrollView 
 	xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-	android:layout_height="fill_parent">
+	android:layout_height="fill_parent"
+    android:background="@drawable/bg30">
 	
     <!-- Title -->	
     <LinearLayout
@@ -14,6 +15,7 @@
 			android:layout_width="fill_parent"  
 			android:layout_height="wrap_content" 
 			android:gravity="center"
+			android:textColor="#ffffff"
 			android:text="@string/title_program_pokok" 
 			android:textStyle="bold">
 		</TextView>
@@ -35,13 +37,15 @@
 				android:layout_width="wrap_content"  
 				android:layout_height="wrap_content" 
 				android:gravity="center_vertical"
+				android:textColor="#ffffff"
 				android:text="@string/id_kelurahan" >
 			</TextView>		
 				
 			<TextView
 				android:id="@+id/idKelurahan"
 				android:layout_width="fill_parent" 
-				android:layout_height="wrap_content">
+				android:layout_height="wrap_content"
+				android:textColor="#ffffff">
 			</TextView>
 		</LinearLayout>
 		
@@ -61,6 +65,7 @@
 				android:layout_width="90dp" 
 				android:layout_height="wrap_content" 		
 				android:gravity="center_vertical"
+				android:textColor="#ffffff"
 				android:text="@string/kb">
 			</TextView>
 				
@@ -80,6 +85,7 @@
 			<TextView 
 				android:layout_width="90dp" 
 				android:layout_height="wrap_content" 
+				android:textColor="#ffffff"
 				android:text="@string/kia">
 			</TextView>
 				
@@ -100,6 +106,7 @@
 				android:layout_width="90dp"  
 				android:layout_height="fill_parent" 
 				android:gravity="center_vertical"
+				android:textColor="#ffffff"
 				android:text="@string/gizi" >
 			</TextView>
 			
@@ -120,6 +127,7 @@
 				android:layout_width="90dp"  
 				android:layout_height="fill_parent" 
 				android:gravity="center_vertical"
+				android:textColor="#ffffff"
 				android:text="@string/imunisasi" >
 			</TextView>
 				
@@ -140,6 +148,7 @@
 				android:layout_width="90dp"  
 				android:layout_height="fill_parent" 
 				android:gravity="center_vertical"
+				android:textColor="#ffffff"
 				android:text="@string/p2d" >
 			</TextView>
 				

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"> 
+        
+    <Button 
+		android:id="@+id/btnNewKolega"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:text="@string/btnNewKolega"/> 
+    
+    <LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"> 
+        
+        <Button 
+	        android:id="@+id/btn_pilih"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/pilih"/>
+        
+    </LinearLayout>
+    
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+        android:textSize="8dp">
+    </ListView>
+</LinearLayout>

@@ -3,7 +3,5 @@
     <string-array name="data_penduduk">
         <item>Jumlah Penduduk (jiwa)</item>
         <item>Kepadatan Penduduk (jiwa/km2)</item>
-        <item>Jumlah Penduduk Berdasarkan Jenis Kelamin (jiwa)</item>
-        <item>Kembali</item>
     </string-array>
 </resources>

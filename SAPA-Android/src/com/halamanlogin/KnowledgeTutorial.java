@@ -200,6 +200,7 @@ public class KnowledgeTutorial extends ListActivity
 
         	Intent all = new Intent(KnowledgeTutorial.this, FileChooser.class);
 			all.putExtra("admin", admin);
+			all.putExtra("category", "tutorial");
 	    	startActivity(all);
             return true;
             
@@ -207,24 +208,28 @@ public class KnowledgeTutorial extends ListActivity
         	
         	Intent image = new Intent(KnowledgeTutorial.this, PhotosActivity.class);
 			image.putExtra("admin", admin);
+			image.putExtra("category", "tutorial");
 	    	startActivity(image);
             return true;
             
         case R.id.audio:
         	Intent audio = new Intent(KnowledgeTutorial.this, SongsActivity.class);
 			audio.putExtra("admin", admin);
+			audio.putExtra("category", "tutorial");
 	    	startActivity(audio);
             return true;
             
         case R.id.video:
         	Intent video = new Intent(KnowledgeTutorial.this, VideosActivity.class);
 			video.putExtra("admin", admin);
+			video.putExtra("category", "tutorial");
 	    	startActivity(video);
             return true;
             
         case R.id.document:
         	Intent doc = new Intent(KnowledgeTutorial.this, DocumentsActivity.class);
 			doc.putExtra("admin", admin);
+			doc.putExtra("category", "tutorial");
 	    	startActivity(doc);
             return true;
             

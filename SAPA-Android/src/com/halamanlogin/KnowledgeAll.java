@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -101,9 +102,11 @@ public class KnowledgeAll extends ListActivity
     	
 		//@Override
 		protected String doInBackground(String... args) 
-		{
+		{	
 			//building parameter
 			List<NameValuePair> params = new ArrayList<NameValuePair>();
+			
+			params.add(new BasicNameValuePair("category", "all"));
 			
 			//getting JSON string from url
 			JSONObject json = jParser.makeHttpRequest(url_all_files, "GET", params);
@@ -200,6 +203,7 @@ public class KnowledgeAll extends ListActivity
 
         	Intent all = new Intent(KnowledgeAll.this, FileChooser.class);
 			all.putExtra("admin", admin);
+			all.putExtra("category", "all");
 	    	startActivity(all);
             return true;
             
@@ -207,24 +211,28 @@ public class KnowledgeAll extends ListActivity
         	
         	Intent image = new Intent(KnowledgeAll.this, PhotosActivity.class);
 			image.putExtra("admin", admin);
+			image.putExtra("category", "all");
 	    	startActivity(image);
             return true;
             
         case R.id.audio:
         	Intent audio = new Intent(KnowledgeAll.this, SongsActivity.class);
 			audio.putExtra("admin", admin);
+			audio.putExtra("category", "all");
 	    	startActivity(audio);
             return true;
             
         case R.id.video:
         	Intent video = new Intent(KnowledgeAll.this, VideosActivity.class);
 			video.putExtra("admin", admin);
+			video.putExtra("category", "all");
 	    	startActivity(video);
             return true;
             
         case R.id.document:
         	Intent doc = new Intent(KnowledgeAll.this, DocumentsActivity.class);
 			doc.putExtra("admin", admin);
+			doc.putExtra("category", "all");
 	    	startActivity(doc);
             return true;
             
