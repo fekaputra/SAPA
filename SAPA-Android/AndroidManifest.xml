@@ -19,7 +19,7 @@
         <!-- Activity untuk login -->
         <activity
             android:name=".LoginMain"
-            android:label="Telemedicine" >
+            android:label="SAPA" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,7 +30,7 @@
         <!-- Activity untuk file chooser -->
         <activity
             android:name=".FileChooser"
-            android:label="Telemedicine" >
+            android:label="SAPA" >
            <intent-filter>
             	<action android:name="com.halamanlogin.FileChooser" />
             	<category android:name="android.intent.category.LAUNCHER" />
@@ -40,7 +40,7 @@
         <!-- Activity untuk gagal login -->
         <activity 
             android:name=".GagalLogin"
-            android:label="Telemedicine" >
+            android:label="SAPA" >
             <intent-filter>
             	<action android:name="com.halamanlogin.GagalLogin" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -50,7 +50,7 @@
         <!-- Activity untuk home page admin -->
         <activity 
             android:name=".homeAdmin"
-            android:label="Telemedicine - Admin Page">
+            android:label="SAPA - Admin Page">
             <intent-filter>
             	<action android:name="com.halamanlogin.homeAdmin" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -60,7 +60,7 @@
         <!-- Activity untuk homepage member -->
         <activity 
             android:name=".homeMember"
-            android:label="Telemedicine - Member Page">
+            android:label="SAPA - Member Page">
             <intent-filter>
             	<action android:name="com.halamanlogin.homeMember" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -70,7 +70,7 @@
         <!-- Activity untuk insert data user baru -->
         <activity 
             android:name=".insertUser"
-            android:label="Telemedicine - Registration">
+            android:label="SAPA - Registration">
             <intent-filter>
             	<action android:name="com.halamanlogin.insertUser" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -80,7 +80,7 @@
         <!-- Activity untuk Chat -->
         <activity 
             android:name=".chat"
-            android:label="Telemedicine - Conversation">
+            android:label="SAPA - Conversation">
             <intent-filter>
             	<action android:name="com.halamanlogin.chat" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -90,7 +90,7 @@
         <!-- Activity untuk menampilkan tab layout e-knowledge -->
         <activity
             android:name=".TabLayoutActivity"
-            android:label="Telemedicine - List File" >
+            android:label="SAPA - List File" >
             <intent-filter>
                 <action android:name="com.halamanlogin.TabLayoutActivity" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -112,7 +112,7 @@
         <!-- Activity untuk e-gis -->
         <activity
             android:name=".gis"
-            android:label="Telemedicine - E-GIS" >
+            android:label="SAPA - E-GIS" >
             <intent-filter>
                 <action android:name="com.halamanlogin.gis" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -122,7 +122,7 @@
         <!-- Activity untuk menu kependudukan -->
         <activity
             android:name=".kependudukan"
-            android:label="Telemedicine - Kependudukan" >
+            android:label="SAPA - Kependudukan" >
             <intent-filter>
                 <action android:name="com.halamanlogin.kependudukan" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -132,7 +132,7 @@
         <!-- Activity untuk menampilkan data jenis kelamin -->
         <activity
             android:name=".DPJenisKelamin"
-            android:label="Telemedicine - Data Penduduk Menurut Jenis Kelamin" >
+            android:label="SAPA - Data Penduduk Menurut Jenis Kelamin" >
             <intent-filter>
                 <action android:name="com.halamanlogin.DPJenisKelamin" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -142,7 +142,7 @@
         <!-- Activity untuk menampilkan data kesehatan -->
         <activity
             android:name=".Kesehatan"
-            android:label="Telemedicine - Kesehatan" >
+            android:label="SAPA - Kesehatan" >
             <intent-filter>
                 <action android:name="com.halamanlogin.Kesehatan" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -152,7 +152,7 @@
         <!-- Activity untuk data kolega -->
         <activity
             android:name=".kolega"
-            android:label="Telemedicine - Kolega" >
+            android:label="SAPA - Kolega" >
             <intent-filter>
                 <action android:name="com.halamanlogin.kolega" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -162,7 +162,7 @@
         <!-- Activity untuk insert data kolega baru -->
         <activity
             android:name=".newKolega"
-            android:label="Telemedicine - Data Kolega Baru" >
+            android:label="SAPA - Data Kolega Baru" >
             <intent-filter>
                 <action android:name="com.halamanlogin.newKolega" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -172,7 +172,7 @@
         <!-- Activity untuk menu e-report -->
         <activity
             android:name=".report"
-            android:label="Telemedicine - E-Report" >
+            android:label="SAPA - E-Report" >
             <intent-filter>
                 <action android:name="com.halamanlogin.report" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -182,7 +182,7 @@
         <!-- Activity untuk menu childcare -->
         <activity
             android:name=".childcare"
-            android:label="Telemedicine - Childcare" >
+            android:label="SAPA - Childcare" >
             <intent-filter>
                 <action android:name="com.halamanlogin.childcare" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -192,7 +192,7 @@
         <!-- Activity untuk insert data anak -->
         <activity
             android:name=".newDataAnak"
-            android:label="Telemedicine - Daftar Data Baru" >
+            android:label="SAPA - Daftar Data Baru" >
             <intent-filter>
                 <action android:name="com.halamanlogin.newDataAnak" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -202,7 +202,7 @@
         <!-- Activity untuk menampilkan sub-menu childcare -->
         <activity
             android:name=".reportChildcare"
-            android:label="Telemedicine - Childcare" >
+            android:label="SAPA - Childcare" >
             <intent-filter>
                 <action android:name="com.halamanlogin.reportChildcare" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -212,7 +212,7 @@
         <!-- Activity untuk menampilkan data tumbuh kembang anak -->
         <activity
             android:name=".tumbuhKembangAnak"
-            android:label="Telemedicine - Childcare" >
+            android:label="SAPA - Childcare" >
             <intent-filter>
                 <action android:name="com.halamanlogin.tumbuhKembangAnak" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -222,7 +222,7 @@
         <!-- Activity untuk menampilkan grafik tumbuh kembang anak -->
         <activity
             android:name=".GrafikTumbuhKembang"
-            android:label="Telemedicine - Grafik" >
+            android:label="SAPA - Grafik" >
             <intent-filter>
                 <action android:name="com.halamanlogin.GrafikTumbuhKembang" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -232,7 +232,7 @@
         <!-- Activity untuk menu disease -->
         <activity
             android:name=".disease"
-            android:label="Telemedicine - Disease" >
+            android:label="SAPA - Disease" >
             <intent-filter>
                 <action android:name="com.halamanlogin.disease" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -242,7 +242,7 @@
         <!-- Activity untuk menu special occasion -->
         <activity
             android:name=".SpecialOccasion"
-            android:label="Telemedicine - Special Occasion" >
+            android:label="SAPA - Special Occasion" >
             <intent-filter>
                 <action android:name="com.halamanlogin.SpecialOccasion" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -252,7 +252,7 @@
         <!-- Activity untuk menampilkan data imunisasi -->
         <activity
             android:name=".imunisasi"
-            android:label="Telemedicine - Imunisasi" >
+            android:label="SAPA - Imunisasi" >
             <intent-filter>
                 <action android:name="com.halamanlogin.imunisasi" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -262,7 +262,7 @@
         <!-- Activity untuk menampilkan data pemberian kapsul vitamin dosis tinggi -->
         <activity
             android:name=".pkvdt"
-            android:label="Telemedicine - Pemberian Kapsul Dosis Tinggi" >
+            android:label="SAPA - Pemberian Kapsul Dosis Tinggi" >
             <intent-filter>
                 <action android:name="com.halamanlogin.pkvdt" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -272,7 +272,7 @@
         <!-- Activity untuk menu e-knowledge -->
         <activity
             android:name=".knowledge"
-            android:label="Telemedicine - E-Knowledge" >
+            android:label="SAPA - E-Knowledge" >
             <intent-filter>
                 <action android:name="com.halamanlogin.knowledge" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -303,7 +303,7 @@
         <!-- Activity untuk menu perkembangan posyandu -->
         <activity
             android:name=".PerkembanganPosyandu"
-            android:label="Telemedicine - Perkembangan Posyandu" >
+            android:label="SAPA - Perkembangan Posyandu" >
             <intent-filter>
                 <action android:name="com.halamanlogin.PerkembanganPosyandu" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -313,7 +313,7 @@
         <!-- Activity untuk insert data posyandu -->
         <activity
             android:name=".DataPosyandu"
-            android:label="Telemedicine - Data Posyandu" >
+            android:label="SAPA - Data Posyandu" >
             <intent-filter>
                 <action android:name="com.halamanlogin.DataPosyandu" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -323,7 +323,7 @@
         <!-- Activity untuk insert data strata posyandu -->
         <activity
             android:name=".Strata"
-            android:label="Telemedicine - Strata Posyandu" >
+            android:label="SAPA - Strata Posyandu" >
             <intent-filter>
                 <action android:name="com.halamanlogin.Strata" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -333,7 +333,7 @@
         <!-- Activity untuk insert data kader posyandu -->
         <activity
             android:name=".Kader"
-            android:label="Telemedicine - Kader Posyandu" >
+            android:label="SAPA - Kader Posyandu" >
             <intent-filter>
                 <action android:name="com.halamanlogin.Kader" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -343,7 +343,7 @@
         <!-- Activity untuk insert data program pokok posyandu -->
         <activity
             android:name=".ProgramPokok"
-            android:label="Telemedicine - Program Pokok" >
+            android:label="SAPA - Program Pokok" >
             <intent-filter>
                 <action android:name="com.halamanlogin.ProgramPokok" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -353,7 +353,7 @@
         <!-- Activity untuk insert data Kegiatan PKP Kecamatan -->
         <activity
             android:name=".LaporanKegPKPKecActivity"
-            android:label="Telemedicine - Kegiatan PKP Kecamatan" >
+            android:label="SAPA - Kegiatan PKP Kecamatan" >
             <intent-filter>
                <action android:name="com.halamanlogin.LaporanKegPKPKecActivity" />
             	<category android:name="android.intent.category.DEFAULT" />
