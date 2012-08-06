@@ -55,6 +55,7 @@
 		   android:layout_width="fill_parent" 
 		   android:layout_height="40dp"
 		   android:hint=""
+		   android:singleLine="true"
 		   android:id="@+id/jk" >
 		</EditText>
 	</LinearLayout>  
@@ -94,6 +95,8 @@
 			android:layout_width="fill_parent" 
 			android:layout_height="40dp"
 			android:hint=""
+			android:singleLine="true"
+			android:inputType="number"
 			android:id="@+id/tgl_data">
 		</EditText>
 	</LinearLayout>
@@ -114,6 +117,8 @@
 			android:layout_width="70dp" 
 			android:layout_height="40dp"
 			android:hint=""
+			android:singleLine="true"
+			android:inputType="number"
 			android:id="@+id/panjang">
 		</EditText>
 		
@@ -142,6 +147,8 @@
 			android:layout_width="70dp" 
 			android:layout_height="40dp"
 			android:hint=""
+			android:singleLine="true"
+			android:inputType="number"
 			android:id="@+id/tinggi">
 		</EditText>
 		
@@ -170,6 +177,8 @@
 		    android:layout_width="70dp" 
 			android:layout_height="40dp" 
 			android:hint=""
+			android:singleLine="true"
+			android:inputType="number"
 			android:id="@+id/berat" >
 		</EditText>
 		

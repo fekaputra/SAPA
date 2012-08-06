@@ -37,6 +37,7 @@
 			android:layout_width="fill_parent" 
 			android:layout_height="wrap_content"
 			android:hint=""
+			android:singleLine="true"
 			android:id="@+id/newusername">
 		</EditText>
 	</LinearLayout>
@@ -56,6 +57,7 @@
 		    android:layout_width="fill_parent" 
 			android:layout_height="wrap_content" 
 			android:hint=""
+			android:singleLine="true"
 			android:id="@+id/newpassword" 
 			></EditText>
 	</LinearLayout>
@@ -75,6 +77,7 @@
 		    android:layout_width="fill_parent" 
 			android:layout_height="wrap_content" 
 			android:hint=""
+			android:singleLine="true"
 			android:id="@+id/newemail" 
 			></EditText>
 	</LinearLayout>
@@ -90,6 +93,13 @@
 			android:layout_height="wrap_content" 
 			android:id="@+id/daftar" 
 			android:text="@string/btnSubmit">
+		</Button>
+		
+		<Button 
+		    android:layout_width="100dp"
+			android:layout_height="wrap_content" 
+			android:id="@+id/kembali" 
+			android:text="@string/btnKembali">
 		</Button>
 	</LinearLayout>
 

@@ -29,6 +29,7 @@
 			android:layout_width="fill_parent" 
 			android:layout_height="40dp"
 			android:hint=""
+			android:singleLine="true"
 			android:id="@+id/nama_posyandu">
 		</EditText>
 	</LinearLayout>
@@ -50,6 +51,7 @@
 			android:layout_width="fill_parent" 
 			android:layout_height="40dp"
 			android:hint=""
+			android:singleLine="true"
 			android:id="@+id/new_namaAnak">
 		</EditText>
 	</LinearLayout>
@@ -106,6 +108,8 @@
 		    android:layout_width="fill_parent" 
 			android:layout_height="40dp"
 			android:hint=""
+			android:inputType="number"
+			android:singleLine="true"
 			android:id="@+id/new_tglLahir" 
 			></EditText>
 	</LinearLayout>
@@ -127,6 +131,8 @@
 		    android:layout_width="fill_parent" 
 			android:layout_height="40dp"
 			android:hint="" 
+			android:inputType="number"
+			android:singleLine="true"
 			android:id="@+id/new_bbLahir" 
 			></EditText>
 	</LinearLayout>
@@ -148,6 +154,7 @@
 		    android:layout_width="fill_parent" 
 			android:layout_height="40dp" 
 			android:hint=""
+			android:singleLine="true"
 			android:id="@+id/new_namaIbu" >
 			</EditText>
 	</LinearLayout>
@@ -169,6 +176,7 @@
 		    android:layout_width="fill_parent" 
 			android:layout_height="40dp" 
 			android:hint=""
+			android:singleLine="true"
 			android:id="@+id/new_namaAyah" 
 			></EditText>
 	</LinearLayout>

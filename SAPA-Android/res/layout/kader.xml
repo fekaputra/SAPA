@@ -72,6 +72,8 @@
 			    android:layout_width="fill_parent" 
 				android:layout_height="40dp" 
 				android:hint=""
+				android:singleLine="true"
+				android:inputType="number"
 				android:id="@+id/jml_total" >
 			</EditText>
 		</LinearLayout>
@@ -92,6 +94,8 @@
 			    android:layout_width="fill_parent" 
 				android:layout_height="40dp" 
 				android:hint=""
+				android:singleLine="true"
+				android:inputType="number"
 				android:id="@+id/kader_terlatih" >
 			</EditText>
 		</LinearLayout>

@@ -36,6 +36,7 @@
 			android:layout_width="fill_parent" 
 			android:layout_height="40dp"
 			android:hint=""
+			android:singleLine="true"
 			android:id="@+id/nama_kolega">
 		</EditText>
 	</LinearLayout>
@@ -57,6 +58,7 @@
 			android:layout_width="fill_parent" 
 			android:layout_height="40dp"
 			android:hint=""
+			android:singleLine="true"
 			android:id="@+id/bidang_kolega">
 		</EditText>	
 	</LinearLayout>
@@ -78,6 +80,7 @@
 		    android:layout_width="fill_parent" 
 			android:layout_height="40dp"
 			android:hint=""
+			android:singleLine="true"
 			android:id="@+id/lokasi_kolega" 
 			></EditText>
 	</LinearLayout>

@@ -73,6 +73,8 @@
 			    android:layout_width="fill_parent" 
 				android:layout_height="40dp" 
 				android:hint=""
+				android:inputType="number"
+				android:singleLine="true"
 				android:id="@+id/new_kb" >
 			</EditText>
 		</LinearLayout>
@@ -93,6 +95,8 @@
 			    android:layout_width="fill_parent" 
 				android:layout_height="40dp" 
 				android:hint=""
+				android:inputType="number"
+				android:singleLine="true"
 				android:id="@+id/new_kia"> 
 			</EditText>
 		</LinearLayout>
@@ -114,6 +118,8 @@
 				android:layout_width="fill_parent" 
 				android:layout_height="40dp"
 				android:hint=""
+				android:inputType="number"
+				android:singleLine="true"
 				android:id="@+id/new_gizi">
 			</EditText>				
 		</LinearLayout>
@@ -135,6 +141,8 @@
 				android:layout_width="fill_parent" 
 				android:layout_height="40dp"
 				android:hint=""
+				android:inputType="number"
+				android:singleLine="true"
 				android:id="@+id/new_imunisasi">
 			</EditText>
 		</LinearLayout>
@@ -149,6 +157,7 @@
 				android:layout_height="fill_parent" 
 				android:gravity="center_vertical"
 				android:textColor="#ffffff"
+				
 				android:text="@string/p2d" >
 			</TextView>
 				
@@ -156,6 +165,8 @@
 				android:layout_width="fill_parent" 
 				android:layout_height="40dp"
 				android:hint=""
+				android:inputType="number"
+				android:singleLine="true"
 				android:id="@+id/new_p2d">
 			</EditText>
 		</LinearLayout>
