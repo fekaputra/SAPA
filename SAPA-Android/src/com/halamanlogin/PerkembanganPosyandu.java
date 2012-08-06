@@ -159,4 +159,11 @@ public class PerkembanganPosyandu extends Activity implements OnClickListener
 			mAdapter.add(kelurahan[spin.getSelectedItemPosition()]);
 		}
 	}
+	
+	//menonaktifkan tombol back di android
+	@Override
+	public void onBackPressed() 
+	{
+		//tidak melakukan apa-apa
+	}
 }

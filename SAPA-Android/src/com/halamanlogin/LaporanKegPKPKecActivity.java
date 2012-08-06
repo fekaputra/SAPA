@@ -206,4 +206,15 @@ public class LaporanKegPKPKecActivity extends Activity
 			pDialog.dismiss();
 		}
     }
+    
+    //menonaktifkan tombol back di android
+  	@Override
+  	public void onBackPressed() 
+  	{
+  		String admin = "ADMIN";
+  		
+  		Intent back = new Intent(LaporanKegPKPKecActivity.this, report.class);
+        back.putExtra("admin", admin);
+        startActivity(back);
+  	}
 }

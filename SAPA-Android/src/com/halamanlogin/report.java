@@ -112,56 +112,10 @@ public class report extends Activity
 		});
 	}
 	
-	/**
-	 * Method untuk Mengirimkan data keserver event by button submit diklik
-	 *
-	 * @param view
-	 
-	public void getRequest(String Url) 
+	//menonaktifkan tombol back di android
+	@Override
+	public void onBackPressed() 
 	{
-		HttpClient client = new DefaultHttpClient();
-		HttpGet request = new HttpGet(url);
-		
-		Intent i = getIntent();
-		String member = i.getStringExtra("admin");
-		try 
-		{
-			HttpResponse response = client.execute(request);
-			Toast.makeText(this, "Terima Kasih" ,Toast.LENGTH_SHORT).show();
-			Intent out = new Intent (homeMember.this, LoginMain.class);
-			out.putExtra("admin", member);
-			startActivity(out);	
-		} 
-		catch (Exception ex) 
-		{
-			Toast.makeText(this, "Registrasi Gagal", Toast.LENGTH_SHORT).show();
-		}
+		//tidak melakukan apa-apa
 	}
-
-	/**
-	 * Method untuk Menenrima data dari server
-	 *
-	 * @param response
-	 * @return
-	 
-	public static String request(HttpResponse response) {
-		String result = "";
-
-		try {
-			InputStream in = response.getEntity().getContent();
-			BufferedReader reader = new BufferedReader(new InputStreamReader(in));
-			StringBuilder str = new StringBuilder();
-			String line = null;
-			while ((line = reader.readLine()) != null) {
-				str.append(line + "\n");
-			}
-			in.close();
-			result = str.toString();
-		} 
-		catch (Exception ex) 
-		{
-			result = "Error";
-		}
-		return result;
-	}*/
 }

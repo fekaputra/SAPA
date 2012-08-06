@@ -92,4 +92,11 @@ public class tumbuhKembangAnak extends Activity
 	        }
 		});
     }
+    
+    //menonaktifkan tombol back di android
+  	@Override
+  	public void onBackPressed() 
+  	{
+  		//tidak melakukan apa-apa
+  	}
 }

@@ -22,7 +22,7 @@ import android.widget.Toast;
 public class insertUser extends Activity
 {
 	private EditText newUsername, newPassword, newEmail;
-	private Button btnSubmit;
+	private Button btnSubmit, btnBack;
 
 	private String url = Referensi.url + "/insertUser.php";
 
@@ -72,6 +72,16 @@ public class insertUser extends Activity
 				{
 					e.printStackTrace();
 				}
+			}
+		});
+		
+		btnBack = (Button) findViewById(R.id.kembali);
+		btnBack.setOnClickListener(new Button.OnClickListener() 
+		{
+			public void onClick(View v) 
+			{
+				Intent back = new Intent(insertUser.this, LoginMain.class);
+		    	startActivity(back);
 			}
 		});
 	}
@@ -131,5 +141,12 @@ public class insertUser extends Activity
 			result = "Error";
 		}
 		return result;
+	}
+	
+	//menonaktifkan tombol back di android
+	@Override
+	public void onBackPressed() 
+	{
+		//tidak melakukan apa-apa
 	}
 }

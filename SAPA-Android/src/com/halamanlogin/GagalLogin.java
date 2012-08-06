@@ -38,4 +38,10 @@ public class GagalLogin extends Activity
 	        }
 		});
 	}
+	//menonaktifkan tombol back di android
+	@Override
+	public void onBackPressed() 
+	{
+		//tidak melakukan apa-apa
+	}
 }

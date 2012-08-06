@@ -40,15 +40,6 @@ public class newDataAnak extends Activity
 		final EditText[] editText = new EditText[] {newPosyandu, newNamaAnak, newTglLahir, newBbLahir, newNamaIbu, newNamaAyah};
 		
 		jenis_kelamin = (RadioGroup) findViewById(R.id.radioGroupSex);
-		int jk = jenis_kelamin.getCheckedRadioButtonId();
-		if(jk == R.id.radioMale)
-		{
-			jns_kel = "Laki-laki";
-		}
-		else if(jk == R.id.radioFemale)
-		{
-			jns_kel = "Perempuan";
-		};
 		
 
 		btnSubmit = (Button) findViewById(R.id.daftar);
@@ -56,6 +47,16 @@ public class newDataAnak extends Activity
 		{
 			public void onClick(View v) 
 			{
+				int jk = jenis_kelamin.getCheckedRadioButtonId();
+				if(jk == R.id.radioMale)
+				{
+					jns_kel = "Laki-laki";
+				}
+				else if(jk == R.id.radioFemale)
+				{
+					jns_kel = "Perempuan";
+				};
+				
 				//call class validation insert to insert new data
 				boolean check = validasi.validation(editText);//validation(editText);
 				if(check == false)
@@ -93,5 +94,12 @@ public class newDataAnak extends Activity
 		    	startActivity(back);
 	        }
 		});
+	}
+	
+	//menonaktifkan tombol back di android
+	@Override
+	public void onBackPressed() 
+	{
+		//tidak melakukan apa-apa
 	}
 }

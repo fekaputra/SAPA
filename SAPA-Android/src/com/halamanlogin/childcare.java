@@ -83,4 +83,11 @@ public class childcare extends Activity implements	OnClickListener
 			mAdapter.add(namaAnak[spin.getSelectedItemPosition()]);
 		}
 	}
+	
+	//menonaktifkan tombol back di android
+	@Override
+	public void onBackPressed() 
+	{
+		//tidak melakukan apa-apa
+	}
 }
