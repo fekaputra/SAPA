@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk android:minSdkVersion="8" />
-
+    
     <!-- Permission untuk akses internet -->
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     
@@ -14,33 +14,90 @@
 
     <application
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name" >
+        android:label="@string/app_name">
         
         <!-- Activity untuk login -->
         <activity
             android:name=".LoginMain"
-            android:label="SAPA" >
+            android:label="SAPA" 
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
+				
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         
-        <!-- Activity untuk file chooser -->
+        <uses-library android:name="com.google.android.maps" />
+        
+        <!-- Activity untuk e-gis -->
         <activity
-            android:name=".FileChooser"
-            android:label="SAPA" >
-           <intent-filter>
-            	<action android:name="com.halamanlogin.FileChooser" />
+            android:name=".gis" 
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.halamanlogin.gis" />
+                
             	<category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         
+        <!-- Activity untuk menu kependudukan -->
+        <activity
+            android:name=".Kependudukan"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.halamanlogin.Kependudukan" />
+            	<category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!-- Activity untuk menampilkan data kesehatan -->
+        <activity
+            android:name=".Kesehatan"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.halamanlogin.Kesehatan" />
+            	<category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!-- Activity untuk data kolega -->
+        <activity
+            android:name=".Kolega" 
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.halamanlogin.Kolega" />
+            	<category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!-- Activity untuk menu e-report -->
+        <activity
+            android:name=".report"
+            android:label="SAPA - E-Report" 
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.halamanlogin.report" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <!-- Activity untuk menampilkan kolega yg dipilih user -->
+        <activity
+            android:name=".ItemKolega"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.halamanlogin.ItemKolega" />
+            	<category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        
         <!-- Activity untuk gagal login -->
         <activity 
             android:name=".GagalLogin"
-            android:label="SAPA" >
+            android:label="SAPA" 
+            android:screenOrientation="portrait">
             <intent-filter>
             	<action android:name="com.halamanlogin.GagalLogin" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -50,7 +107,8 @@
         <!-- Activity untuk home page admin -->
         <activity 
             android:name=".homeAdmin"
-            android:label="SAPA - Admin Page">
+            android:label="SAPA - Admin Page"
+            android:screenOrientation="portrait">
             <intent-filter>
             	<action android:name="com.halamanlogin.homeAdmin" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -60,7 +118,8 @@
         <!-- Activity untuk homepage member -->
         <activity 
             android:name=".homeMember"
-            android:label="SAPA - Member Page">
+            android:label="SAPA - Member Page"
+            android:screenOrientation="portrait">
             <intent-filter>
             	<action android:name="com.halamanlogin.homeMember" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -70,7 +129,8 @@
         <!-- Activity untuk insert data user baru -->
         <activity 
             android:name=".insertUser"
-            android:label="SAPA - Registration">
+            android:label="SAPA - Registration"
+            android:screenOrientation="portrait">
             <intent-filter>
             	<action android:name="com.halamanlogin.insertUser" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -80,109 +140,21 @@
         <!-- Activity untuk Chat -->
         <activity 
             android:name=".chat"
-            android:label="SAPA - Conversation">
+            android:label="SAPA - Conversation"
+            android:screenOrientation="portrait">
             <intent-filter>
             	<action android:name="com.halamanlogin.chat" />
             	<category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         
-        <!-- Activity untuk menampilkan tab layout e-knowledge -->
-        <activity
-            android:name=".TabLayoutActivity"
-            android:label="SAPA - List File" >
-            <intent-filter>
-                <action android:name="com.halamanlogin.TabLayoutActivity" />
-            	<category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
         
-        <!--  Songs Activity -->
-        <activity android:name=".SongsActivity" />
-        
-        <!--  Videos Activity -->
-        <activity android:name=".VideosActivity" />
-        
-        <!--  Photos Activity -->
-        <activity android:name=".PhotosActivity" />
-        
-         <!--  Document Activity -->
-        <activity android:name=".DocumentsActivity" />
-        
-        <!-- Activity untuk e-gis -->
-        <activity
-            android:name=".gis"
-            android:label="SAPA - E-GIS" >
-            <intent-filter>
-                <action android:name="com.halamanlogin.gis" />
-            	<category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        
-        <!-- Activity untuk menu kependudukan -->
-        <activity
-            android:name=".kependudukan"
-            android:label="SAPA - Kependudukan" >
-            <intent-filter>
-                <action android:name="com.halamanlogin.kependudukan" />
-            	<category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        
-        <!-- Activity untuk menampilkan data jenis kelamin -->
-        <activity
-            android:name=".DPJenisKelamin"
-            android:label="SAPA - Data Penduduk Menurut Jenis Kelamin" >
-            <intent-filter>
-                <action android:name="com.halamanlogin.DPJenisKelamin" />
-            	<category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        
-        <!-- Activity untuk menampilkan data kesehatan -->
-        <activity
-            android:name=".Kesehatan"
-            android:label="SAPA - Kesehatan" >
-            <intent-filter>
-                <action android:name="com.halamanlogin.Kesehatan" />
-            	<category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        
-        <!-- Activity untuk data kolega -->
-        <activity
-            android:name=".kolega"
-            android:label="SAPA - Kolega" >
-            <intent-filter>
-                <action android:name="com.halamanlogin.kolega" />
-            	<category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        
-        <!-- Activity untuk insert data kolega baru -->
-        <activity
-            android:name=".newKolega"
-            android:label="SAPA - Data Kolega Baru" >
-            <intent-filter>
-                <action android:name="com.halamanlogin.newKolega" />
-            	<category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        
-        <!-- Activity untuk menu e-report -->
-        <activity
-            android:name=".report"
-            android:label="SAPA - E-Report" >
-            <intent-filter>
-                <action android:name="com.halamanlogin.report" />
-            	<category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
         
         <!-- Activity untuk menu childcare -->
         <activity
             android:name=".childcare"
-            android:label="SAPA - Childcare" >
+            android:label="SAPA - Childcare" 
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="com.halamanlogin.childcare" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -192,7 +164,8 @@
         <!-- Activity untuk insert data anak -->
         <activity
             android:name=".newDataAnak"
-            android:label="SAPA - Daftar Data Baru" >
+            android:label="SAPA - Daftar Data Baru" 
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="com.halamanlogin.newDataAnak" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -202,7 +175,8 @@
         <!-- Activity untuk menampilkan sub-menu childcare -->
         <activity
             android:name=".reportChildcare"
-            android:label="SAPA - Childcare" >
+            android:label="SAPA - Childcare" 
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="com.halamanlogin.reportChildcare" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -212,7 +186,8 @@
         <!-- Activity untuk menampilkan data tumbuh kembang anak -->
         <activity
             android:name=".tumbuhKembangAnak"
-            android:label="SAPA - Childcare" >
+            android:label="SAPA - Childcare" 
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="com.halamanlogin.tumbuhKembangAnak" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -222,17 +197,63 @@
         <!-- Activity untuk menampilkan grafik tumbuh kembang anak -->
         <activity
             android:name=".GrafikTumbuhKembang"
-            android:label="SAPA - Grafik" >
+            android:label="SAPA - Grafik"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="com.halamanlogin.GrafikTumbuhKembang" />
             	<category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>        
         
+        <!-- Activity untuk menampilkan data imunisasi -->
+        <activity
+            android:name=".imunisasi"
+            android:label="SAPA - Imunisasi" 
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.halamanlogin.imunisasi" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <!-- Activity untuk menampilkan data imunisasi -->
+        <activity
+            android:name=".TabelImunisasi"
+            android:label="SAPA - Tabel Imunisasi" 
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.halamanlogin.TabelImunisasi" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <!-- Activity untuk menampilkan data pemberian kapsul vitamin dosis tinggi -->
+        <activity
+            android:name=".PemberianVitamin"
+            android:label="SAPA - Pemberian Kapsul Dosis Tinggi" 
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.halamanlogin.PemberianVitamin" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <!-- Activity untuk menampilkan data pemberian kapsul vitamin dosis tinggi -->
+        <activity
+            android:name=".TabelPemberianVitamin"
+            android:label="SAPA - Tabel Pemberian Kapsul Dosis Tinggi" 
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.halamanlogin.TabelPemberianVitamin" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
         <!-- Activity untuk menu disease -->
         <activity
             android:name=".disease"
-            android:label="SAPA - Disease" >
+            android:label="SAPA - Disease" 
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="com.halamanlogin.disease" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -242,68 +263,19 @@
         <!-- Activity untuk menu special occasion -->
         <activity
             android:name=".SpecialOccasion"
-            android:label="SAPA - Special Occasion" >
+            android:label="SAPA - Special Occasion"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="com.halamanlogin.SpecialOccasion" />
             	<category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         
-        <!-- Activity untuk menampilkan data imunisasi -->
-        <activity
-            android:name=".imunisasi"
-            android:label="SAPA - Imunisasi" >
-            <intent-filter>
-                <action android:name="com.halamanlogin.imunisasi" />
-            	<category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        
-        <!-- Activity untuk menampilkan data pemberian kapsul vitamin dosis tinggi -->
-        <activity
-            android:name=".pkvdt"
-            android:label="SAPA - Pemberian Kapsul Dosis Tinggi" >
-            <intent-filter>
-                <action android:name="com.halamanlogin.pkvdt" />
-            	<category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-                
-        <!-- Activity untuk menu e-knowledge -->
-        <activity
-            android:name=".knowledge"
-            android:label="SAPA - E-Knowledge" >
-            <intent-filter>
-                <action android:name="com.halamanlogin.knowledge" />
-            	<category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        
-        <!-- Activity untuk semua data knowledge -->
-        <activity android:name=".KnowledgeAll" />
-
-        <!-- Activity untuk data library -->
-        <activity android:name=".KnowledgeLibrary" />
-        
-		<!-- Activity untuk data news -->
-		<activity android:name=".KnowledgeNews" />
-		
-    	<!-- Activity untuk data library -->
-    	<activity android:name=".KnowledgeTutorial" />
-    	
-    	<!-- Activity untuk load image -->
-    	<activity android:name=".LoadImage"/>
-        
-    	<!-- Activity untuk download file -->
-        <activity android:name=".DownloadFile"/>
-        
-        <!-- Activity untuk file loader -->
-        <activity android:name=".FileLoader"/>
-        
         <!-- Activity untuk menu perkembangan posyandu -->
         <activity
             android:name=".PerkembanganPosyandu"
-            android:label="SAPA - Perkembangan Posyandu" >
+            android:label="SAPA - Perkembangan Posyandu" 
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="com.halamanlogin.PerkembanganPosyandu" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -313,7 +285,8 @@
         <!-- Activity untuk insert data posyandu -->
         <activity
             android:name=".DataPosyandu"
-            android:label="SAPA - Data Posyandu" >
+            android:label="SAPA - Data Posyandu" 
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="com.halamanlogin.DataPosyandu" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -323,7 +296,8 @@
         <!-- Activity untuk insert data strata posyandu -->
         <activity
             android:name=".Strata"
-            android:label="SAPA - Strata Posyandu" >
+            android:label="SAPA - Strata Posyandu" 
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="com.halamanlogin.Strata" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -333,7 +307,8 @@
         <!-- Activity untuk insert data kader posyandu -->
         <activity
             android:name=".Kader"
-            android:label="SAPA - Kader Posyandu" >
+            android:label="SAPA - Kader Posyandu" 
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="com.halamanlogin.Kader" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -343,7 +318,8 @@
         <!-- Activity untuk insert data program pokok posyandu -->
         <activity
             android:name=".ProgramPokok"
-            android:label="SAPA - Program Pokok" >
+            android:label="SAPA - Program Pokok" 
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="com.halamanlogin.ProgramPokok" />
             	<category android:name="android.intent.category.DEFAULT" />
@@ -353,12 +329,86 @@
         <!-- Activity untuk insert data Kegiatan PKP Kecamatan -->
         <activity
             android:name=".LaporanKegPKPKecActivity"
-            android:label="SAPA - Kegiatan PKP Kecamatan" >
+            android:label="SAPA - Kegiatan PKP Kecamatan" 
+            android:screenOrientation="portrait">
             <intent-filter>
                <action android:name="com.halamanlogin.LaporanKegPKPKecActivity" />
             	<category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        
+        
+                  
+        <!-- Activity untuk menu e-knowledge -->
+        <activity
+            android:name=".knowledge"
+            android:label="SAPA - E-Knowledge" 
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.halamanlogin.knowledge" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <!-- Activity untuk semua data knowledge -->
+        <activity android:name=".KnowledgeAll" android:screenOrientation="portrait"/>
+
+        <!-- Activity untuk data library -->
+        <activity android:name=".KnowledgeLibrary" android:screenOrientation="portrait"/>
+        
+		<!-- Activity untuk data news -->
+		<activity android:name=".KnowledgeNews" android:screenOrientation="portrait"/>
+		
+    	<!-- Activity untuk data library -->
+    	<activity android:name=".KnowledgeTutorial" android:screenOrientation="portrait"/>
+    	
+    	<!-- Activity untuk load image -->
+    	<activity android:name=".LoadImage" android:screenOrientation="portrait"/>
+        
+    	<!-- Activity untuk download file -->
+        <activity android:name=".DownloadFile" android:screenOrientation="portrait"/>
+        
+        <!-- Activity untuk file chooser -->
+        <activity
+            android:name=".FileChooser"
+            android:label="SAPA" 
+            android:screenOrientation="portrait">
+           <intent-filter>
+            	<action android:name="com.halamanlogin.FileChooser" />
+            	<category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!-- Activity untuk file loader -->
+        <activity android:name=".FileLoader"
+            	  android:screenOrientation="portrait"/>
+        
+        <!-- Activity untuk menampilkan tab layout e-knowledge -->
+        <activity
+            android:name=".TabLayoutActivity"
+            android:label="SAPA - List File"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.halamanlogin.TabLayoutActivity" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <!--  Songs Activity -->
+        <activity android:name=".SongsActivity" 
+            	  android:screenOrientation="portrait"/>
+        
+        <!--  Videos Activity -->
+        <activity android:name=".VideosActivity" 
+            	  android:screenOrientation="portrait"/>
+        
+        <!--  Photos Activity -->
+        <activity android:name=".PhotosActivity" 
+            	  android:screenOrientation="portrait"/>
+        
+         <!--  Document Activity -->
+        <activity android:name=".DocumentsActivity" 
+                  android:screenOrientation="portrait"/>
                 
     </application>
 
