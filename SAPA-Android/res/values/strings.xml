@@ -3,15 +3,14 @@
 
     <!-- Global -->
     <string name="hello">Hello World, LoginMain!</string>
-    <string name="app_name">Telemedis</string>
+    <string name="app_name">SAPA</string>
     <string name="btnKembali">Kembali</string>
-    <string name="btnSubmit">Submit</string>
     <string name="btnDaftar">Daftar</string>
     <string name="id_kelurahan">Id Kelurahan/ Desa</string>
     
     <!-- main.xml -->
-    <string name="username">Username</string>
-    <string name="password">Password</string>
+    <string name="username">Username (Email)</string>
+    <string name="password">Password (Email Password)</string>
     <string name="btnLogin">LOGIN</string>
     <string name="register">REGISTER</string>
     <string name="exit">EXIT</string>
@@ -120,7 +119,6 @@
     
     <!-- register.xml -->
     <string name="title_register">Register</string>
-    <string name="email">Email</string>
     
     <!-- report_disease.xml -->
     <string name="namaPelapor">Nama Pelapor</string>
@@ -142,6 +140,15 @@
     <string name="kg"> Kg</string>
     <string name="btnKirim">Kirim</string>
     <string name="lihatGrafik">Lihat Grafik</string>
+    
+    <!-- report imunisasi -->
+    <string name="usia">Usia/ Bulan</string>
+    <string name="jenisimunisasi">Jenis Imunisasi</string>
+    <string name="tglimunisasi">Tanggal Imunisasi</string>
+    
+    <!-- report pemberian vitamin -->
+    <string name="dosis">Dosis</string>
+    <string name="tglPemberiannVitamin">Tanggal Pemberian Vitamin</string>
     
     <!-- special_occasion.xml -->
     <string name="namaKegiatan">Nama Kegiatan</string>
