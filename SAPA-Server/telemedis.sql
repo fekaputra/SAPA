@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 25, 2012 at 09:54 
+-- Generation Time: Aug 09, 2012 at 10:27 
 -- Server version: 5.1.41
 -- PHP Version: 5.3.1
 
@@ -18,6 +18,115 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 --
 -- Database: `telemedis`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `data_kependudukan`
+--
+
+CREATE TABLE IF NOT EXISTS `data_kependudukan` (
+  `idKotaKab` int(11) NOT NULL,
+  `jml_penduduk` int(10) NOT NULL,
+  `kepadatan_penduduk` int(10) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `data_kependudukan`
+--
+
+INSERT INTO `data_kependudukan` (`idKotaKab`, `jml_penduduk`, `kepadatan_penduduk`) VALUES
+(1, 123, 456);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `data_kesehatan`
+--
+
+CREATE TABLE IF NOT EXISTS `data_kesehatan` (
+  `idKotaKab` int(11) NOT NULL,
+  `jml_dbd` int(11) NOT NULL,
+  `jml_malaria` int(11) NOT NULL,
+  `jml_giziBuruk` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `data_kesehatan`
+--
+
+INSERT INTO `data_kesehatan` (`idKotaKab`, `jml_dbd`, `jml_malaria`, `jml_giziBuruk`) VALUES
+(1, 50, 20, 5);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `data_kolega`
+--
+
+CREATE TABLE IF NOT EXISTS `data_kolega` (
+  `idKotaKab` int(11) NOT NULL,
+  `NamaKolega` varchar(100) NOT NULL,
+  `Alamat` varchar(100) NOT NULL,
+  `Telp` varchar(11) NOT NULL,
+  `latitude` double NOT NULL,
+  `longitude` double NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `data_kolega`
+--
+
+INSERT INTO `data_kolega` (`idKotaKab`, `NamaKolega`, `Alamat`, `Telp`, `latitude`, `longitude`) VALUES
+(1, 'RS.Advent', 'Jl.Cihampelas No.161', '022-2038941', -6.892304, 107.604003),
+(1, 'Puskesmas Dago', 'Jl.Ir.H.Djuanda No.360', '-', -6.875515, 107.618369),
+(9, 'RS. Pertamina Klayan', 'Jl.Patra Raya Klayan', '0231-224646', -6.682391, 108.55199);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `data_map`
+--
+
+CREATE TABLE IF NOT EXISTS `data_map` (
+  `idKotaKab` int(11) NOT NULL AUTO_INCREMENT,
+  `kota_kabupaten` varchar(40) NOT NULL,
+  `latitude` double NOT NULL,
+  `longitude` double NOT NULL,
+  PRIMARY KEY (`idKotaKab`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=27 ;
+
+--
+-- Dumping data for table `data_map`
+--
+
+INSERT INTO `data_map` (`idKotaKab`, `kota_kabupaten`, `latitude`, `longitude`) VALUES
+(1, 'Kota Bandung', -6.911165, 107.610326),
+(2, 'Kabupaten Bandung Barat', -6.8711, 107.6098),
+(3, 'Kabupaten Bandung', -6.99909, 107.55706),
+(4, 'Kabupaten Bogor', -6.54412, 107.00244),
+(5, 'Kabupaten Karawang', -6.28699, 107.36429),
+(6, 'Kabupaten Bekasi', -6.20242, 107.1351),
+(7, 'Kota Bogor', -6.59621, 106.79373),
+(8, 'Kota Sukabumi', -6.94092, 106.90585),
+(9, 'Kota Cirebon', -6.75021, 108.55259),
+(10, 'Kota Bekasi', -6.28521, 106.97309),
+(11, 'Kota Depok', -6.38896, 106.81655),
+(12, 'Kota Cimahi', -6.88191, 107.54861),
+(13, 'Kota Tasikmalaya', -7.36021, 108.21763),
+(14, 'Kabupaten Purwakarta', -6.58963, 107.43061),
+(15, 'Kabupaten Subang', -6.4939, 107.72629),
+(16, 'Kabupaten Sukabumi', -7.07288, 106.71684),
+(17, 'Kabupaten Cianjur', -7.05156, 107.12645),
+(18, 'Kabupaten Garut', -7.3425, 107.77823),
+(19, 'Kabupaten Tasikmalaya', -7.42885, 108.16424),
+(20, 'Kabupaten Ciamis', -7.4369, 108.48638),
+(21, 'Kabupaten Kuningan', -6.98826, 108.59138),
+(22, 'Kabupaten Cirebon', -6.75547, 108.57552),
+(23, 'Kabupaten Majalengka', -6.81747, 108.22775),
+(24, 'Kabupaten Sumedang', -6.81018, 107.97937),
+(25, 'Kabupaten Indramayu', -6.44806, 108.19772),
+(26, 'Kota Banjar', -7.36996, 108.55901);
 
 -- --------------------------------------------------------
 
@@ -48,7 +157,7 @@ INSERT INTO `file` (`fileid`, `filepath`, `filename`, `filetype`, `filesize`, `f
 (6, 'android/JTK 2 APPL1Teo (1st Task - Laporan Ke-robust-an - Fiyyan).txt', 'JTK 2 APPL1Teo (1st Task - Laporan Ke-robust-an - Fiyyan).txt', 'txt', 1020, 'library'),
 (7, 'android/Future Vision of Healthcare - YouTube.3gp', 'Future Vision of Healthcare - YouTube.3gp', '3gp', 1515365, 'tutorial'),
 (8, 'android/13032012409.jpg', '13032012409.jpg', 'jpg', 798730, 'news'),
-(9, 'android/audio_Google_Translate.MP3', 'audio_Google_Translate.MP3', 'mp3', 5257, 'library'),
+(9, 'android/audio_Google_Translate.MP3', 'audio_Google_Translate.MP3', 'mp3', 5257, 'tutorial'),
 (10, 'android/Daftar_Pembimbing_KP_D3_2012_for_Mhs.pdf', 'Daftar_Pembimbing_KP_D3_2012_for_Mhs.pdf', 'pdf', 19436, 'tutorial'),
 (11, 'android/Future_Vision_of_Healthcare_-_YouTube.3gp', 'Future_Vision_of_Healthcare_-_YouTube.3gp', '3gp', 1515365, 'library');
 
@@ -69,7 +178,7 @@ CREATE TABLE IF NOT EXISTS `kader` (
 --
 
 INSERT INTO `kader` (`idPosyandu`, `totalKader`, `kaderTerlatih`) VALUES
-(1, 15, 15),
+(1, 15, 12),
 (2, 20, 20);
 
 -- --------------------------------------------------------
@@ -116,13 +225,16 @@ CREATE TABLE IF NOT EXISTS `perkembangan_posyandu` (
   `n` int(11) DEFAULT NULL,
   `progPengembangan` int(11) DEFAULT NULL,
   PRIMARY KEY (`idPosyandu`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
 
 --
 -- Dumping data for table `perkembangan_posyandu`
 --
 
 INSERT INTO `perkembangan_posyandu` (`idPosyandu`, `kecamatan`, `desa`, `kelurahan`, `jmlBangunan`, `s`, `k`, `d`, `n`, `progPengembangan`) VALUES
+(19, 'g', 'h', 'y', 0, 0, 0, 0, 0, 0),
+(18, 'g', 'h', 'y', 0, 0, 0, 0, 0, 0),
+(17, 'Coblong', '-', 'Cipaganti', 10, 10, 20, 15, 25, 12),
 (1, 'Lembang', 'Gudang Kahuripan', 'Gudang Kahuripan', 10, 10, 10, 10, 10, 10),
 (2, 'Cimahi tengah', 'Baros', 'Baros', 2, 10, 15, 20, 25, 30);
 
@@ -189,8 +301,8 @@ CREATE TABLE IF NOT EXISTS `t_user` (
 --
 
 INSERT INTO `t_user` (`username`, `password`, `email`, `status`) VALUES
-('keukeu', 'android', 'keukeuanggaraniputri@gmail.com', 1),
-('laras', 'laras', 'laraservintyana@gmail.com', 0);
+('SAPA.Keukeu@gmail.com', 'sapakeukeu', 'SAPA.Keukeu@gmail.com', 1),
+('SAPA.Laras@gmail.com', 'sapalaras', 'SAPA.Laras@gmail.com', 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
