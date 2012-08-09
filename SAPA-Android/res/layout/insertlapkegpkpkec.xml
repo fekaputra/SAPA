@@ -8,7 +8,8 @@
     <LinearLayout
     	android:layout_width="fill_parent"
     	android:layout_height="wrap_content" 
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@drawable/bg37">
         
         <!-- Kecamatan -->
 		<TextView
@@ -173,12 +174,33 @@
 		    android:singleLine="true"
 		    android:ems="10" >
 		</EditText>
+		
+		<!-- blank -->
+			<TextView 
+			    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
+				android:gravity="center" android:text="" >
+			</TextView>
 		    
-		<!-- Button Create Content -->
-		<Button 
-		    android:id="@+id/btnCreate"
-		    android:layout_width="fill_parent"
-		    android:layout_height="wrap_content"
-		    android:text="@string/btnSubmit"/>
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center">
+			
+			<!-- Kirim -->
+			<Button 
+			    android:layout_width="100dp"
+				android:layout_height="wrap_content" 
+				android:id="@+id/kirim" 
+				android:text="@string/btnKirim">
+			</Button>
+			
+			<!-- Kembali -->
+			<Button 
+			    android:layout_width="150dp"
+				android:layout_height="wrap_content" 
+				android:id="@+id/home_report" 
+				android:text="@string/btnKembali">
+			</Button>
+		</LinearLayout>
     </LinearLayout>
 </ScrollView>

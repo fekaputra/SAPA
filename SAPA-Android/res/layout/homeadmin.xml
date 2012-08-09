@@ -1,86 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/bg25"
-    android:gravity="center">  
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout1"
+    android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+		
+	<TableLayout
+	    android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/bg25"
+	    android:gravity="center">  
+		
+		<!-- Gambar untuk e-GIS dan e-Report -->
+		<TableRow android:gravity="center">
+			<TextView
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:text=""
+				android:gravity="center"/>
+			<Button
+				android:layout_width="100dp" 
+				android:layout_height="120dp" 
+				android:background="@drawable/gis2" 
+				android:layout_gravity="center"
+				android:id="@+id/gis"/>
+			<TextView
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"  
+				android:text="            "
+				android:gravity="center"/>
+			<Button
+				android:layout_width="100dp" 
+				android:layout_height="120dp"  
+				android:layout_gravity="center"
+				android:background="@drawable/report1" 
+				android:id="@+id/report"/>
+		</TableRow>
+		
+		<TableRow android:gravity="center">
+			<TextView
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:gravity="center"/>
+		</TableRow>    
+		
+		<!-- Gambar untuk e-Knowledge dan e-Communication -->
+		<TableRow android:gravity="center">
+			<TextView
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:text=""
+				android:gravity="center"/>
+			<Button
+				android:layout_width="100dp" 
+				android:layout_height="120dp" 
+				android:layout_gravity="center"
+				android:background="@drawable/knowledge3" 
+				android:id="@+id/listfile"/>
+			<TextView
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"  
+				android:text="            "
+				android:gravity="center"/>
+			<Button
+				android:layout_width="100dp" 
+				android:layout_height="120dp"
+				android:layout_gravity="center" 
+				android:background="@drawable/communication2" 
+				android:id="@+id/chat"/>
+		</TableRow>
+		
+		<TableRow android:gravity="center">
+			<TextView
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:gravity="center"/>
+		</TableRow>    	
+		
+		<!-- Gambar untuk Keluar/Logout -->
+		<TableRow android:gravity="center">
+			<TextView
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:text="    "
+				android:gravity="center"/>
 	
-	<!-- Gambar untuk e-GIS dan e-Report -->
-	<TableRow>
-		<TextView
-			android:layout_width="wrap_content" 
-			android:layout_height="wrap_content"
-			android:text=""/>
-		<Button
-			android:layout_width="100dp" 
-			android:layout_height="120dp" 
-			android:background="@drawable/gis2" 
-			android:id="@+id/gis"/>
-		<TextView
-			android:layout_width="wrap_content" 
-			android:layout_height="wrap_content"  
-			android:text="            "/>
-		<Button
-			android:layout_width="100dp" 
-			android:layout_height="120dp"  
-			android:background="@drawable/report1" 
-			android:id="@+id/report"/>
-	</TableRow>
+			<Button
+			    android:id="@+id/keluar"
+				android:layout_width="100dp" 
+				android:layout_height="120dp" 
+				android:layout_gravity="center"  
+			    android:background="@drawable/keluar1" />
 	
-	<TableRow>
-		<TextView
-			android:layout_width="wrap_content" 
-			android:layout_height="wrap_content"
-			android:text="        "/>
-	</TableRow>    
-	
-	<!-- Gambar untuk e-Knowledge dan e-Communication -->
-	<TableRow>
-		<TextView
-			android:layout_width="wrap_content" 
-			android:layout_height="wrap_content"
-			android:text=""/>
-		<Button
-			android:layout_width="100dp" 
-			android:layout_height="120dp" 
-			android:background="@drawable/knowledge3" 
-			android:id="@+id/listfile"/>
-		<TextView
-			android:layout_width="wrap_content" 
-			android:layout_height="wrap_content"  
-			android:text="            "/>
-		<Button
-			android:layout_width="100dp" 
-			android:layout_height="120dp" 
-			android:background="@drawable/communication2" 
-			android:id="@+id/chat"/>
-	</TableRow>
-	
-	<TableRow>
-		<TextView
-			android:layout_width="wrap_content" 
-			android:layout_height="wrap_content"
-			android:text="        "/>
-	</TableRow>    	
-	
-	<!-- Gambar untuk Keluar/Logout -->
-	<TableRow android:gravity="center">
-		<TextView
-			android:layout_width="wrap_content" 
-			android:layout_height="wrap_content"
-			android:text=""/>
-
-		<Button
-		    android:id="@+id/keluar"
-			android:layout_width="100dp" 
-			android:layout_height="120dp"   
-		    android:background="@drawable/keluar1" />
-
-		<TextView
-			android:layout_width="wrap_content" 
-			android:layout_height="wrap_content"
-			android:text="    "/>
-	</TableRow>
-
-</TableLayout>
+			<TextView
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:text=""
+				android:gravity="center"/>
+		</TableRow>	
+	</TableLayout>
+</ScrollView>

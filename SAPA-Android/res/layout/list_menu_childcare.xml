@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout1"
+    android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:gravity="center"
+	    android:background="@drawable/bg28">
+	    
+		<!-- blank -->
+	    	<TextView
+				android:layout_width="fill_parent"  
+				android:layout_height="wrap_content" 
+				android:text="">
+			</TextView>
+		
+		    <TextView
+				android:layout_width="fill_parent"  
+				android:layout_height="wrap_content"
+				android:text="">
+			</TextView>
+		
+		    <TextView
+				android:layout_width="fill_parent"  
+				android:layout_height="wrap_content" 
+				android:text="">
+			</TextView>
+			
+		    <TextView
+				android:layout_width="fill_parent"  
+				android:layout_height="wrap_content" 
+				android:text="">
+			</TextView>
+			    	    	
+			<TextView
+				android:layout_width="fill_parent"  
+				android:layout_height="wrap_content" 
+				android:text="">
+			</TextView>
+		
+		<!-- Pertumbuhan dan Perkembangan Anak -->	
+		<Button 
+			android:layout_width="fill_parent"  
+			android:layout_height="wrap_content" 
+			android:id="@+id/PPA" 
+			android:text="@string/btnTumbuhKembang">
+		</Button>
+	
+		<!-- blank -->
+			<TextView
+				android:layout_width="fill_parent"  
+				android:layout_height="wrap_content" 
+				android:text="">
+			</TextView>
+	
+		<!-- Pemberian Imunisasi -->	
+		<Button 
+			android:id="@+id/imunisasi" 
+			android:layout_width="fill_parent"  
+			android:layout_height="wrap_content"
+			android:text="@string/btnImunisasi">
+		</Button>
+		
+		<!-- blank -->
+			<TextView
+				android:layout_width="fill_parent"  
+				android:layout_height="wrap_content" 
+				android:text="">
+			</TextView>
+		
+		<!-- Pemberian Kapsul Vitamin Dosis Tinggi -->	
+		<Button 
+			android:layout_width="fill_parent"  
+			android:layout_height="wrap_content"
+			android:id="@+id/PKVDT" 
+			android:text="@string/pkvdt">
+		</Button>
+		
+		<!-- blank -->
+			<TextView
+				android:layout_width="fill_parent"  
+				android:layout_height="wrap_content" 
+				android:text="">
+			</TextView>
+		
+			<TextView
+				android:layout_width="fill_parent"  
+				android:layout_height="wrap_content" 
+				android:text="">
+			</TextView>
+			
+			<TextView
+				android:layout_width="fill_parent"  
+				android:layout_height="wrap_content" 
+				android:text="">
+			</TextView>
+			
+		<!-- Kembali ke menu Childcare -->
+		<Button 
+			android:layout_width="150dp"
+			android:layout_height="40dp" 
+			android:id="@+id/home_childcare" 
+			android:text="@string/menu_childcare">
+		</Button>
+	</LinearLayout>
+</ScrollView>

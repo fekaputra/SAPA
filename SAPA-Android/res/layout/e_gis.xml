@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android" 
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    android:layout_height="fill_parent">
     
-    <!-- Gambar Peta -->
-    <ImageView
-	   	android:id="@+id/imageView1"
+	<com.google.android.maps.MapView
+	    android:id="@+id/mapView"
 	    android:layout_width="fill_parent"
 	    android:layout_height="fill_parent"
-	    android:layout_gravity="center"
-	    android:src="@drawable/peta3" />
-</LinearLayout>
+	    android:clickable="true"
+	    android:apiKey="01btsqPAzp34Hx0niioLzXhAExaW48U3SRGqxVQ"/>
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<LinearLayout 
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+	  	android:layout_height="wrap_content" 
+	  	android:orientation="vertical" 
+	  	android:layout_width="fill_parent">
+		
+		<TextView 
+		    android:id="@+id/kabupaten_kota"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:visibility="gone"/>
+		
+		<TextView 
+		    android:id="@+id/latitude"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:visibility="gone"/>
+		
+		<TextView 
+		    android:id="@+id/longitude"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:visibility="gone"/>
+		
+		<!-- Jumlah Penduduk -->
+		<LinearLayout 
+		    android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+			
+			<TextView
+			    android:layout_width="90dp"
+			    android:layout_height="wrap_content"
+			    android:layout_marginLeft="10dip"
+			    android:text="Kolega" />
+			
+			<TextView
+			    android:id="@+id/TextView01"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_marginLeft="10dip"
+			    android:text="@+id/TextView01" />
+		</LinearLayout>
+			
+		<!-- Kepadatan Penduduk -->
+		<LinearLayout 
+		    android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+			<TextView
+			    android:layout_width="90dp"
+			    android:layout_height="wrap_content"
+			    android:layout_marginLeft="10dip"
+			    android:text="Alamat" />
+			
+			<TextView
+			    android:id="@+id/TextView02"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_marginLeft="10dip"
+			    android:text="@+id/TextView02" />
+		</LinearLayout>
+		
+		<!-- Kepadatan Penduduk -->
+		<LinearLayout 
+		    android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+			<TextView
+			    android:layout_width="90dp"
+			    android:layout_height="wrap_content"
+			    android:layout_marginLeft="10dip"
+			    android:text="No. Telepon" />
+			
+			<TextView
+			    android:id="@+id/TextView03"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_marginLeft="10dip"
+			    android:text="@+id/TextView03" />
+		</LinearLayout>
+	</LinearLayout>

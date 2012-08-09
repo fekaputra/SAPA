@@ -1,34 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" 
-	android:background="@drawable/bg11">
-    
-    <!-- Title -->
-    <TextView
-		android:layout_width="fill_parent"  
-		android:layout_height="wrap_content" 
-		android:gravity="center" 
-		android:textSize="30dp"
-		android:textColor="#000000"
-		android:text="@string/title_register" >
-	</TextView>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout1"
+    android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
 	
-    <!-- blank -->	
-    	<TextView
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical" 
+		android:background="@drawable/bg11">
+	    
+	    <!-- Title -->
+	    <TextView
 			android:layout_width="fill_parent"  
 			android:layout_height="wrap_content" 
-			android:text="" >
+			android:gravity="center" 
+			android:textSize="27dp"
+			android:textColor="#000000"
+			android:text="@string/title_register" >
 		</TextView>
-    
-    <!-- Username -->
-    <LinearLayout
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content" >
+		
+	    <!-- blank -->	
+	    	<TextView
+				android:layout_width="fill_parent"  
+				android:layout_height="wrap_content" 
+				android:text="" >
+			</TextView>
+	    
+	    <!-- Username -->
 	
 		<TextView
-			android:layout_width="90dp"  
+			android:layout_width="fill_parent"  
 			android:layout_height="wrap_content" 
 			android:text="@string/username" >
 		</TextView>
@@ -40,67 +43,41 @@
 			android:singleLine="true"
 			android:id="@+id/newusername">
 		</EditText>
-	</LinearLayout>
-	
-	<!-- Password -->
-	<LinearLayout
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content" >
 		
+		<!-- Password -->
 		<TextView 
-			android:layout_width="90dp" 
+			android:layout_width="fill_parent" 
 			android:layout_height="wrap_content" 
 			android:text="@string/password">
 		</TextView>
-		
+			
 		<EditText 
 		    android:layout_width="fill_parent" 
 			android:layout_height="wrap_content" 
 			android:hint=""
 			android:singleLine="true"
-			android:id="@+id/newpassword" 
-			></EditText>
+			android:id="@+id/newpassword" >
+		</EditText>
+		
+		<!-- Submit -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center">
+			
+			<Button 
+			    android:layout_width="100dp"
+				android:layout_height="wrap_content" 
+				android:id="@+id/daftar" 
+				android:text="@string/btnDaftar">
+			</Button>
+			
+			<Button 
+			    android:layout_width="100dp"
+				android:layout_height="wrap_content" 
+				android:id="@+id/kembali" 
+				android:text="@string/btnKembali">
+			</Button>
+		</LinearLayout>
 	</LinearLayout>
-
-	<!-- Email -->
-	<LinearLayout
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content" >
-		
-		<TextView 
-			android:layout_width="90dp" 
-			android:layout_height="wrap_content" 
-			android:text="@string/email">
-		</TextView>
-		
-		<EditText 
-		    android:layout_width="fill_parent" 
-			android:layout_height="wrap_content" 
-			android:hint=""
-			android:singleLine="true"
-			android:id="@+id/newemail" 
-			></EditText>
-	</LinearLayout>
-	
-	<!-- Submit -->
-	<LinearLayout
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:gravity="center">
-		
-		<Button 
-		    android:layout_width="100dp"
-			android:layout_height="wrap_content" 
-			android:id="@+id/daftar" 
-			android:text="@string/btnSubmit">
-		</Button>
-		
-		<Button 
-		    android:layout_width="100dp"
-			android:layout_height="wrap_content" 
-			android:id="@+id/kembali" 
-			android:text="@string/btnKembali">
-		</Button>
-	</LinearLayout>
-
-</LinearLayout>
+</ScrollView>

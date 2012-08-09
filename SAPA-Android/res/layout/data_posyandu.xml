@@ -5,7 +5,7 @@
 	android:layout_height="fill_parent">
 		
     <LinearLayout
-		android:layout_width="match_parent"
+		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:orientation="vertical" >
 	    
@@ -28,7 +28,7 @@
 			
 		<!-- Input data kecamatan -->
 		<LinearLayout
-			android:layout_width="match_parent"
+			android:layout_width="fill_parent"
 			android:layout_height="wrap_content" >
 				
 			<TextView 
@@ -49,7 +49,7 @@
 		
 		<!-- Input data desa -->
 		<LinearLayout
-			android:layout_width="match_parent"
+			android:layout_width="fill_parent"
 			android:layout_height="wrap_content" >
 			
 			<TextView 
@@ -69,7 +69,7 @@
 		    
 		<!-- Input data kelurahan -->
 		<LinearLayout
-			android:layout_width="match_parent"
+			android:layout_width="fill_parent"
 			android:layout_height="wrap_content" >
 		
 			<TextView
@@ -113,7 +113,7 @@
 			
 		<!-- Input jumlah bangunan posyandu  -->
 		<LinearLayout
-			android:layout_width="match_parent"
+			android:layout_width="fill_parent"
 			android:layout_height="wrap_content" >
 			
 			<TextView 
@@ -158,7 +158,7 @@
 			
 		<!-- Input S dan K-->	
 		<LinearLayout
-			android:layout_width="match_parent"
+			android:layout_width="fill_parent"
 			android:layout_height="wrap_content" >
 			
 			<TextView 
@@ -201,7 +201,7 @@
 		
 		<!-- Input D dan N -->
 		<LinearLayout
-			android:layout_width="match_parent"
+			android:layout_width="fill_parent"
 			android:layout_height="wrap_content" >
 				
 			<TextView 
@@ -252,7 +252,7 @@
 			
 		<!-- Input Program Pengembangan/ Integrasi -->	
 		<LinearLayout
-			android:layout_width="match_parent"
+			android:layout_width="fill_parent"
 			android:layout_height="wrap_content" >
 				
 			<TextView 
@@ -280,7 +280,7 @@
 			</TextView>
 			
 		<LinearLayout
-			android:layout_width="match_parent"
+			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
 			android:gravity="center">
 				
@@ -288,7 +288,7 @@
 			    android:layout_width="100dp"
 				android:layout_height="45dp" 
 				android:id="@+id/daftar" 
-				android:text="@string/btnSubmit">
+				android:text="@string/btnDaftar">
 			</Button>
 		</LinearLayout>
 	</LinearLayout>	

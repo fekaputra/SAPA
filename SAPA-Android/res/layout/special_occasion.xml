@@ -1,201 +1,194 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@drawable/bg30">
-    
-    <!-- blank -->
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout1"
+    android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:background="@drawable/bg37">
+	    
+	    <!-- blank -->
+		    <TextView 
+			    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
+				android:gravity="center" android:text="" >
+			</TextView>
+	    
+	    <!-- Nama Kegiatan -->
+	    <LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" >
+		
+			<TextView
+				android:layout_width="100dp"  
+				android:layout_height="fill_parent" 
+				android:gravity="center_vertical"
+				android:textColor="#ffffff"
+				android:text="@string/namaKegiatan" >
+			</TextView>
+			
+			<EditText 
+				android:layout_width="fill_parent" 
+				android:layout_height="40dp"
+				android:hint=""
+				android:singleLine="true"
+				android:id="@+id/nama_kegiatan">
+			</EditText>
+		</LinearLayout>
+	    
+	    <!-- Penyelenggara -->
+	    <LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" >
+		
+			<TextView
+				android:layout_width="100dp"  
+				android:layout_height="fill_parent"
+				android:gravity="center_vertical"
+				android:textColor="#ffffff"
+				android:text="@string/penyelenggara" >
+			</TextView>
+			
+			<EditText 
+				android:layout_width="fill_parent" 
+				android:layout_height="40dp"
+				android:hint=""
+				android:singleLine="true"
+				android:id="@+id/nama_penyelenggara">
+			</EditText>
+		</LinearLayout>
+		
+	    <!-- Waktu Kegiatan -->
 	    <TextView 
-		    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
-			android:gravity="center" android:text="" >
-		</TextView>
-		
-	    <TextView 
-		    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
-			android:gravity="center" android:text="" >
-		</TextView>
-    
-    <!-- Nama Kegiatan -->
-    <LinearLayout
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content" >
-	
-		<TextView
-			android:layout_width="100dp"  
-			android:layout_height="fill_parent" 
-			android:gravity="center_vertical"
-			android:textColor="#ffffff"
-			android:text="@string/namaKegiatan" >
-		</TextView>
-		
-		<EditText 
-			android:layout_width="fill_parent" 
-			android:layout_height="40dp"
-			android:hint=""
-			android:singleLine="true"
-			android:id="@+id/nama_kegiatan">
-		</EditText>
-	</LinearLayout>
-    
-    <!-- Penyelenggara -->
-    <LinearLayout
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content" >
-	
-		<TextView
-			android:layout_width="100dp"  
-			android:layout_height="fill_parent"
-			android:gravity="center_vertical"
-			android:textColor="#ffffff"
-			android:text="@string/penyelenggara" >
-		</TextView>
-		
-		<EditText 
-			android:layout_width="fill_parent" 
-			android:layout_height="40dp"
-			android:hint=""
-			android:singleLine="true"
-			android:id="@+id/nama_penyelenggara">
-		</EditText>
-	</LinearLayout>
-	
-    <!-- Waktu Kegiatan -->
-    <LinearLayout
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content" >
-		
-		<TextView 
 			android:layout_width="100dp" 
 			android:layout_height="fill_parent" 
 			android:gravity="center_vertical"
 			android:textColor="#ffffff"
 			android:text="@string/waktuKegiatan">
 		</TextView>
+			
+		<DatePicker
+		    android:id="@+id/dateTanggal"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content" />
 		
-		<EditText 
-		    android:layout_width="fill_parent" 
-			android:layout_height="40dp" 
-			android:hint=""
-			android:singleLine="true"
-			android:id="@+id/waktu_kegiatan" >
-		</EditText>
-	</LinearLayout>
-
-	<!-- Kota -->
-	<LinearLayout
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content" >
-		
-		<TextView 
-			android:layout_width="100dp" 
-			android:layout_height="fill_parent" 
-			android:gravity="center_vertical"
-			android:textColor="#ffffff"
-			android:text="@string/kota">
-		</TextView>
-		
-		<EditText 
-		    android:layout_width="fill_parent" 
-			android:layout_height="40dp"
-			android:hint=""
-			android:singleLine="true"
-			android:id="@+id/kota"> 
-		</EditText>
-	</LinearLayout>
+		<!-- blank -->
+			<TextView
+				android:layout_width="fill_parent"  
+				android:layout_height="wrap_content" 
+				android:text="" >
+			</TextView>
+			
+		<!-- blank -->
 	
-	<!-- Topik -->
-	<LinearLayout
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content" >
+		<!-- Kota -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" >
+			
+			<TextView 
+				android:layout_width="100dp" 
+				android:layout_height="fill_parent" 
+				android:gravity="center_vertical"
+				android:textColor="#ffffff"
+				android:text="@string/kota">
+			</TextView>
+			
+			<EditText 
+			    android:layout_width="fill_parent" 
+				android:layout_height="40dp"
+				android:hint=""
+				android:singleLine="true"
+				android:id="@+id/kota"> 
+			</EditText>
+		</LinearLayout>
 		
-		<TextView 
-			android:layout_width="100dp" 
-			android:layout_height="fill_parent"
-			android:gravity="center_vertical"
-			android:textColor="#ffffff"
-			android:text="@string/topik">
-		</TextView>
+		<!-- Topik -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" >
+			
+			<TextView 
+				android:layout_width="100dp" 
+				android:layout_height="fill_parent"
+				android:gravity="center_vertical"
+				android:textColor="#ffffff"
+				android:text="@string/topik">
+			</TextView>
+			
+			<EditText 
+			    android:layout_width="fill_parent" 
+				android:layout_height="40dp" 
+				android:hint=""
+				android:singleLine="true"
+				android:id="@+id/topik" >
+			</EditText>
+		</LinearLayout>
 		
-		<EditText 
-		    android:layout_width="fill_parent" 
-			android:layout_height="40dp" 
-			android:hint=""
-			android:singleLine="true"
-			android:id="@+id/topik" >
-		</EditText>
-	</LinearLayout>
+	    <!-- Tag -->
+	    <LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" >
+		
+			<TextView
+				android:layout_width="100dp"  
+				android:layout_height="wrap_content"
+				android:textColor="#ffffff"
+				android:text="@string/tag" >
+			</TextView>
+			
+			<EditText 
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content"
+				android:hint=""
+				android:singleLine="true"
+				android:id="@+id/tag">
+			</EditText>				
+		</LinearLayout>
 	
-    <!-- Tag -->
-    <LinearLayout
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content" >
-	
+		<!-- Keterangan -->
 		<TextView
-			android:layout_width="100dp"  
+			android:layout_width="fill_parent"  
 			android:layout_height="wrap_content"
 			android:textColor="#ffffff"
-			android:text="@string/tag" >
+			android:textStyle="italic"
+			android:text="@string/keterangan4" >
 		</TextView>
 		
-		<EditText 
-			android:layout_width="fill_parent" 
+		<!-- blank -->
+			<TextView 
+			    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
+				android:gravity="center" android:text="" >
+			</TextView>
+			
+			<TextView 
+			    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
+				android:gravity="center" android:text="" >
+			</TextView>
+			
+		<LinearLayout
+			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
-			android:hint=""
-			android:singleLine="true"
-			android:id="@+id/tag">
-		</EditText>				
+			android:gravity="center">
+			
+			<!-- Kirim -->
+			<Button 
+			    android:layout_width="100dp"
+				android:layout_height="wrap_content" 
+				android:id="@+id/kirim" 
+				android:text="@string/btnKirim">
+			</Button>
+			
+			<!-- Kembali -->
+			<Button 
+			    android:layout_width="150dp"
+				android:layout_height="wrap_content" 
+				android:id="@+id/home_report" 
+				android:text="@string/btnKembali">
+			</Button>
+		</LinearLayout>
 	</LinearLayout>
-
-	<!-- Keterangan -->
-	<TextView
-		android:layout_width="fill_parent"  
-		android:layout_height="wrap_content"
-		android:textColor="#ffffff"
-		android:textStyle="italic"
-		android:text="@string/keterangan4" >
-	</TextView>
-	
-	<!-- blank -->
-		<TextView 
-		    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
-			android:gravity="center" android:text="" >
-		</TextView>
-		
-		<TextView 
-		    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
-			android:gravity="center" android:text="" >
-		</TextView>
-		
-		<TextView 
-		    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
-			android:gravity="center" android:text="" >
-		</TextView>
-		
-		<TextView 
-		    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
-			android:gravity="center" android:text="" >
-		</TextView>
-		
-	<LinearLayout
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:gravity="center">
-		
-		<!-- Kirim -->
-		<Button 
-		    android:layout_width="100dp"
-			android:layout_height="wrap_content" 
-			android:id="@+id/kirim" 
-			android:text="@string/btnKirim">
-		</Button>
-		
-		<!-- Kembali -->
-		<Button 
-		    android:layout_width="150dp"
-			android:layout_height="wrap_content" 
-			android:id="@+id/home_report" 
-			android:text="@string/btnKembali">
-		</Button>
-	</LinearLayout>
-</LinearLayout>
+</ScrollView>

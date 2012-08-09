@@ -3,10 +3,10 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
-    android:background="@drawable/bg30">
+    android:background="@drawable/bg37">
 		
     <LinearLayout
-		android:layout_width="match_parent"
+		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:orientation="vertical" >
 	    
@@ -29,7 +29,7 @@
 			
 		<!-- Id Kelurahan/ Desa -->
 		<LinearLayout
-			android:layout_width="match_parent"
+			android:layout_width="fill_parent"
 			android:layout_height="wrap_content" >
 				
 			<TextView
@@ -57,7 +57,7 @@
 			
 		<!-- Jumlah Total -->	
 		<LinearLayout
-			android:layout_width="match_parent"
+			android:layout_width="fill_parent"
 			android:layout_height="wrap_content" >
 				
 			<TextView 
@@ -80,7 +80,7 @@
 		
 		<!-- Kader Terlatih -->
 		<LinearLayout
-			android:layout_width="match_parent"
+			android:layout_width="fill_parent"
 			android:layout_height="wrap_content" >
 		
 			<TextView 
@@ -110,7 +110,7 @@
 		
 		<!-- Submit -->	
 		<LinearLayout
-			android:layout_width="match_parent"
+			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
 			android:gravity="center">
 				
@@ -118,7 +118,7 @@
 				android:id="@+id/daftar"
 			    android:layout_width="100dp"
 				android:layout_height="45dp" 
-				android:text="@string/btnSubmit">
+				android:text="@string/btnKirim">
 			</Button>
 		</LinearLayout>
 	</LinearLayout>	
