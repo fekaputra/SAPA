@@ -2,7 +2,8 @@
 <ScrollView
 	xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-	android:layout_height="fill_parent">
+	android:layout_height="fill_parent"
+	android:background="@drawable/bg37">
 
 	<TableLayout
 	    android:layout_width="fill_parent"
@@ -15,6 +16,7 @@
 			android:layout_height="wrap_content" 
 			android:gravity="center" 
 			android:textSize="18dp"
+			android:textColor="#ffffffff"
 			android:text="@string/title_tumbuh_kembang" >
 		</TextView>
 		
@@ -34,13 +36,15 @@
 				android:layout_width="90dp"  
 				android:layout_height="wrap_content" 
 				android:gravity="center_vertical"
+				android:textColor="#ffffffff"
 				android:text="@string/namaAnak" >
 			</TextView>		
 			
 			<TextView
 				android:id="@+id/namaAnak"
 				android:layout_width="fill_parent" 
-				android:layout_height="wrap_content">
+				android:layout_height="wrap_content"
+				android:textColor="#ffffffff">
 			</TextView>
 		</LinearLayout>
 		
@@ -60,12 +64,14 @@
 				android:layout_width="90dp" 
 				android:layout_height="wrap_content" 
 				android:gravity="center_vertical"
+				android:textColor="#ffffffff"
 				android:text="@string/jk">
 			</TextView>
 			
 			<TextView
 			   android:layout_width="fill_parent" 
 			   android:layout_height="wrap_content"
+			   android:textColor="#ffffffff"
 			   android:id="@+id/jk" >
 			</TextView>
 		</LinearLayout>  
@@ -93,9 +99,10 @@
 		<TextView
 			android:layout_width="wrap_content"  
 			android:layout_height="fill_parent"
-			android:text="@string/tgl_pendataan" >
+			android:text="@string/tgl_pendataan" 
+			android:textColor="#ffffffff">
 		</TextView>
-		
+		
 		<DatePicker
 		    android:id="@+id/dateTanggal"
 		    android:layout_width="wrap_content"
@@ -119,6 +126,7 @@
 				android:layout_width="90dp"  
 				android:layout_height="fill_parent"
 				android:gravity="center_vertical"
+				android:textColor="#ffffffff"
 				android:text="@string/panjang_badan" >
 			</TextView>
 			
@@ -136,6 +144,7 @@
 				android:layout_width="fill_parent" 
 				android:layout_height="fill_parent" 
 				android:gravity="center_vertical"
+				android:textColor="#ffffffff"
 				android:text="@string/keterangan5">
 			</TextView>		
 		</LinearLayout>
@@ -149,6 +158,7 @@
 				android:layout_width="90dp"  
 				android:layout_height="fill_parent"
 				android:gravity="center_vertical"
+				android:textColor="#ffffffff"
 				android:text="@string/tinggi_badan" >
 			</TextView>	
 					
@@ -166,6 +176,7 @@
 				android:layout_width="fill_parent" 
 				android:layout_height="fill_parent" 
 				android:gravity="center_vertical"
+				android:textColor="#ffffffff"
 				android:text="@string/keterangan6">
 			</TextView>			
 		</LinearLayout>
@@ -179,6 +190,7 @@
 				android:layout_width="90dp" 
 				android:layout_height="fill_parent" 
 				android:gravity="center_vertical"
+				android:textColor="#ffffffff"
 				android:text="@string/bb">
 			</TextView>
 			
@@ -196,7 +208,8 @@
 				android:layout_width="90dp" 
 				android:layout_height="fill_parent" 
 				android:gravity="center_vertical"
-				android:text="@string/kb">
+				android:textColor="#ffffffff"
+				android:text="@string/kg">
 			</TextView>		
 		</LinearLayout>
 	
