@@ -152,6 +152,11 @@ public class ProgramPokok extends Activity {
 	@Override
 	public void onBackPressed() 
 	{
-		//tidak melakukan apa-apa
+		Intent i = getIntent();
+		String admin = i.getStringExtra("admin");
+				
+		Intent back = new Intent(ProgramPokok.this, PerkembanganPosyandu.class);
+		back.putExtra("admin", admin);
+    	startActivity(back);
 	}
 }

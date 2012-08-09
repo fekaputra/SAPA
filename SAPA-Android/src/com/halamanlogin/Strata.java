@@ -28,6 +28,8 @@ public class Strata extends Activity {
 	
 	private String url = Referensi.url + "/insertStrata.php";
 	
+	ValidasiInsert validasi = new ValidasiInsert();
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) 
 	{
@@ -44,9 +46,15 @@ public class Strata extends Activity {
     	idKelurahan.setText(id);
 		
 		new_pratama = (EditText) findViewById(R.id.new_pratama);
+		validasi.message(new_pratama);
 		new_madya = (EditText) findViewById(R.id.new_madya);
+		validasi.message(new_madya);
 		new_purnama =  (EditText) findViewById(R.id.new_purnama);
+		validasi.message(new_purnama);
 		new_mandiri =  (EditText) findViewById(R.id.new_mandiri);
+		validasi.message(new_mandiri);
+		
+		final EditText[] editText = new EditText[] {new_pratama, new_madya, new_purnama, new_mandiri};
 		
 		jmlStrata =  (TextView) findViewById(R.id.jumlahStrata);
 		
@@ -72,16 +80,26 @@ public class Strata extends Activity {
 			public void onClick(View v) 
 			{
 				try {
-					String idPosyandu = URLEncoder.encode(idKelurahan.getText().toString(), "utf-8");
-					String pratama = URLEncoder.encode(new_pratama.getText().toString(), "utf-8");
-					String madya = URLEncoder.encode(new_madya.getText().toString(), "utf-8");
-					String purnama = URLEncoder.encode(new_purnama.getText().toString(), "utf-8");
-					String mandiri = URLEncoder.encode(new_mandiri.getText().toString(), "utf-8");
-					String jumlahStrata = URLEncoder.encode(jmlStrata.getText().toString(), "utf-8");
-					
-					url += "?idPosyandu="+ idPosyandu + "&pratama=" + pratama + "&madya=" + madya + "&purnama=" + purnama + "&mandiri=" + mandiri + "&jumlahStrata=" + jumlahStrata;
-
-					getRequest(url);
+					//call class validation insert to insert new data
+					boolean check = validasi.validation(editText);//validation(editText);
+					if(check == false)
+					{
+						Toast.makeText(Strata.this, "There are some field(s) need to input", Toast.LENGTH_SHORT).show();
+						validasi.messages(editText);
+					}
+					else
+					{	
+						String idPosyandu = URLEncoder.encode(idKelurahan.getText().toString(), "utf-8");
+						String pratama = URLEncoder.encode(new_pratama.getText().toString(), "utf-8");
+						String madya = URLEncoder.encode(new_madya.getText().toString(), "utf-8");
+						String purnama = URLEncoder.encode(new_purnama.getText().toString(), "utf-8");
+						String mandiri = URLEncoder.encode(new_mandiri.getText().toString(), "utf-8");
+						String jumlahStrata = URLEncoder.encode(jmlStrata.getText().toString(), "utf-8");
+						
+						url += "?idPosyandu="+ idPosyandu + "&pratama=" + pratama + "&madya=" + madya + "&purnama=" + purnama + "&mandiri=" + mandiri + "&jumlahStrata=" + jumlahStrata;
+	
+						getRequest(url);
+					}
 				} catch (UnsupportedEncodingException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -147,7 +165,12 @@ public class Strata extends Activity {
 	@Override
 	public void onBackPressed() 
 	{
-		//tidak melakukan apa-apa
+		Intent i = getIntent();
+		String admin = i.getStringExtra("admin");
+				
+		Intent back = new Intent(Strata.this, PerkembanganPosyandu.class);
+		back.putExtra("admin", admin);
+    	startActivity(back);
 	}
 }
 

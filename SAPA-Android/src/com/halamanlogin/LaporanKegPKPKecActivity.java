@@ -69,7 +69,7 @@ public class LaporanKegPKPKecActivity extends Activity
         final EditText[] editText = new EditText[] {textKec, textBulan, textUraianKeg, textTempat, textUnsur, textMasalah, textRTL};
         
         //button insert
-        Button buttonInsert = (Button) findViewById(R.id.btnCreate);
+        Button buttonInsert = (Button) findViewById(R.id.kirim);
         
         //button click event
         buttonInsert.setOnClickListener(new View.OnClickListener() 
@@ -88,6 +88,20 @@ public class LaporanKegPKPKecActivity extends Activity
 					new InsertDataLapKegPKPKec().execute();
 				}
 			}
+		});
+        
+        Button back = (Button) findViewById(R.id.home_report);
+		back.setOnClickListener(new Button.OnClickListener()
+		{
+			public void onClick(View v)
+	        {
+				Intent i = getIntent();
+				String admin = i.getStringExtra("admin");
+				
+				Intent home_report = new Intent(LaporanKegPKPKecActivity.this, report.class);
+				home_report.putExtra("admin", admin);
+		    	startActivity(home_report);
+	        }
 		});
     }
     
@@ -147,21 +161,9 @@ public class LaporanKegPKPKecActivity extends Activity
 			params.add(new BasicNameValuePair ("masalah", masalah));
 			params.add(new BasicNameValuePair ("rtl", rtl));
 			
-			/*Log.d("kecamatan", kecamatan);
-			Log.d("bulan", bulan);
-			Log.d("tanggal", tanggal);
-			Log.d("uraianKeg", uraianKeg);
-			Log.d("tempat", tempat);
-			Log.d("unsur", unsur);
-			Log.d("masalah", masalah);
-			Log.d("rtl", rtl);*/
-			
 			//getting json object
 			//using post method
 			JSONObject json = jsonParser.makeHttpRequest(url_insert, "POST", params);
-			
-			//check log cat for response
-			//Log.d("Create Response", json.toString());
 			
 			// check for success tag
             try 

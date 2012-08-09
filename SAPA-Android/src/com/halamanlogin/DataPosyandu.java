@@ -25,12 +25,19 @@ public class DataPosyandu extends Activity
 	private String url = Referensi.url + "/insertPerkembanganPosyandu.php";
 
 	ValidasiInsert validasi = new ValidasiInsert();
+	User user = new User();
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) 
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.data_posyandu);
+		
+		Intent intent = getIntent();
+		String admin = intent.getStringExtra("admin");
+		
+		//set user dari data yang dikirim class sebelumnya
+		user.setUser(admin);
 		
 		new_kecamatan = (EditText) findViewById(R.id.new_kecamatan);
         validasi.message(new_kecamatan);
@@ -149,6 +156,10 @@ public class DataPosyandu extends Activity
 	@Override
 	public void onBackPressed() 
 	{
-		//tidak melakukan apa-apa
+		String admin = user.getUser();
+    	
+    	Intent back = new Intent (DataPosyandu.this, PerkembanganPosyandu.class);
+    	back.putExtra("admin", admin);
+    	startActivity(back);
 	}
 }

@@ -38,8 +38,6 @@ public class insertUser extends Activity
 		validasi.message(newUsername);
 		newPassword = (EditText) findViewById(R.id.newpassword);
 		validasi.message(newPassword);
-		newEmail = (EditText) findViewById(R.id.newemail);
-		validasi.message(newEmail);
 		
 		final EditText[] editText = new EditText[] {newUsername, newPassword, newEmail};
 

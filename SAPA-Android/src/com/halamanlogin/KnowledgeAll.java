@@ -8,6 +8,7 @@ import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -78,6 +79,7 @@ public class KnowledgeAll extends ListActivity
                 
                 //replace all white space
                 filePath = filePath.replaceAll(" ", "%20");
+                //Toast.makeText(KnowledgeAll.this, filePath, Toast.LENGTH_SHORT).show();
                 
                 in = new Intent(getApplicationContext(), FileLoader.class);
                 
@@ -144,7 +146,6 @@ public class KnowledgeAll extends ListActivity
 			catch (JSONException e)
 			{
 				e.printStackTrace();
-				//Toast.makeText(this, e.printStackTrace(), Toast.LENGTH_SHORT).show();
 			}
 			
 			return null;

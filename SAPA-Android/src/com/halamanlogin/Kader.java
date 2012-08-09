@@ -139,6 +139,11 @@ public class Kader extends Activity {
 	@Override
 	public void onBackPressed() 
 	{
-		//tidak melakukan apa-apa
+		Intent i = getIntent();
+		String admin = i.getStringExtra("admin");
+				
+		Intent back = new Intent(Kader.this, PerkembanganPosyandu.class);
+		back.putExtra("admin", admin);
+    	startActivity(back);
 	}
 }

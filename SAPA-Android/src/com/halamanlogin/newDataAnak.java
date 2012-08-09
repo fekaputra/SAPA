@@ -5,16 +5,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class newDataAnak extends Activity 
 {	
-	private EditText newPosyandu, newNamaAnak, newTglLahir, newBbLahir, newNamaIbu, newNamaAyah;
+	private EditText newPosyandu, newNamaAnak, newBbLahir, newNamaIbu, newNamaAyah;
 	private Button btnSubmit, back;
 	private String jns_kel;
 	private RadioGroup jenis_kelamin;
+	DatePicker newTglLahir;
 	
 	ValidasiInsert validasi = new ValidasiInsert();
 
@@ -28,8 +30,6 @@ public class newDataAnak extends Activity
 		validasi.message(newPosyandu);
 		newNamaAnak = (EditText) findViewById(R.id.new_namaAnak);
 		validasi.message(newNamaAnak);
-		newTglLahir = (EditText) findViewById(R.id.new_tglLahir);
-		validasi.message(newTglLahir);
 		newBbLahir = (EditText) findViewById(R.id.new_bbLahir);
 		validasi.message(newBbLahir);
 		newNamaIbu = (EditText) findViewById(R.id.new_namaIbu);
@@ -37,7 +37,9 @@ public class newDataAnak extends Activity
 		newNamaAyah = (EditText) findViewById(R.id.new_namaAyah);
 		validasi.message(newNamaAyah);
 		
-		final EditText[] editText = new EditText[] {newPosyandu, newNamaAnak, newTglLahir, newBbLahir, newNamaIbu, newNamaAyah};
+		newTglLahir = (DatePicker) findViewById(R.id.dateTanggal);
+		
+		final EditText[] editText = new EditText[] {newPosyandu, newNamaAnak, newBbLahir, newNamaIbu, newNamaAyah};
 		
 		jenis_kelamin = (RadioGroup) findViewById(R.id.radioGroupSex);
 		
@@ -57,6 +59,12 @@ public class newDataAnak extends Activity
 					jns_kel = "Perempuan";
 				};
 				
+				//mengambil tanggal dari datepicker
+				int day = newTglLahir.getDayOfMonth();
+				int month = newTglLahir.getMonth() + 1;
+				int year =newTglLahir.getYear();
+				String tanggal = day + "-" + month + "-" + year;
+				
 				//call class validation insert to insert new data
 				boolean check = validasi.validation(editText);//validation(editText);
 				if(check == false)
@@ -70,7 +78,7 @@ public class newDataAnak extends Activity
 							"Nama Posyandu : " + newPosyandu.getText().toString() + "\n" +
 							"Nama Anak     : " + newNamaAnak.getText().toString() + "\n" +
 							"Jenis Kelamin : " + jns_kel                          + "\n" +		
-							"Tanggal Lahir : " + newTglLahir.getText().toString() + "\n" +
+							"Tanggal Lahir : " + tanggal						  + "\n" +
 							"Berat Badan   : " + newBbLahir.getText().toString() + "\n" +
 							"Nama Ibu      : " + newNamaIbu.getText().toString() + "\n" +
 							"Nama Ayah     : " + newNamaAyah.getText().toString();

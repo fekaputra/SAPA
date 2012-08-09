@@ -9,6 +9,7 @@ import java.net.URL;
 import java.util.concurrent.ExecutorService;
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -29,7 +30,11 @@ public class FileLoader extends Activity
     
     //make an instance of static class
     
-	FileCache fileCache = new FileCache();
+    Context context;
+    
+    FileCache fileCache = new FileCache(context);
+    
+	//FileCache fileCache = new FileCache();
 	ExecutorService executorService;
 	
 	
@@ -73,7 +78,7 @@ public class FileLoader extends Activity
          //*//*/
         btnShowProgress.setOnClickListener(new View.OnClickListener() {
  
-            //@Override
+            @Override
             public void onClick(View v) {
                 // starting new Async Task
             	Intent in = new Intent(getApplicationContext(), DownloadFile.class);

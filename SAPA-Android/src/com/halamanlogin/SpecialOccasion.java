@@ -5,14 +5,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
 public class SpecialOccasion extends Activity
 {
-	EditText namaKegiatan, namaPenyelenggara, waktuKegiatan, Kota, Topik, tag;
+	EditText namaKegiatan, namaPenyelenggara, Kota, Topik, tag;
 	Button kirim, homeReport;
+	DatePicker waktuKegiatan;
 	ListView list;
 	
 	ValidasiInsert validasi = new ValidasiInsert();
@@ -27,8 +29,6 @@ public class SpecialOccasion extends Activity
         validasi.message(namaKegiatan);
 		namaPenyelenggara = (EditText) findViewById(R.id.nama_penyelenggara);
         validasi.message(namaPenyelenggara);
-		waktuKegiatan = (EditText) findViewById(R.id.waktu_kegiatan);
-        validasi.message(waktuKegiatan);
 		Kota = (EditText) findViewById(R.id.kota);
         validasi.message(Kota);
 		Topik = (EditText) findViewById(R.id.topik);
@@ -36,7 +36,9 @@ public class SpecialOccasion extends Activity
 		tag = (EditText) findViewById(R.id.tag);
         validasi.message(tag);
         
-        final EditText[] editText = new EditText[] {namaKegiatan, namaPenyelenggara, waktuKegiatan, Kota, Topik, tag};		
+        waktuKegiatan = (DatePicker) findViewById(R.id.dateTanggal);
+        
+        final EditText[] editText = new EditText[] {namaKegiatan, namaPenyelenggara, Kota, Topik, tag};		
 
 		kirim = (Button) findViewById(R.id.kirim);
 		kirim.setOnClickListener(new Button.OnClickListener() 
@@ -52,15 +54,21 @@ public class SpecialOccasion extends Activity
 				}
 				else
 				{
+					//mengambil tanggal dari datepicker
+					int day = waktuKegiatan.getDayOfMonth();
+					int month = waktuKegiatan.getMonth() + 1;
+					int year = waktuKegiatan.getYear();
+					String tanggal = day + "-" + month + "-" + year;
+					
 					String toastMessage =
 							"Nama Kegiatan 	 : " + namaKegiatan.getText().toString() + "\n" +
 							"Nama Penyelenggara : " + namaPenyelenggara.getText().toString() + "\n" +
-							"Waktu Kegiatan 	 : " + waktuKegiatan.getText().toString() + "\n" +
+							"Waktu Kegiatan 	 : " + tanggal + "\n" +
 							"Kota   			 : " + Kota.getText().toString() + "\n" +
 							"Topik      		 : " + Topik.getText().toString() + "\n" +
 							"Tag        		 : " + tag.getText().toString();
 						
-						Toast.makeText(SpecialOccasion.this, toastMessage, Toast.LENGTH_LONG).show();
+					Toast.makeText(SpecialOccasion.this, toastMessage, Toast.LENGTH_LONG).show();
 				}
 			}
 		});

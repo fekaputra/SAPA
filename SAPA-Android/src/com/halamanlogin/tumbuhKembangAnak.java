@@ -5,15 +5,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class tumbuhKembangAnak extends Activity 
 {
-    TextView nama;
+    TextView nama, JK;
     Button kirim, grafik, back;
-    EditText JK, tgl_data, panjang, tinggi, berat;
+    EditText panjang, tinggi, berat;
+    DatePicker tgl_data;
     
     ValidasiInsert validasi = new ValidasiInsert();
     
@@ -24,16 +26,17 @@ public class tumbuhKembangAnak extends Activity
         setContentView(R.layout.report_tumbuh_kembang);
         
         nama = (TextView) findViewById(R.id.namaAnak);
+        JK = (TextView) findViewById(R.id.jk);
         
         Intent i = getIntent();
     	String namaAnak = i.getStringExtra("namaAnak");
+    	String jk = i.getStringExtra("jk");
                
         nama.setText(namaAnak);
+        JK.setText(jk);
         
-        JK = (EditText) findViewById(R.id.jk);
-        validasi.message(JK);
-        tgl_data = (EditText) findViewById(R.id.tgl_data);
-        validasi.message(tgl_data);
+        tgl_data = (DatePicker) findViewById(R.id.dateTanggal);
+        
         panjang = (EditText) findViewById(R.id.panjang);
         validasi.message(panjang);
         tinggi = (EditText) findViewById(R.id.tinggi);
@@ -41,7 +44,7 @@ public class tumbuhKembangAnak extends Activity
         berat = (EditText) findViewById(R.id.berat);
         validasi.message(berat);
         
-        final EditText[] editText = new EditText[] {JK, tgl_data, panjang, tinggi, berat};
+        final EditText[] editText = new EditText[] {panjang, tinggi, berat};
         
         kirim = (Button) findViewById(R.id.kirim);
         kirim.setOnClickListener(new Button.OnClickListener()
@@ -56,11 +59,20 @@ public class tumbuhKembangAnak extends Activity
 				}
 				else
 				{
-					String admin = "ADMIN";
+					//mengambil tanggal dari datepicker
+					int day = tgl_data.getDayOfMonth();
+					int month = tgl_data.getMonth() + 1;
+					int year = tgl_data.getYear();
+					String tanggal = day + "-" + month + "-" + year;
 					
-					Intent start_kirim = new Intent(tumbuhKembangAnak.this, tumbuhKembangAnak.class);
-					start_kirim.putExtra("admin", admin);
-			    	startActivity(start_kirim);
+					String toastMessage = 
+							"Nama Anak     : " + nama.getText().toString() 	  + "\n" +
+							"tgl_data      : " + tanggal          			  + "\n" +	
+							"panjang badan : " + panjang.getText().toString() + "\n" +
+							"berat badan   : " + berat.getText().toString()   + "\n" +
+							"tinggi badan  : " + tinggi.getText().toString() ;
+					
+					Toast.makeText(tumbuhKembangAnak.this, toastMessage, Toast.LENGTH_LONG).show();
 				}
 	        }
 		});
@@ -72,23 +84,30 @@ public class tumbuhKembangAnak extends Activity
 	        {
 				Intent i = getIntent();
 		    	String namaAnak = i.getStringExtra("namaAnak");
+		    	String jk = i.getStringExtra("jk");
 				
 				Intent start_grafik = new Intent(tumbuhKembangAnak.this, GrafikTumbuhKembang.class);
 				start_grafik.putExtra("namaAnak", namaAnak);
+				start_grafik.putExtra("jk", jk);
 		    	startActivity(start_grafik);
 	        }
 		});
         
         back = (Button) findViewById(R.id.kembali);
-        back.setOnClickListener(new Button.OnClickListener()
+		back.setOnClickListener(new Button.OnClickListener()
 		{			
 			public void onClick(View v)
 	        {
-				String admin = "ADMIN";
+				Intent i = getIntent();
+				String admin = i.getStringExtra("admin");
+				String namaAnak = i.getStringExtra("namaAnak");
+				String jk = i.getStringExtra("jk");
 				
-				Intent back = new Intent(tumbuhKembangAnak.this, reportChildcare.class);
-				back.putExtra("admin", admin);
-		    	startActivity(back);
+				Intent home_report = new Intent(tumbuhKembangAnak.this, reportChildcare.class);
+				home_report.putExtra("admin", admin);
+				home_report.putExtra("namaAnak", namaAnak);
+				home_report.putExtra("jk", jk);
+		    	startActivity(home_report);
 	        }
 		});
     }

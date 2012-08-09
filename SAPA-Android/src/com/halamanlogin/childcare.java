@@ -14,6 +14,7 @@ public class childcare extends Activity implements	OnClickListener
 	Button databaru, home, next;
 	Spinner spin;
 	String[] namaAnak = { "Ary", "Bintang", "Hana", "Tisa" };
+	String jk;
 	
 	private ArrayAdapter<String> mAdapter;
 	
@@ -65,9 +66,19 @@ public class childcare extends Activity implements	OnClickListener
 				String admin = i.getStringExtra("admin");
 				
 				String nama = namaAnak[spin.getSelectedItemPosition()]; 
+				
+				if(nama.equals("Ary") || nama.equals("Bintang"))
+				{
+					jk = "Laki-laki";
+				}
+				else if(nama.equals("Ary") || nama.equals("Bintang"))
+				{
+					jk = "Perempuan";
+				}
 
 				Intent start_report = new Intent(childcare.this, reportChildcare.class);
 				start_report.putExtra("namaAnak", nama );
+				start_report.putExtra("jk", jk);
 				start_report.putExtra("admin", admin);
 		    	startActivity(start_report);
 		    	//Toast.makeText(childcare.this, namaAnak[spin.getSelectedItemPosition()],Toast.LENGTH_LONG).show();

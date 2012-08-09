@@ -31,10 +31,15 @@ public class GrafikTumbuhKembang extends Activity
 		{			
 			public void onClick(View v)
 	        {
+				Intent i = getIntent();
 				String admin = "ADMIN";
+				String namaAnak = i.getStringExtra("namaAnak");
+				String jk = i.getStringExtra("jk");
 				
 				Intent back = new Intent(GrafikTumbuhKembang.this, tumbuhKembangAnak.class);
 				back.putExtra("admin", admin);
+				back.putExtra("namaAnak", namaAnak);
+				back.putExtra("jk", jk);
 		    	startActivity(back);
 	        }
 		});

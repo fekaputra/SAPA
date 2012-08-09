@@ -1,107 +1,203 @@
 package com.halamanlogin;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Bundle;
-import android.util.SparseBooleanArray;
-import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ListView;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
-public class kolega extends Activity 
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.app.ListActivity;
+import android.app.ProgressDialog;
+import android.content.Intent;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
+import android.widget.TextView;
+import android.widget.AdapterView.OnItemClickListener;
+
+public class Kolega extends ListActivity 
 {
-	/*Variabel global*/
+	private ProgressDialog pDialog;
 	
-	private Button pilih, new_kolega;
-	private ListView lv;
-	private String[] data_kolega;
-		
-	@Override
+	//button untuk menampilkan progress dialog
+    Button btnShowProgress;
+    
+    // tipe progress dialog (0 - for horizontal progress bar)
+    public static final int progress_bar_type = 0;
+    
+    //Membuat objek JSON Parser
+    JSONParser jParser = new JSONParser();
+    
+    ArrayList<HashMap<String, String>> dataList;
+    
+    private static String url_all_files = Referensi.url + "/listkolega.php";
+    
+    //nama-nama node JSON
+    private static final String TAG_ListKolega = "listkolega";
+    private static final String TAG_IdKotaKab = "idKotaKab";
+    private static final String TAG_NamaKolega = "NamaKolega";
+    private static final String TAG_Alamat = "Alamat";
+    private static final String TAG_Telp = "Telp";
+    private static final String TAG_Latitude = "latitude";
+    private static final String TAG_Longitude = "longitude";
+    
+    JSONArray file = null;
+    
+    User user = new User();
+    
+    @Override
     public void onCreate(Bundle savedInstanceState) 
-	{
+    {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.kolega);
         
-        //data_kolega diambil dari list item di file string.xml
-        data_kolega = getResources().getStringArray(R.array.data_kolega);
+        setContentView(R.layout.all_files);
         
-        //menampilkan list item
-        lv = (ListView)findViewById(R.id.list);
-        lv.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_multiple_choice, data_kolega));     
- 
-        //menampilkan list item dengan mode multiple choice
-        lv.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+        dataList = new ArrayList<HashMap<String, String>>();
         
-        //action untuk button Insert Data Kolega Baru
-        new_kolega = (Button)findViewById(R.id.btnNewKolega); 
-        new_kolega.setOnClickListener(new Button.OnClickListener()
-		{
-			//mengambil parameter yang dikirim activity lain
-        	Intent i = getIntent();
-        	
-        	//menampung data dari parameter admin yang dikirim activity sebelumnya
-			String admin = i.getStringExtra("admin");
-			
-			public void onClick(View v)
-	        {
-				//berpindah ke activity newKolega
-				Intent start_new_kolega = new Intent(kolega.this, newKolega.class);
-				
-				//mengirimkan parameter admin untuk activity selanjutnya
-				start_new_kolega.putExtra("admin", admin);
-				
-				//memulai activity newKolega
-		    	startActivity(start_new_kolega);
-	        }
-		});
- 
-        //action untuk button Pilih
-        pilih = (Button)findViewById(R.id.btn_pilih); 
-        pilih.setOnClickListener(new Button.OnClickListener()
-        {
-        	//mengambil parameter yang dikirim activity lain
-        	Intent i = getIntent();
-        	
-        	//menampung data dari parameter admin yang dikirim activity sebelumnya
-			String admin = i.getStringExtra("admin");
-			
-        	public void onClick(View v) 
-            {
-                String selected = "";
-                int cntChoice = lv.getCount();
- 
-                //menampung item yang diberi tanda check
-                SparseBooleanArray sparseBooleanArray = lv.getCheckedItemPositions();
- 
-                for(int i = 0; i < cntChoice; i++)
-                {
-                    if(sparseBooleanArray.get(i)) 
-                    {
-                        selected += lv.getItemAtPosition(i).toString() + "\n";
-                    }
-                }
-                
-                //menampilkan hasil penampung di activity gis
-                Intent peta = new Intent(kolega.this, gis.class);
-    	       	peta.putExtra("admin", admin);
-    	       	peta.putExtra("selected", selected);
-    	       	startActivity(peta);
-            }
-         });    
-    }
-	
-	@Override
-	public void onBackPressed() 
-	{
-		//mengambil parameter yang dikirim activity lain
-    	Intent i = getIntent();
-    	
-    	//menampung data dari parameter admin yang dikirim activity sebelumnya
-		String admin = i.getStringExtra("admin");
+        Intent intent = getIntent();
+		String admin = intent.getStringExtra("admin");
 		
-		Intent back = new Intent (kolega.this, gis.class);
-		back.putExtra("admin", admin);
+		//set user dari data yang dikirim class sebelumnya
+		user.setUser(admin);
+                
+        //loading all files in the background
+        new LoadAllFiles().execute();
+        
+        ListView lv = getListView();
+        
+        lv.setOnItemClickListener(new OnItemClickListener() 
+        {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) 
+            {           	
+            	String NamaKolega = ((TextView)view.findViewById(R.id.TextView01)).getText().toString();
+            	String AlamatTelp = ((TextView)view.findViewById(R.id.TextView02)).getText().toString() + "\n" + ((TextView)view.findViewById(R.id.TextView03)).getText().toString();
+            	String latitude = ((TextView)view.findViewById(R.id.latitude)).getText().toString();
+            	String longitude = ((TextView)view.findViewById(R.id.longitude)).getText().toString();
+            	           	            	
+            	/**
+            	 * Mengirimlan data Nama kolega, alamat+telp, latitude dan longitude ke class ItemKolega 
+            	 * untuk menampilkan lokasi kolega yang dipilih oleh user dalam peta
+            	 **/
+            	Intent item = new Intent (Kolega.this, ItemKolega.class);
+            	item.putExtra("NamaKolega", NamaKolega);
+            	item.putExtra("AlamatTelp", AlamatTelp);
+            	item.putExtra("latitude", latitude);
+            	item.putExtra("longitude", longitude);
+            	item.putExtra("admin", user.getUser() );
+		    	startActivity(item);
+            	
+            }
+        });
+    }
+    
+    class LoadAllFiles extends AsyncTask<String, String, String>
+    {    	
+    	@Override
+		protected void onPreExecute()
+		{
+			super.onPreExecute();
+			pDialog = new ProgressDialog(Kolega.this);
+			pDialog.setMessage ("Loading Data...Please Wait...");
+			pDialog.setIndeterminate(false);
+			pDialog.setCancelable(false);
+			pDialog.show();
+		}
+    	
+		protected String doInBackground(String... args) 
+		{
+			Intent intent = getIntent();
+		    String id = intent.getStringExtra("id");
+		    //String admin = intent.getStringExtra("admin");
+		    
+		    //Toast.makeText(getBaseContext(), admin , Toast.LENGTH_SHORT).show();
+			
+		    //Membuat parameter
+			List<NameValuePair> params = new ArrayList<NameValuePair>();
+			
+			params.add(new BasicNameValuePair("id", id));
+			
+			//mendapatkan string JSON dari url
+			JSONObject json = jParser.makeHttpRequest(url_all_files, "GET", params);
+			
+			try
+			{
+				//Mendapatkan array of product (list data yang ada di tabel data_kolega di DB)
+				file = json.getJSONArray(TAG_ListKolega);
+				for (int i = 0; i < file.length(); i++)
+				{
+					JSONObject o = file.getJSONObject(i);
+					
+					//menyimpan setiap item json pada variabel
+					String idKotaKab = o.getString(TAG_IdKotaKab).toString();
+					String NamaKolega = o.getString(TAG_NamaKolega).toString();
+					String Alamat = o.getString(TAG_Alamat).toString();
+					String Telp = o.getString(TAG_Telp).toString();
+					String latitude = o.getString(TAG_Latitude).toString();
+					String longitude = o.getString(TAG_Longitude).toString();
+					
+					//membuat hashmap baru
+					HashMap<String, String> map = new HashMap<String, String>();
+					
+					//adding each child node to hash map key => value
+					map.put(TAG_IdKotaKab, idKotaKab);
+					map.put(TAG_NamaKolega, NamaKolega);
+					map.put(TAG_Alamat, Alamat);
+					map.put(TAG_Telp, Telp);
+					map.put(TAG_Latitude, latitude);
+					map.put(TAG_Longitude, longitude);
+					
+					//menambahkan hashlist ke array list
+					dataList.add(map);
+				}
+			}
+			catch (JSONException e)
+			{
+				e.printStackTrace();
+			}
+			return null;
+		}
+		
+		protected void onPostExecute(String file_url) 
+		{
+			// dismiss dialog setelah mendapatkan semua "produk"
+            pDialog.dismiss();
+            // updating UI dari Background Thread
+            runOnUiThread(new Runnable() 
+            {
+                public void run() 
+                {
+                    /**
+                     * Updating parsed JSON data kedalam ListView
+                     * */
+                    ListAdapter adapter = new SimpleAdapter(
+                            Kolega.this, dataList,
+                            R.layout.list_kolega, new String[] { TAG_IdKotaKab, TAG_Latitude, TAG_Longitude, TAG_NamaKolega, TAG_Alamat, TAG_Telp},
+                            new int[] { R.id.kabupaten_kota, R.id.latitude, R.id.longitude, R.id.TextView01, R.id.TextView02, R.id.TextView03 });
+                    
+                    // updating listview
+                    setListAdapter(adapter);
+                }
+            });
+        }
+	} 
+        
+    //Action jika tombol back di tekan
+    @Override
+    public void onBackPressed() 
+	{
+    	String admin = user.getUser();
+    	
+    	Intent back = new Intent (Kolega.this, gis.class);
+    	back.putExtra("admin", admin);
     	startActivity(back);
 	}
 }
