@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class homeMember extends Activity
+public class HomeMember extends Activity
 {
 	Button gis, knowledge, communication, logout;
 	
@@ -33,7 +33,7 @@ public class homeMember extends Activity
 			
 			public void onClick(View v)
 	        {
-				Intent start_gis = new Intent(homeMember.this, gis.class);
+				Intent start_gis = new Intent(HomeMember.this, Gis.class);
 				start_gis.putExtra("admin", admin);
 		    	startActivity(start_gis);
 	        }
@@ -47,7 +47,7 @@ public class homeMember extends Activity
 			
 			public void onClick(View v)
 	        {
-				Intent list_file = new Intent(homeMember.this, TabLayoutActivity.class);
+				Intent list_file = new Intent(HomeMember.this, TabLayoutActivity.class);
 				list_file.putExtra("admin", admin);
 		    	startActivity(list_file);
 	        }
@@ -61,7 +61,7 @@ public class homeMember extends Activity
 			
 			public void onClick(View v)
 	        {
-				Intent start_chat = new Intent(homeMember.this, chat.class);
+				Intent start_chat = new Intent(HomeMember.this, Chat.class);
 				start_chat.putExtra("admin", admin);
 		    	startActivity(start_chat);
 	        }
@@ -74,10 +74,10 @@ public class homeMember extends Activity
 	        {
 				String admin = "FALSE";
 
-				Intent out = new Intent (homeMember.this, LoginMain.class);
+				Intent out = new Intent (HomeMember.this, LoginMain.class);
 				out.putExtra("admin", admin);
 				startActivity(out);
-				Toast.makeText(homeMember.this, "Terima Kasih",Toast.LENGTH_SHORT).show();
+				Toast.makeText(HomeMember.this, "Terima Kasih",Toast.LENGTH_SHORT).show();
 	        }
 		});
 	}

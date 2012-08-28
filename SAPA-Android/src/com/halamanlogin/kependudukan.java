@@ -154,7 +154,7 @@ public class Kependudukan extends ListActivity
 	{
     	String admin = user.getUser();
     	
-    	Intent back = new Intent (Kependudukan.this, gis.class);
+    	Intent back = new Intent (Kependudukan.this, Gis.class);
     	back.putExtra("admin", admin);
     	startActivity(back);
 	}

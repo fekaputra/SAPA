@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class tumbuhKembangAnak extends Activity 
+public class TumbuhKembangAnak extends Activity 
 {
     TextView nama, JK;
     Button kirim, grafik, back;
@@ -54,7 +54,7 @@ public class tumbuhKembangAnak extends Activity
 				boolean check = validasi.validation(editText);//validation(editText);
 				if(check == false)
 				{
-					Toast.makeText(tumbuhKembangAnak.this, "There are some field(s) need to input", Toast.LENGTH_SHORT).show();
+					Toast.makeText(TumbuhKembangAnak.this, "There are some field(s) need to input", Toast.LENGTH_SHORT).show();
 					validasi.messages(editText);
 				}
 				else
@@ -72,7 +72,7 @@ public class tumbuhKembangAnak extends Activity
 							"berat badan   : " + berat.getText().toString()   + "\n" +
 							"tinggi badan  : " + tinggi.getText().toString() ;
 					
-					Toast.makeText(tumbuhKembangAnak.this, toastMessage, Toast.LENGTH_LONG).show();
+					Toast.makeText(TumbuhKembangAnak.this, toastMessage, Toast.LENGTH_LONG).show();
 				}
 	        }
 		});
@@ -86,7 +86,7 @@ public class tumbuhKembangAnak extends Activity
 		    	String namaAnak = i.getStringExtra("namaAnak");
 		    	String jk = i.getStringExtra("jk");
 				
-				Intent start_grafik = new Intent(tumbuhKembangAnak.this, GrafikTumbuhKembang.class);
+				Intent start_grafik = new Intent(TumbuhKembangAnak.this, GrafikTumbuhKembang.class);
 				start_grafik.putExtra("namaAnak", namaAnak);
 				start_grafik.putExtra("jk", jk);
 		    	startActivity(start_grafik);
@@ -103,7 +103,7 @@ public class tumbuhKembangAnak extends Activity
 				String namaAnak = i.getStringExtra("namaAnak");
 				String jk = i.getStringExtra("jk");
 				
-				Intent home_report = new Intent(tumbuhKembangAnak.this, reportChildcare.class);
+				Intent home_report = new Intent(TumbuhKembangAnak.this, ReportChildcare.class);
 				home_report.putExtra("admin", admin);
 				home_report.putExtra("namaAnak", namaAnak);
 				home_report.putExtra("jk", jk);

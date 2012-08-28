@@ -90,7 +90,7 @@ public class LaporanKegPKPKecActivity extends Activity
 			}
 		});
         
-        Button back = (Button) findViewById(R.id.home_report);
+        Button back = (Button) findViewById(R.id.kembali);
 		back.setOnClickListener(new Button.OnClickListener()
 		{
 			public void onClick(View v)
@@ -98,7 +98,7 @@ public class LaporanKegPKPKecActivity extends Activity
 				Intent i = getIntent();
 				String admin = i.getStringExtra("admin");
 				
-				Intent home_report = new Intent(LaporanKegPKPKecActivity.this, report.class);
+				Intent home_report = new Intent(LaporanKegPKPKecActivity.this, Report.class);
 				home_report.putExtra("admin", admin);
 		    	startActivity(home_report);
 	        }
@@ -215,7 +215,7 @@ public class LaporanKegPKPKecActivity extends Activity
   	{
   		String admin = "ADMIN";
   		
-  		Intent back = new Intent(LaporanKegPKPKecActivity.this, report.class);
+  		Intent back = new Intent(LaporanKegPKPKecActivity.this, Report.class);
         back.putExtra("admin", admin);
         startActivity(back);
   	}

@@ -158,7 +158,7 @@ public class Kesehatan extends ListActivity
 	{		
     	String admin = user.getUser();
     	
-    	Intent back = new Intent (Kesehatan.this, gis.class);
+    	Intent back = new Intent (Kesehatan.this, Gis.class);
     	back.putExtra("admin", admin);
     	startActivity(back);
 	}

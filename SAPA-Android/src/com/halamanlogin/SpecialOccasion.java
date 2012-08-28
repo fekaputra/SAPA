@@ -81,7 +81,7 @@ public class SpecialOccasion extends Activity
 				Intent i = getIntent();
 				String admin = i.getStringExtra("admin");
 				
-				Intent home_report = new Intent(SpecialOccasion.this, report.class);
+				Intent home_report = new Intent(SpecialOccasion.this, Report.class);
 				home_report.putExtra("admin", admin);
 		    	startActivity(home_report);
 	        }

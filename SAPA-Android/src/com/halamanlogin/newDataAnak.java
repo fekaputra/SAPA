@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-public class newDataAnak extends Activity 
+public class NewDataAnak extends Activity 
 {	
 	private EditText newPosyandu, newNamaAnak, newBbLahir, newNamaIbu, newNamaAyah;
 	private Button btnSubmit, back;
@@ -69,7 +69,7 @@ public class newDataAnak extends Activity
 				boolean check = validasi.validation(editText);//validation(editText);
 				if(check == false)
 				{
-					Toast.makeText(newDataAnak.this, "There are some field(s) need to input", Toast.LENGTH_SHORT).show();
+					Toast.makeText(NewDataAnak.this, "There are some field(s) need to input", Toast.LENGTH_SHORT).show();
 					validasi.messages(editText);
 				}
 				else
@@ -83,7 +83,7 @@ public class newDataAnak extends Activity
 							"Nama Ibu      : " + newNamaIbu.getText().toString() + "\n" +
 							"Nama Ayah     : " + newNamaAyah.getText().toString();
 				
-					Toast t = Toast.makeText(newDataAnak.this, toastMessage, Toast.LENGTH_LONG);
+					Toast t = Toast.makeText(NewDataAnak.this, toastMessage, Toast.LENGTH_LONG);
 					t.show();
 				}
 			}
@@ -97,7 +97,7 @@ public class newDataAnak extends Activity
 				Intent i = getIntent();
 				String admin = i.getStringExtra("admin");
 				
-				Intent back = new Intent(newDataAnak.this, childcare.class);
+				Intent back = new Intent(NewDataAnak.this, Childcare.class);
 				back.putExtra("admin", admin);
 		    	startActivity(back);
 	        }

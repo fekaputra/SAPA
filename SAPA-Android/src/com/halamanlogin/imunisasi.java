@@ -12,7 +12,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class imunisasi extends Activity implements	OnClickListener 
+public class Imunisasi extends Activity implements	OnClickListener 
 {
 	TextView nama, jenis_imunisasi, JK;
 	Button kirim, grafik, back;
@@ -83,7 +83,7 @@ public class imunisasi extends Activity implements	OnClickListener
 						"Jenis Imunisasi   : " + imunisasi           + "\n" +		
 						"Tanggal Imunisasi : " + tanggal ;
 				
-				Toast.makeText(imunisasi.this, toastMessage, Toast.LENGTH_LONG).show();
+				Toast.makeText(Imunisasi.this, toastMessage, Toast.LENGTH_LONG).show();
 	        }
 		});
         
@@ -97,7 +97,7 @@ public class imunisasi extends Activity implements	OnClickListener
 		    	String jk = i.getStringExtra("jk");
 		    	String admin = i.getStringExtra("admin");
 				
-				Intent start_grafik = new Intent(imunisasi.this, TabelPemberianVitamin.class);
+				Intent start_grafik = new Intent(Imunisasi.this, TabelPemberianVitamin.class);
 				start_grafik.putExtra("namaAnak", namaAnak);
 				start_grafik.putExtra("jk", jk);
 				start_grafik.putExtra("admin", admin);
@@ -115,7 +115,7 @@ public class imunisasi extends Activity implements	OnClickListener
 		    	String jk = i.getStringExtra("jk");
 				String namaAnak = i.getStringExtra("namaAnak");
 				
-				Intent home_report = new Intent(imunisasi.this, reportChildcare.class);
+				Intent home_report = new Intent(Imunisasi.this, ReportChildcare.class);
 				home_report.putExtra("admin", admin);
 				home_report.putExtra("jk", jk);
 				home_report.putExtra("namaAnak", namaAnak);

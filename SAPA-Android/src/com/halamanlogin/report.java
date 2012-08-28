@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class report extends Activity
+public class Report extends Activity
 {
 	Button report_childcare, report_disease, report_specoccasion, perkembangan_posyandu, pkp_kecamatan, home;
 	
@@ -24,7 +24,7 @@ public class report extends Activity
 				Intent i = getIntent();
 				String admin = i.getStringExtra("admin");
 				
-				Intent child_care = new Intent(report.this, childcare.class);
+				Intent child_care = new Intent(Report.this, Childcare.class);
 				child_care.putExtra("admin", admin);
 		    	startActivity(child_care);
 	        }
@@ -38,7 +38,7 @@ public class report extends Activity
 				Intent i = getIntent();
 				String admin = i.getStringExtra("admin");
 				
-				Intent start_disease = new Intent(report.this, disease.class);
+				Intent start_disease = new Intent(Report.this, Disease.class);
 				start_disease.putExtra("admin", admin);
 		    	startActivity(start_disease);
 	        }
@@ -52,7 +52,7 @@ public class report extends Activity
 				Intent i = getIntent();
 				String admin = i.getStringExtra("admin");
 				
-				Intent special_occasion = new Intent(report.this, SpecialOccasion.class);
+				Intent special_occasion = new Intent(Report.this, SpecialOccasion.class);
 				special_occasion.putExtra("admin", admin);
 		    	startActivity(special_occasion);
 	        }
@@ -66,7 +66,7 @@ public class report extends Activity
 				Intent i = getIntent();
 				String admin = i.getStringExtra("admin");
 				
-				Intent special_occasion = new Intent(report.this, PerkembanganPosyandu.class);
+				Intent special_occasion = new Intent(Report.this, PerkembanganPosyandu.class);
 				special_occasion.putExtra("admin", admin);
 		    	startActivity(special_occasion);
 	        }
@@ -80,7 +80,7 @@ public class report extends Activity
 				Intent i = getIntent();
 				String admin = i.getStringExtra("admin");
 				
-				Intent special_occasion = new Intent(report.this, LaporanKegPKPKecActivity.class);
+				Intent special_occasion = new Intent(Report.this, LaporanKegPKPKecActivity.class);
 				special_occasion.putExtra("admin", admin);
 		    	startActivity(special_occasion);
 	        }
@@ -97,14 +97,14 @@ public class report extends Activity
 				if(admin.equals("ADMIN"))
 				{
 					//ketika button Login di tekan, maka akan kembali ke halaman utama
-					Intent home = new Intent (report.this, homeAdmin.class);
+					Intent home = new Intent (Report.this, HomeAdmin.class);
 					home.putExtra("admin", admin);
 			    	startActivity(home);
 				}
 				else
 				{
 					//ketika button Login di tekan, maka akan kembali ke halaman utama
-					Intent home = new Intent (report.this, homeMember.class);
+					Intent home = new Intent (Report.this, HomeMember.class);
 					home.putExtra("admin", admin);
 			    	startActivity(home);
 				}

@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
-public class childcare extends Activity implements	OnClickListener 
+public class Childcare extends Activity implements	OnClickListener 
 {
 	Button databaru, home, next;
 	Spinner spin;
@@ -32,7 +32,7 @@ public class childcare extends Activity implements	OnClickListener
 				Intent i = getIntent();
 				String admin = i.getStringExtra("admin");
 				
-				Intent data_baru = new Intent(childcare.this, newDataAnak.class);
+				Intent data_baru = new Intent(Childcare.this, NewDataAnak.class);
 				data_baru.putExtra("admin", admin);
 		    	startActivity(data_baru);
 	        }
@@ -46,7 +46,7 @@ public class childcare extends Activity implements	OnClickListener
 				Intent i = getIntent();
 				String admin = i.getStringExtra("admin");
 				
-				Intent home_report = new Intent(childcare.this, report.class);
+				Intent home_report = new Intent(Childcare.this, Report.class);
 				home_report.putExtra("admin", admin);
 		    	startActivity(home_report);
 	        }
@@ -71,12 +71,12 @@ public class childcare extends Activity implements	OnClickListener
 				{
 					jk = "Laki-laki";
 				}
-				else if(nama.equals("Ary") || nama.equals("Bintang"))
+				else if(nama.equals("Hana") || nama.equals("Tisa"))
 				{
 					jk = "Perempuan";
 				}
 
-				Intent start_report = new Intent(childcare.this, reportChildcare.class);
+				Intent start_report = new Intent(Childcare.this, ReportChildcare.class);
 				start_report.putExtra("namaAnak", nama );
 				start_report.putExtra("jk", jk);
 				start_report.putExtra("admin", admin);

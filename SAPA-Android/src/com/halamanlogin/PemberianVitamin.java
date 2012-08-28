@@ -111,7 +111,7 @@ public class PemberianVitamin extends Activity implements	OnClickListener
 		    	String jk = i.getStringExtra("jk");
 				String namaAnak = i.getStringExtra("namaAnak");
 				
-				Intent home_report = new Intent(PemberianVitamin.this, reportChildcare.class);
+				Intent home_report = new Intent(PemberianVitamin.this, ReportChildcare.class);
 				home_report.putExtra("admin", admin);
 				home_report.putExtra("jk", jk);
 				home_report.putExtra("namaAnak", namaAnak);

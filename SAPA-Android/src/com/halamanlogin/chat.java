@@ -21,7 +21,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
-public class chat extends Activity
+public class Chat extends Activity
 {
 	private ArrayList<String> messages = new ArrayList<String>();
     private Handler mHandler = new Handler();
@@ -119,13 +119,13 @@ public class chat extends Activity
 				
 				if(admin.equals("ADMIN"))
 				{
-					Intent home = new Intent (chat.this, homeAdmin.class);
+					Intent home = new Intent (Chat.this, HomeAdmin.class);
 					home.putExtra("admin", admin);
 			    	startActivity(home);
 				}
 				else
 				{
-					Intent home = new Intent (chat.this, homeMember.class);
+					Intent home = new Intent (Chat.this, HomeMember.class);
 					home.putExtra("admin", admin);
 			    	startActivity(home);
 				}

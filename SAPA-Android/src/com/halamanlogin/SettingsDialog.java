@@ -17,7 +17,7 @@ public class SettingsDialog extends Dialog implements android.view.View.OnClickL
 {
     //private XMPPClient xmppClient;
     
-    private chat xmppClient;
+    private Chat xmppClient;
 
     /*public SettingsDialog(XMPPClient xmppClient) 
     {
@@ -25,7 +25,7 @@ public class SettingsDialog extends Dialog implements android.view.View.OnClickL
         this.xmppClient = xmppClient;
     }*/
     
-    public SettingsDialog(chat xmppClient) 
+    public SettingsDialog(Chat xmppClient) 
     {
         super(xmppClient);
         this.xmppClient = xmppClient;

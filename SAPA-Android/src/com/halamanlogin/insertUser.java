@@ -19,9 +19,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class insertUser extends Activity
+public class InsertUser extends Activity
 {
-	private EditText newUsername, newPassword, newEmail;
+	private EditText newUsername, newPassword;
 	private Button btnSubmit, btnBack;
 
 	private String url = Referensi.url + "/insertUser.php";
@@ -39,7 +39,7 @@ public class insertUser extends Activity
 		newPassword = (EditText) findViewById(R.id.newpassword);
 		validasi.message(newPassword);
 		
-		final EditText[] editText = new EditText[] {newUsername, newPassword, newEmail};
+		final EditText[] editText = new EditText[] {newUsername, newPassword};
 
 		btnSubmit = (Button) findViewById(R.id.daftar);
 		btnSubmit.setOnClickListener(new Button.OnClickListener() 
@@ -52,14 +52,14 @@ public class insertUser extends Activity
 					boolean check = validasi.validation(editText);//validation(editText);
 					if(check == false)
 					{
-						Toast.makeText(insertUser.this, "There are some field(s) need to input", Toast.LENGTH_SHORT).show();
+						Toast.makeText(InsertUser.this, "There are some field(s) need to input", Toast.LENGTH_SHORT).show();
 						validasi.messages(editText);
 					}
 					else
 					{
 						String username = URLEncoder.encode(newUsername.getText().toString(), "utf-8");
 						String password = URLEncoder.encode(newPassword.getText().toString(), "utf-8");
-						String email = URLEncoder.encode(newEmail.getText().toString(), "utf-8");
+						String email = URLEncoder.encode(newUsername.getText().toString(), "utf-8");
 					
 						url += "?username="+ username+ "&password=" + password + "&email=" + email;
 
@@ -78,7 +78,7 @@ public class insertUser extends Activity
 		{
 			public void onClick(View v) 
 			{
-				Intent back = new Intent(insertUser.this, LoginMain.class);
+				Intent back = new Intent(InsertUser.this, LoginMain.class);
 		    	startActivity(back);
 			}
 		});
@@ -104,7 +104,7 @@ public class insertUser extends Activity
 		{
 			HttpResponse response = client.execute(request);
 			Toast.makeText(this, "Registrasi " + request(response), Toast.LENGTH_SHORT).show();
-			Intent home = new Intent (insertUser.this, LoginMain.class);
+			Intent home = new Intent (InsertUser.this, LoginMain.class);
 			startActivity(home);
 		} 
 		catch (Exception ex) 

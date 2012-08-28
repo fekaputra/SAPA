@@ -83,7 +83,7 @@ public class ItemKolega extends MapActivity
 	{
     	String admin = user.getUser();
     	
-    	Intent back = new Intent (ItemKolega.this, gis.class);
+    	Intent back = new Intent (ItemKolega.this, Gis.class);
     	back.putExtra("admin", admin);
     	startActivity(back);
 	}

@@ -35,7 +35,7 @@ public class TabelImunisasi extends Activity
 				String namaAnak = i.getStringExtra("namaAnak");
 				String jk = i.getStringExtra("jk");
 				
-				Intent back = new Intent(TabelImunisasi.this, imunisasi.class);
+				Intent back = new Intent(TabelImunisasi.this, Imunisasi.class);
 				back.putExtra("namaAnak", namaAnak);
 				back.putExtra("jk", jk);
 				back.putExtra("admin", admin);

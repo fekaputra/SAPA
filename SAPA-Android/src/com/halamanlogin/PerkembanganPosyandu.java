@@ -140,7 +140,7 @@ public class PerkembanganPosyandu extends Activity implements OnClickListener
 				Intent i = getIntent();
 				String admin = i.getStringExtra("admin");
 				
-				Intent back = new Intent(PerkembanganPosyandu.this, report.class);
+				Intent back = new Intent(PerkembanganPosyandu.this, Report.class);
 				back.putExtra("admin", admin);
 		    	startActivity(back);
 	        }

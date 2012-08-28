@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class disease extends Activity
+public class Disease extends Activity
 {
 	private EditText namaPelapor, gejala, Lokasi, laporan, tag;
 	private Button kirim, homeReport;
@@ -42,7 +42,7 @@ public class disease extends Activity
 				boolean check = validasi.validation(editText);//validation(editText);
 				if(check == false)
 				{
-					Toast.makeText(disease.this, "There are some field(s) need to input", Toast.LENGTH_SHORT).show();
+					Toast.makeText(Disease.this, "There are some field(s) need to input", Toast.LENGTH_SHORT).show();
 					validasi.messages(editText);
 				}
 				else
@@ -54,7 +54,7 @@ public class disease extends Activity
 							"Laporan        : " + laporan.getText().toString() + "\n" +
 							"Tag            : " + tag.getText().toString();
 						
-						Toast.makeText(disease.this, toastMessage, Toast.LENGTH_LONG).show();
+						Toast.makeText(Disease.this, toastMessage, Toast.LENGTH_LONG).show();
 				}
 			}
 		});
@@ -67,7 +67,7 @@ public class disease extends Activity
 				Intent i = getIntent();
 				String admin = i.getStringExtra("admin");
 				
-				Intent home_report = new Intent(disease.this, report.class);
+				Intent home_report = new Intent(Disease.this, Report.class);
 				home_report.putExtra("admin", admin);
 		    	startActivity(home_report);
 	        }

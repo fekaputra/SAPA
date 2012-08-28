@@ -57,7 +57,7 @@ public class LoginMain extends Activity
 		{
 			public void onClick(View v)
 	        {
-				Intent register = new Intent (LoginMain.this, insertUser.class);
+				Intent register = new Intent (LoginMain.this, InsertUser.class);
 		    	startActivity(register);
 	        }
 		});
@@ -153,7 +153,7 @@ public class LoginMain extends Activity
 		 */
 		public void sendData(ArrayList<NameValuePair> data) throws ClientProtocolException, IOException 
 		{
-			readURL rL;	
+			ReadURL rL;	
 			HttpPost httppost = new HttpPost(Referensi.url + "/login.php");
 			httppost.setEntity(new UrlEncodedFormEntity(data));
 			
@@ -162,7 +162,7 @@ public class LoginMain extends Activity
 				try {
 					
 					//mengirimkan username dan password yang diinput user untuk di proses oleh url http://10.0.2.2/Android/login.php
-					rL = new readURL(Referensi.url + "/login.php?username=" + user.getText().toString() + "&password=" + pass.getText().toString());
+					rL = new ReadURL(Referensi.url + "/login.php?username=" + user.getText().toString() + "&password=" + pass.getText().toString());
 					String auth=rL.getHTML();
 					
 					String filename = auth;
@@ -177,7 +177,7 @@ public class LoginMain extends Activity
 						if(admin.equals("ADMIN"))
 						{	
 							//Toast.makeText(getBaseContext(), "Selamat Datang " + user.getText(), Toast.LENGTH_SHORT).show();
-							Intent s = new Intent(LoginMain.this, homeAdmin.class);
+							Intent s = new Intent(LoginMain.this, HomeAdmin.class);
 							s.putExtra("admin", admin); //mengirimkan level user (admin atau member)
 							s.putExtra("username", username);
 							startActivity(s);
@@ -185,7 +185,7 @@ public class LoginMain extends Activity
 						else
 						{
 							//Toast.makeText(getBaseContext(), "Selamat Datang " + user.getText(), Toast.LENGTH_SHORT).show();
-							Intent s = new Intent(LoginMain.this, homeMember.class);
+							Intent s = new Intent(LoginMain.this, HomeMember.class);
 							s.putExtra("admin", admin);
 							s.putExtra("username", username);
 						    startActivity(s);

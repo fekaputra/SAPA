@@ -2,11 +2,11 @@ package com.halamanlogin;
 
 import java.io.*;
 import java.net.URL;
-public class readURL 
+public class ReadURL 
 {
   private String url;
   
-  public readURL(String url) 
+  public ReadURL(String url) 
   {
      this.url = url;
   }

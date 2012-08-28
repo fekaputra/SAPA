@@ -36,7 +36,7 @@ public class GrafikTumbuhKembang extends Activity
 				String namaAnak = i.getStringExtra("namaAnak");
 				String jk = i.getStringExtra("jk");
 				
-				Intent back = new Intent(GrafikTumbuhKembang.this, tumbuhKembangAnak.class);
+				Intent back = new Intent(GrafikTumbuhKembang.this, TumbuhKembangAnak.class);
 				back.putExtra("admin", admin);
 				back.putExtra("namaAnak", namaAnak);
 				back.putExtra("jk", jk);

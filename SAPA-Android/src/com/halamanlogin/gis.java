@@ -20,7 +20,7 @@ import com.google.android.maps.MapView;
 import com.google.android.maps.Overlay;
 import com.google.android.maps.OverlayItem;
 
-public class gis extends MapActivity 
+public class Gis extends MapActivity 
 {	
 	//Membuat objek JSON Parser
     JSONParser jParser = new JSONParser();
@@ -131,13 +131,13 @@ public class gis extends MapActivity
 		//Toast.makeText(getBaseContext(), admin, Toast.LENGTH_SHORT).show();		
 		if(admin.equals("ADMIN"))
 		{
-			Intent home = new Intent (gis.this, homeAdmin.class);
+			Intent home = new Intent (Gis.this, HomeAdmin.class);
 			home.putExtra("admin", admin);
 	    	startActivity(home);
 		}
 		else
 		{
-			Intent home = new Intent (gis.this, homeMember.class);
+			Intent home = new Intent (Gis.this, HomeMember.class);
 			home.putExtra("admin", admin);
 	    	startActivity(home);
 		}

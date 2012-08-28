@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class homeAdmin extends Activity
+public class HomeAdmin extends Activity
 {
 	Button gis, report, knowledge, communication, logout;
 	
@@ -33,7 +33,7 @@ public class homeAdmin extends Activity
 			
 			public void onClick(View v)
 	        {
-				Intent start_gis = new Intent(homeAdmin.this, gis.class);
+				Intent start_gis = new Intent(HomeAdmin.this, Gis.class);
 				start_gis.putExtra("admin", admin);
 		    	startActivity(start_gis);
 	        }
@@ -47,7 +47,7 @@ public class homeAdmin extends Activity
 			
 			public void onClick(View v)
 	        {
-				Intent start_report = new Intent(homeAdmin.this, report.class);
+				Intent start_report = new Intent(HomeAdmin.this, Report.class);
 				start_report.putExtra("admin", admin);
 		    	startActivity(start_report);
 	        }
@@ -61,7 +61,7 @@ public class homeAdmin extends Activity
 			
 			public void onClick(View v)
 	        {
-				Intent list_file = new Intent(homeAdmin.this, TabLayoutActivity.class);
+				Intent list_file = new Intent(HomeAdmin.this, TabLayoutActivity.class);
 				list_file.putExtra("admin", admin);
 		    	startActivity(list_file);
 	        }
@@ -75,7 +75,7 @@ public class homeAdmin extends Activity
 			
 			public void onClick(View v)
 	        {
-				Intent start_chat = new Intent(homeAdmin.this, chat.class);
+				Intent start_chat = new Intent(HomeAdmin.this, Chat.class);
 				start_chat.putExtra("admin", admin);
 		    	startActivity(start_chat);
 	        }
@@ -88,10 +88,10 @@ public class homeAdmin extends Activity
 	        {
 				String admin = "FALSE";
 
-				Intent out = new Intent (homeAdmin.this, LoginMain.class);
+				Intent out = new Intent (HomeAdmin.this, LoginMain.class);
 				out.putExtra("admin", admin);
 				startActivity(out);
-				Toast.makeText(homeAdmin.this, "Terima Kasih",Toast.LENGTH_SHORT).show();
+				Toast.makeText(HomeAdmin.this, "Terima Kasih",Toast.LENGTH_SHORT).show();
 	        }		
 		});
 	}

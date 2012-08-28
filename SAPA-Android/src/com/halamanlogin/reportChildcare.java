@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class reportChildcare extends Activity
+public class ReportChildcare extends Activity
 {
 	Button PPA, imunisasi, PKVDT, home;
 	
@@ -26,7 +26,7 @@ public class reportChildcare extends Activity
 				String jk = i.getStringExtra("jk");
 				String admin = i.getStringExtra("admin");
 				
-				Intent child_care = new Intent(reportChildcare.this, tumbuhKembangAnak.class);
+				Intent child_care = new Intent(ReportChildcare.this, TumbuhKembangAnak.class);
 				child_care.putExtra("namaAnak", namaAnak );
 				child_care.putExtra("jk", jk);
 				child_care.putExtra("admin", admin);
@@ -44,7 +44,7 @@ public class reportChildcare extends Activity
 				String jk = i.getStringExtra("jk");
 				String admin = i.getStringExtra("admin");
 				
-				Intent start_imunisasi = new Intent(reportChildcare.this, imunisasi.class);
+				Intent start_imunisasi = new Intent(ReportChildcare.this, Imunisasi.class);
 				start_imunisasi.putExtra("namaAnak", namaAnak);
 				start_imunisasi.putExtra("jk", jk);
 				start_imunisasi.putExtra("admin", admin);
@@ -62,7 +62,7 @@ public class reportChildcare extends Activity
 				String jk = i.getStringExtra("jk");
 				String admin = i.getStringExtra("admin");
 				
-				Intent start_pkvdt = new Intent(reportChildcare.this, PemberianVitamin.class);
+				Intent start_pkvdt = new Intent(ReportChildcare.this, PemberianVitamin.class);
 				start_pkvdt.putExtra("namaAnak", namaAnak);
 				start_pkvdt.putExtra("jk", jk);
 				start_pkvdt.putExtra("admin", admin);
@@ -80,7 +80,7 @@ public class reportChildcare extends Activity
 				String jk = i.getStringExtra("jk");
 				String admin = i.getStringExtra("admin");
 				
-				Intent home = new Intent (reportChildcare.this, childcare.class);
+				Intent home = new Intent (ReportChildcare.this, Childcare.class);
 				home.putExtra("namaAnak", namaAnak);
 				home.putExtra("jk", jk);
 				home.putExtra("admin", admin);

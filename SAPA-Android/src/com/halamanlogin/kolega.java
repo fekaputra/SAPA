@@ -196,7 +196,7 @@ public class Kolega extends ListActivity
 	{
     	String admin = user.getUser();
     	
-    	Intent back = new Intent (Kolega.this, gis.class);
+    	Intent back = new Intent (Kolega.this, Gis.class);
     	back.putExtra("admin", admin);
     	startActivity(back);
 	}
