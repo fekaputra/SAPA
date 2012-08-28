@@ -1,161 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-	xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/layout1"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-	android:layout_height="fill_parent">
-	
-	<LinearLayout 
-	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content"
-	    android:orientation="vertical" 
-	    android:gravity="center"
-		android:background="@drawable/bg9">
-	    
-	    	
-		<!-- Untuk menampilkan level user, apakah Admin atau Member -->
-		<!-- <TextView android:id="@+id/txtLevel"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_margin="15dip"
-	            android:textSize="18dip"/> -->
-		
-		<!-- blank -->
-			<TextView
-				android:layout_width="fill_parent"  
-				android:layout_height="wrap_content" 
-				android:text="">
-			</TextView>
-		
-		<!-- Menu Childcare -->
-		<LinearLayout
-	        android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:gravity="center_horizontal">
-			
-		    <Button 
-				android:id="@+id/childcare" 
-				android:layout_width="250dp"
-				android:layout_height="40dp" 
-				android:text="@string/btnChildcare">
-			</Button>
-		</LinearLayout>
-		
-		<!-- blank -->
-			<TextView
-				android:layout_width="fill_parent"  
-				android:layout_height="wrap_content" 
-				android:text="">
-			</TextView>
-		
-		<!-- Menu Disease -->
-		<LinearLayout
-	        android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:gravity="center_horizontal">
-			
-		    <Button 
-		        android:id="@+id/disease"
-				android:layout_width="250dp"
-				android:layout_height="40dp"  
-				android:text="@string/btnDisease">
-			</Button>
-		</LinearLayout>
-		
-		<!-- blank -->
-			<TextView
-				android:layout_width="fill_parent"  
-				android:layout_height="wrap_content" 
-				android:text="">
-			</TextView>
-		
-		<!-- Menu Special Occasion -->
-		<LinearLayout
-	        android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:gravity="center_horizontal">
-			
-		    <Button 
-				android:id="@+id/specoccasion" 
-				android:layout_width="250dp"
-				android:layout_height="40dp" 
-				android:text="@string/btnSpecialOcc">
-			</Button>
-		</LinearLayout>
-		
-		<!-- blank -->
-			<TextView
-				android:layout_width="fill_parent"  
-				android:layout_height="wrap_content" 
-				android:text="">
-			</TextView>
-		
-		<!-- Menu Perkembangan Posyandu -->
-		<LinearLayout
-	        android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:gravity="center_horizontal">
-			
-		    <Button 
-				android:id="@+id/perkembangan_posyandu"
-				android:layout_width="250dp"
-				android:layout_height="wrap_content"  
-				android:text="@string/btnPerkembanganPosyandu">
-			</Button>
-		</LinearLayout>
-		
-		<!-- blank -->
-			<TextView
-				android:layout_width="fill_parent"  
-				android:layout_height="wrap_content" 
-				android:text="">
-			</TextView>
-		
-		<!--  -->	
-		<LinearLayout
-	        android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:gravity="center_horizontal">
-			
-		    <Button 
-				android:id="@+id/pkp_kecamatan" 
-				android:layout_width="250dp"
-				android:layout_height="wrap_content" 
-				android:text="@string/btnPKPKecamatan">
-			</Button>
-		</LinearLayout>
-		
-		<!-- blank -->
-			<TextView
-				android:layout_width="fill_parent"  
-				android:layout_height="wrap_content" 
-				android:text="">
-			</TextView>
-			
-			<TextView
-				android:layout_width="fill_parent"  
-				android:layout_height="wrap_content" 
-				android:text="">
-			</TextView>
-			
-			<TextView
-				android:layout_width="fill_parent"  
-				android:layout_height="wrap_content" 
-				android:text="">
-			</TextView>
-		
-	    <LinearLayout
-	        android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:gravity="center_horizontal">
-			
-		    <Button 
-		        android:id="@+id/homePage"
-				android:layout_width="150dp"
-				android:layout_height="40dp"  
-				android:text="@string/btnMenuUtama">
-			</Button>
-		</LinearLayout>
-	
-	</LinearLayout>
-</ScrollView>
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/bg25"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <!-- Menu Childcare -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" >
+
+        <Button
+            android:id="@+id/childcare"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/childcare1"
+            android:gravity="center"
+            android:text="@string/btnChildcare" >
+        </Button>
+    </LinearLayout>
+
+    <!-- blank -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="" >
+    </TextView>
+
+    <!-- Menu Disease -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" >
+
+        <Button
+            android:id="@+id/disease"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/disease"
+            android:gravity="center"
+            android:text="@string/btnDisease" >
+        </Button>
+    </LinearLayout>
+
+    <!-- blank -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="" >
+    </TextView>
+
+    <!-- Menu Special Occasion -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" >
+
+        <Button
+            android:id="@+id/specoccasion"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/calendar1"
+            android:gravity="center"
+            android:text="@string/btnSpecialOcc" >
+        </Button>
+    </LinearLayout>
+
+    <!-- blank -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="" >
+    </TextView>
+
+    <!-- Menu Perkembangan Posyandu -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" >
+
+        <Button
+            android:id="@+id/perkembangan_posyandu"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/posyandu"
+            android:gravity="center"
+            android:text="@string/btnPerkembanganPosyandu" >
+        </Button>
+    </LinearLayout>
+
+    <!-- blank -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="" >
+    </TextView>
+
+    <!-- Kegiatan PKP Kecamatan -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" >
+
+        <Button
+            android:id="@+id/pkp_kecamatan"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/kecamatan"
+            android:gravity="center"
+            android:text="@string/btnPKPKecamatan" >
+        </Button>
+    </LinearLayout>
+
+    <!-- blank -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="" >
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" >
+
+        <Button
+            android:id="@+id/homePage"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/home2"
+            android:gravity="center"
+            android:text="@string/btnMenuUtama" >
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>

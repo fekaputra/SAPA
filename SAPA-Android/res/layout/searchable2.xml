@@ -5,28 +5,28 @@
     android:orientation="vertical" >
 
     <EditText
-	    android:id="@+id/editSearch2"
-	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content"
-	    android:ems="10" 
-	    
-	    xmlns:android="http://schemas.android.com/apk/res/android"
-	    android:label="@string/app_name" 
-	    android:hint="@string/search_hint"
-	    android:searchMode="showSearchLabelAsBadge"
-	    android:searchSettingsDescription="suggests symbols"
-	    android:queryAfterZeroResults="true"
-	    android:searchSuggestAuthority="com.plexobject.service.SearchSuggestionsProvider"
-	    android:searchSuggestSelection=" ? " 
-	    android:searchSuggestIntentAction="android.intent.action.VIEW">
-	    <requestFocus />
-	</EditText>
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/editSearch2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/search_hint"
+        android:label="@string/app_name"
+        android:queryAfterZeroResults="true"
+        android:searchMode="showSearchLabelAsBadge"
+        android:searchSettingsDescription="suggests symbols"
+        android:searchSuggestAuthority="com.plexobject.service.SearchSuggestionsProvider"
+        android:searchSuggestIntentAction="android.intent.action.VIEW"
+        android:searchSuggestSelection=" ? " >
 
-	<Button
-	    android:id="@+id/buttonSearch2"
-	    style="?android:attr/buttonStyleSmall"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:text="@string/search" />
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/buttonSearch2"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search" />
 
 </LinearLayout>

@@ -1,83 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-	xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/layout1"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-	android:layout_height="fill_parent">
-	
-	<LinearLayout 
-	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content"
-	    android:orientation="vertical" 
-		android:background="@drawable/bg11">
-	    
-	    <!-- Title -->
-	    <TextView
-			android:layout_width="fill_parent"  
-			android:layout_height="wrap_content" 
-			android:gravity="center" 
-			android:textSize="27dp"
-			android:textColor="#000000"
-			android:text="@string/title_register" >
-		</TextView>
-		
-	    <!-- blank -->	
-	    	<TextView
-				android:layout_width="fill_parent"  
-				android:layout_height="wrap_content" 
-				android:text="" >
-			</TextView>
-	    
-	    <!-- Username -->
-	
-		<TextView
-			android:layout_width="fill_parent"  
-			android:layout_height="wrap_content" 
-			android:text="@string/username" >
-		</TextView>
-		
-		<EditText 
-			android:layout_width="fill_parent" 
-			android:layout_height="wrap_content"
-			android:hint=""
-			android:singleLine="true"
-			android:id="@+id/newusername">
-		</EditText>
-		
-		<!-- Password -->
-		<TextView 
-			android:layout_width="fill_parent" 
-			android:layout_height="wrap_content" 
-			android:text="@string/password">
-		</TextView>
-			
-		<EditText 
-		    android:layout_width="fill_parent" 
-			android:layout_height="wrap_content" 
-			android:hint=""
-			android:singleLine="true"
-			android:id="@+id/newpassword" >
-		</EditText>
-		
-		<!-- Submit -->
-		<LinearLayout
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:gravity="center">
-			
-			<Button 
-			    android:layout_width="100dp"
-				android:layout_height="wrap_content" 
-				android:id="@+id/daftar" 
-				android:text="@string/btnDaftar">
-			</Button>
-			
-			<Button 
-			    android:layout_width="100dp"
-				android:layout_height="wrap_content" 
-				android:id="@+id/kembali" 
-				android:text="@string/btnKembali">
-			</Button>
-		</LinearLayout>
-	</LinearLayout>
-</ScrollView>
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- Title -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_register"
+        android:background="#d3d3d3"
+        android:textColor="#000000"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/registration_ldpi"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dip" >
+    </TextView>
+
+    <!-- Garis Pemisah -->
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dip"
+        android:background="#696969" />
+    
+    <!-- blank -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:text="" >
+    </TextView>
+    
+    <!-- blank -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:text="" >
+    </TextView>
+
+    <!-- Username -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/username"
+        android:textColor="#ffffff" >
+    </TextView>
+
+    <EditText
+        android:id="@+id/newusername"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint=""
+        android:singleLine="true" >
+    </EditText>
+
+    <!-- blank -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:text="" >
+    </TextView>
+
+    <!-- Password -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/password"
+        android:textColor="#ffffff" >
+    </TextView>
+
+    <EditText
+        android:id="@+id/newpassword"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint=""
+        android:singleLine="true" >
+    </EditText>
+
+    <!-- blank -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:text="" >
+    </TextView>
+    
+    <!-- blank -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:text="" >
+    </TextView>
+
+    <!-- Daftar -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/daftar"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/btnDaftar"
+            android:drawableLeft="@drawable/send_ldpi" >
+        </Button>
+
+        <Button
+            android:id="@+id/kembali"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/btnKembali"
+            android:drawableLeft="@drawable/back_ldpi" >
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>

@@ -4,13 +4,15 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
-	    <Button
-	        android:id="@+id/setup"
-	        android:layout_width="fill_parent"
-	        android:layout_height="wrap_content"
-	        android:text="Setup" >
-	    </Button>
-	
+    <Button
+        android:id="@+id/setup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/setup_ldpi"
+        android:gravity="center"
+        android:text="Setup" >
+    </Button>
+
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
@@ -29,48 +31,49 @@
             android:layout_height="wrap_content"
             android:autoText="false"
             android:capitalize="none"
-            android:minWidth="250dp"
+            android:minWidth="248dp"
             android:scrollHorizontally="true"
             android:singleLine="true"
             android:textSize="16sp" />
     </LinearLayout>
-    
-	    <ListView
-	        android:id="@+id/listView1"
-	        android:layout_width="fill_parent"
-	        android:layout_height="300dp"
-	        android:layout_above="@+id/form"
-	        android:layout_alignParentTop="true" >
-	    </ListView>
-	
-	        <EditText
-	            android:id="@+id/editText1"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_alignParentLeft="true"
-	            android:layout_alignParentRight="true"
-	            android:ems="10"
-	            android:inputType="text" />
-	    
-	    <LinearLayout 
-	        android:layout_width="fill_parent"
-	        android:layout_height="wrap_content"
-	        android:gravity="center">
-		    <Button
-		        android:id="@+id/send"
-		        android:layout_width="156dp"
-		        android:layout_height="wrap_content"
-		        android:text="Send" >
-		
-		    </Button>
-		
-		    <Button
-		        android:id="@+id/kembali"
-		        android:layout_width="156dp"
-		        android:layout_height="wrap_content"
-		        android:text="Back" >
-		
-		    </Button>
-	    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:layout_above="@+id/form"
+        android:layout_alignParentTop="true" >
+    </ListView>
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:inputType="text" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="156dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/send_ldpi"
+            android:text="Send" >
+        </Button>
+
+        <Button
+            android:id="@+id/kembali"
+            android:layout_width="156dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/back_ldpi"
+            android:text="Kembali" >
+        </Button>
+    </LinearLayout>
 
 </LinearLayout>

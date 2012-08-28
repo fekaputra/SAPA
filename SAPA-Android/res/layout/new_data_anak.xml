@@ -1,217 +1,222 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-	xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/layout1"
     android:layout_width="fill_parent"
-	android:layout_height="fill_parent">
+    android:layout_height="fill_parent" >
 
-	<LinearLayout
-	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content"
-	    android:orientation="vertical"
-	    android:background="@drawable/bg37">
-		
-	    <!-- blank -->	
-		    <TextView
-				android:layout_width="fill_parent"  
-				android:layout_height="wrap_content"
-				android:text="" >
-			</TextView>
-	    
-	    <!-- Nama Posyandu -->
-	    <LinearLayout
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content" >
-		
-			<TextView
-				android:layout_width="90dp"  
-				android:layout_height="fill_parent" 
-				android:gravity="center_vertical"
-				android:textColor="#ffffff"
-				android:text="@string/nama_posyandu" >
-			</TextView>
-			
-			<EditText 
-				android:layout_width="fill_parent" 
-				android:layout_height="40dp"
-				android:hint=""
-				android:singleLine="true"
-				android:id="@+id/nama_posyandu">
-			</EditText>
-		</LinearLayout>
-	    
-	    <!-- Nama Anak -->
-	    <LinearLayout
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content" >
-		
-			<TextView
-				android:layout_width="90dp"  
-				android:layout_height="fill_parent"
-				android:gravity="center_vertical"
-				android:textColor="#ffffff"
-				android:text="@string/nama_anak" >
-			</TextView>
-			
-			<EditText 
-				android:layout_width="fill_parent" 
-				android:layout_height="40dp"
-				android:hint=""
-				android:singleLine="true"
-				android:id="@+id/new_namaAnak">
-			</EditText>
-		</LinearLayout>
-		
-		<!-- Jenis Kelamin -->
-		<LinearLayout
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content" >
-			
-			<TextView 
-				android:layout_width="90dp" 
-				android:layout_height="fill_parent" 
-				android:gravity="center_vertical"
-				android:textColor="#ffffff"
-				android:text="@string/jenis_kelamin">
-			</TextView>
-			
-			<RadioGroup 
-			    android:layout_width="wrap_content"
-			    android:layout_height="wrap_content" 
-			    android:id="@+id/radioGroupSex">
-			    
-			    <RadioButton 
-			        android:id="@+id/radioMale"
-			        android:layout_width="wrap_content"
-			        android:layout_height="wrap_content" 
-			        android:checked="true"
-			        android:text="@string/men">   
-			    </RadioButton>
-			    
-			    <RadioButton 
-			        android:layout_width="wrap_content"
-			        android:layout_height="wrap_content" 
-			        android:id="@+id/radioFemale"
-			        android:text="@string/female">
-			    </RadioButton>
-			</RadioGroup>
-		</LinearLayout>
-	
-		<!-- Tanggal Lahir -->
-		<TextView 
-			android:layout_width="fill_parent" 
-			android:layout_height="fill_parent" 
-			android:gravity="center_vertical"
-			android:textColor="#ffffff"
-			android:text="@string/tglLahir">
-		</TextView>
-		
-		<DatePicker
-		   android:id="@+id/dateTanggal"
-		   android:layout_width="wrap_content"
-		   android:layout_height="wrap_content" />
-		
-		<!-- blank -->
-			
-		<!-- blank -->	
-		    <TextView
-				android:layout_width="fill_parent"  
-				android:layout_height="wrap_content"
-				android:text="" >
-			</TextView>	
-		
-		<!-- Berat Badan Saat Lahir -->
-		<LinearLayout
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content" >
-			
-			<TextView 
-				android:layout_width="90dp" 
-				android:layout_height="fill_parent" 
-				android:gravity="center_vertical"
-				android:textColor="#ffffff"
-				android:text="@string/berat_badan">
-			</TextView>
-			
-			<EditText 
-			    android:layout_width="fill_parent" 
-				android:layout_height="40dp"
-				android:hint="" 
-				android:inputType="number"
-				android:singleLine="true"
-				android:id="@+id/new_bbLahir" 
-				></EditText>
-		</LinearLayout>
-		
-		<!-- Nama Ibu -->
-		<LinearLayout
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content" >
-			
-			<TextView 
-				android:layout_width="90dp" 
-				android:layout_height="fill_parent"
-				android:gravity="center_vertical"
-				android:textColor="#ffffff"
-				android:text="@string/nama_ibu">
-			</TextView>
-			
-			<EditText 
-			    android:layout_width="fill_parent" 
-				android:layout_height="40dp" 
-				android:hint=""
-				android:singleLine="true"
-				android:id="@+id/new_namaIbu" >
-				</EditText>
-		</LinearLayout>
-		
-		<!-- Nama Ayah -->
-		<LinearLayout
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content" >
-			
-			<TextView 
-				android:layout_width="90dp" 
-				android:layout_height="fill_parent" 
-				android:gravity="center_vertical"
-				android:textColor="#ffffff"
-				android:text="@string/nama_ayah">
-			</TextView>
-			
-			<EditText 
-			    android:layout_width="fill_parent" 
-				android:layout_height="40dp" 
-				android:hint=""
-				android:singleLine="true"
-				android:id="@+id/new_namaAyah" 
-				></EditText>
-		</LinearLayout>
-	
-		<!-- blank -->
-			<TextView
-				android:layout_width="fill_parent"  
-				android:layout_height="wrap_content" 
-				android:text="" >
-			</TextView>
-		
-		<LinearLayout
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:gravity="center">
-			
-			<Button  
-				android:id="@+id/daftar" 
-			    android:layout_width="100dp"
-				android:layout_height="40dp"
-				android:text="@string/btnDaftar">
-			</Button>
-			
-			<Button 
-				android:id="@+id/kembali"
-			    android:layout_width="100dp"
-				android:layout_height="40dp"  
-				android:text="@string/btnKembali">
-			</Button>
-		</LinearLayout>
-	</LinearLayout>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/form_ldpi"
+            android:gravity="center_vertical"
+            android:text="DATA BARU"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:background="#d3d3d3"
+            android:paddingLeft="5dip" >
+        </TextView>
+
+        <!-- Garis Pemisah -->
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="2dip"
+            android:background="#696969" />
+
+        <!-- blank -->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="10dp"
+            android:text="" >
+        </TextView>
+
+        <!-- Nama Posyandu -->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:text="@string/nama_posyandu"
+            android:textColor="#ffffff" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/nama_posyandu"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:hint=""
+            android:singleLine="true" >
+        </EditText>
+
+        <!-- Nama Anak -->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:text="@string/nama_anak"
+            android:textColor="#ffffff" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/new_namaAnak"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:hint=""
+            android:singleLine="true" >
+        </EditText>
+
+        <!-- Jenis Kelamin -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:text="@string/jenis_kelamin"
+                android:textColor="#ffffff" >
+            </TextView>
+
+            <RadioGroup
+                android:id="@+id/radioGroupSex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <RadioButton
+                    android:id="@+id/radioMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/men" >
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/radioFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/female" >
+                </RadioButton>
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- Tanggal Lahir -->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:text="@string/tglLahir"
+            android:textColor="#ffffff" >
+        </TextView>
+
+        <DatePicker
+            android:id="@+id/dateTanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- blank -->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="10dp"
+            android:text="" >
+        </TextView>
+
+        <!-- Berat Badan Saat Lahir -->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:text="Berat Badan Saat Lahir"
+            android:textColor="#ffffff" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/new_bbLahir"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:hint=""
+            android:inputType="number"
+            android:singleLine="true" >
+        </EditText>
+
+        <!-- Nama Ibu -->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:text="@string/nama_ibu"
+            android:textColor="#ffffff" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/new_namaIbu"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:hint=""
+            android:singleLine="true" >
+        </EditText>
+
+        <!-- Nama Ayah -->
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:text="@string/nama_ayah"
+            android:textColor="#ffffff" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/new_namaAyah"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:hint=""
+            android:singleLine="true" >
+        </EditText>
+
+        <!-- blank -->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="10dp"
+            android:text="" >
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/daftar"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/send_ldpi"
+                android:text="@string/btnDaftar" >
+            </Button>
+
+            <Button
+                android:id="@+id/kembali"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/back_ldpi"
+                android:text="@string/btnKembali" >
+            </Button>
+        </LinearLayout>
+    </LinearLayout>
+
 </ScrollView>

@@ -1,202 +1,218 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView 
-	xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-	android:layout_height="fill_parent"
-    android:background="@drawable/bg37">
-	
-    <!-- Title -->	
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!-- Title -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_program_pokok"
+        android:textColor="#000000"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:background="#d3d3d3"
+        android:drawableLeft="@drawable/strata_ldpi"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dip" >
+    </TextView>
+
+    <!-- Garis Pemisah -->
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dip"
+        android:background="#696969" />
+
+    <!-- blank -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:text="" >
+    </TextView>
+
+    <!-- Id Kelurahan/ Desa -->
+
     <LinearLayout
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content"
-		android:orientation="vertical" >
-	    
-		<TextView
-			android:layout_width="fill_parent"  
-			android:layout_height="wrap_content" 
-			android:gravity="center"
-			android:textColor="#ffffff"
-			android:text="@string/title_program_pokok" 
-			android:textStyle="bold">
-		</TextView>
-		
-		<!-- blank -->	
-		    <TextView
-				android:layout_width="fill_parent"  
-				android:layout_height="10dp" 
-				android:gravity="center" 
-				android:text="" >
-			</TextView>	
-		
-		<!-- Id Kelurahan/ Desa -->	
-		<LinearLayout
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content" >
-				
-			<TextView
-				android:layout_width="wrap_content"  
-				android:layout_height="wrap_content" 
-				android:gravity="center_vertical"
-				android:textColor="#ffffff"
-				android:text="@string/id_kelurahan" >
-			</TextView>		
-				
-			<TextView
-				android:id="@+id/idKelurahan"
-				android:layout_width="fill_parent" 
-				android:layout_height="wrap_content"
-				android:textColor="#ffffff">
-			</TextView>
-		</LinearLayout>
-		
-		<!-- blank -->
-		    <TextView
-				android:layout_width="fill_parent"  
-				android:layout_height="10dp"  
-				android:text="" >
-			</TextView>	
-			
-		<!-- KB -->
-		<LinearLayout
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content" >
-				
-			<TextView 
-				android:layout_width="90dp" 
-				android:layout_height="wrap_content" 		
-				android:gravity="center_vertical"
-				android:textColor="#ffffff"
-				android:text="@string/kb">
-			</TextView>
-				
-			<EditText 
-			    android:layout_width="fill_parent" 
-				android:layout_height="40dp" 
-				android:hint=""
-				android:inputType="number"
-				android:singleLine="true"
-				android:id="@+id/new_kb" >
-			</EditText>
-		</LinearLayout>
-		
-		<!-- KIA -->
-		<LinearLayout
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content" >
-				
-			<TextView 
-				android:layout_width="90dp" 
-				android:layout_height="wrap_content" 
-				android:textColor="#ffffff"
-				android:text="@string/kia">
-			</TextView>
-				
-			<EditText 
-			    android:layout_width="fill_parent" 
-				android:layout_height="40dp" 
-				android:hint=""
-				android:inputType="number"
-				android:singleLine="true"
-				android:id="@+id/new_kia"> 
-			</EditText>
-		</LinearLayout>
-		    
-		<!-- Gizi -->
-		<LinearLayout
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content" >
-			
-			<TextView
-				android:layout_width="90dp"  
-				android:layout_height="fill_parent" 
-				android:gravity="center_vertical"
-				android:textColor="#ffffff"
-				android:text="@string/gizi" >
-			</TextView>
-			
-			<EditText 
-				android:layout_width="fill_parent" 
-				android:layout_height="40dp"
-				android:hint=""
-				android:inputType="number"
-				android:singleLine="true"
-				android:id="@+id/new_gizi">
-			</EditText>				
-		</LinearLayout>
-			
-		<!-- Imunisasi -->
-		<LinearLayout
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content" >
-			
-			<TextView
-				android:layout_width="90dp"  
-				android:layout_height="fill_parent" 
-				android:gravity="center_vertical"
-				android:textColor="#ffffff"
-				android:text="@string/imunisasi" >
-			</TextView>
-				
-			<EditText 
-				android:layout_width="fill_parent" 
-				android:layout_height="40dp"
-				android:hint=""
-				android:inputType="number"
-				android:singleLine="true"
-				android:id="@+id/new_imunisasi">
-			</EditText>
-		</LinearLayout>
-			
-		<!-- P2D -->
-		<LinearLayout
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content">
-				
-			<TextView
-				android:layout_width="90dp"  
-				android:layout_height="fill_parent" 
-				android:gravity="center_vertical"
-				android:textColor="#ffffff"
-				
-				android:text="@string/p2d" >
-			</TextView>
-				
-			<EditText 
-				android:layout_width="fill_parent" 
-				android:layout_height="40dp"
-				android:hint=""
-				android:inputType="number"
-				android:singleLine="true"
-				android:id="@+id/new_p2d">
-			</EditText>
-		</LinearLayout>
-		
-		<!-- blank -->	
-			<TextView
-				android:layout_width="fill_parent"  
-				android:layout_height="10dp" 
-				android:text="" >
-			</TextView>
-		
-		<!-- blank -->	
-			<TextView
-				android:layout_width="fill_parent"  
-				android:layout_height="10dp" 
-				android:text="" >
-			</TextView>
-			
-		<!-- Submit/ Kirim -->
-		<LinearLayout
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:gravity="center">
-			
-			<Button 
-			    android:layout_width="100dp"
-				android:layout_height="45dp" 
-				android:id="@+id/daftar" 
-				android:text="@string/btnKirim">
-			</Button>
-		</LinearLayout>
-	</LinearLayout>	
-</ScrollView>
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/id_kelurahan"
+            android:textColor="#ffffff" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/idKelurahan"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff" >
+        </TextView>
+    </LinearLayout>
+
+    <!-- blank -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:text="" >
+    </TextView>
+
+    <!-- KB -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/kb"
+            android:textColor="#ffffff" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/new_kb"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:hint=""
+            android:inputType="number"
+            android:singleLine="true" >
+        </EditText>
+    </LinearLayout>
+
+    <!-- KIA -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="@string/kia"
+            android:textColor="#ffffff" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/new_kia"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:hint=""
+            android:inputType="number"
+            android:singleLine="true" >
+        </EditText>
+    </LinearLayout>
+
+    <!-- Gizi -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:text="@string/gizi"
+            android:textColor="#ffffff" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/new_gizi"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:hint=""
+            android:inputType="number"
+            android:singleLine="true" >
+        </EditText>
+    </LinearLayout>
+
+    <!-- Imunisasi -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:text="@string/imunisasi"
+            android:textColor="#ffffff" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/new_imunisasi"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:hint=""
+            android:inputType="number"
+            android:singleLine="true" >
+        </EditText>
+    </LinearLayout>
+
+    <!-- P2D -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:text="@string/p2d"
+            android:textColor="#ffffff" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/new_p2d"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:hint=""
+            android:inputType="number"
+            android:singleLine="true" >
+        </EditText>
+    </LinearLayout>
+
+    <!-- blank -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:text="" >
+    </TextView>
+
+    <!-- blank -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:text="" >
+    </TextView>
+
+    <!-- Submit/ Kirim -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/daftar"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/send_ldpi"
+            android:text="@string/btnKirim" >
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>

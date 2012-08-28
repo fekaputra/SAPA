@@ -1,88 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-	xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/layout1"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-	android:layout_height="fill_parent">
-	
-	<LinearLayout
-	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content"
-	    android:orientation="vertical"
-	    android:gravity="center_horizontal"
-	    android:background="@drawable/childcare">
-	    
-	    <!-- blank -->
-		    <TextView
-				android:layout_width="fill_parent"  
-				android:layout_height="wrap_content" 
-				android:text="">
-			</TextView>
-		
-		<LinearLayout
-	        android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:gravity="center">
-			
-		    <!-- Daftar Data Anak -->
-		    <Button 
-				android:layout_width="150dp"
-				android:layout_height="40dp" 
-				android:id="@+id/daftar_data_anak"
-				android:text="@string/btn_new_data_anak">
-			</Button>
-			
-		    <!-- Kembali ke Menu e-Report -->
-		    <Button 
-				android:layout_width="150dp"
-				android:layout_height="40dp" 
-				android:id="@+id/home_report" 
-				android:text="@string/btnKembali">
-			</Button>
-		</LinearLayout>
-		
-		<!-- blank -->
-			<TextView
-				android:layout_width="fill_parent"  
-				android:layout_height="wrap_content" 
-				android:text="">
-			</TextView>
-		
-		<!-- Title : Pilih Nama Anak -->
-		<TextView
-			android:layout_width="fill_parent"  
-			android:layout_height="wrap_content" 
-			android:textStyle="bold"
-			android:textColor="#696969" 
-			android:text="@string/pilih_nama_anak">
-		</TextView>
-		
-		<!-- Spinner Nama Anak -->
-		<LinearLayout
-	        android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:gravity="center_horizontal">
-			
-			<Spinner
-				android:id="@+id/spinner1"
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content" >
-			</Spinner>
-		</LinearLayout>
-		
-		<!-- blank -->
-			<TextView
-				android:layout_width="fill_parent"  
-				android:layout_height="wrap_content" 
-				android:text="">
-			</TextView>
-		
-		<!-- Next -->
-		<Button 
-			android:layout_width="150dp"
-			android:layout_height="40dp" 
-			android:id="@+id/tumbuh_kembang_anak" 
-			android:text="@string/btnNext">
-		</Button>
-	</LinearLayout>
-</ScrollView>
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <!-- Title -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#d3d3d3"
+        android:drawableLeft="@drawable/childcare1"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dip"
+        android:text="  CHILDCARE"
+        android:textColor="#000000"
+        android:textSize="15dp"
+        android:textStyle="bold" >
+    </TextView>
+
+    <!-- Garis Pemisah -->
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dip"
+        android:background="#696969" />
+
+    <!-- blank -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:text="" >
+    </TextView>
+    
+    <!-- blank -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:text="" >
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <!-- Daftar Data Anak -->
+
+        <Button
+            android:id="@+id/daftar_data_anak"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/form_ldpi"
+            android:gravity="center"
+            android:text="@string/btn_new_data_anak" >
+        </Button>
+
+        <!-- Kembali ke Menu e-Report -->
+
+        <Button
+            android:id="@+id/home_report"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/back_ldpi"
+            android:gravity="center"
+            android:text="@string/btnKembali" >
+        </Button>
+    </LinearLayout>
+
+    <!-- blank -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="" >
+    </TextView>
+
+    <!-- Title : Pilih Nama Anak -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pilih_nama_anak"
+        android:textColor="#ffffff"
+        android:textStyle="bold" >
+    </TextView>
+
+    <!-- Spinner Nama Anak -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" >
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+        </Spinner>
+    </LinearLayout>
+
+    <!-- blank -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:text="" >
+    </TextView>
+
+    <!-- Next -->
+
+    <Button
+        android:id="@+id/tumbuh_kembang_anak"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/next_arrow_ldpi"
+        android:gravity="center"
+        android:text="@string/btnNext" >
+    </Button>
+
+</LinearLayout>

@@ -1,206 +1,218 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-	xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/layout1"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-	android:layout_height="fill_parent">
-    
+    android:layout_height="fill_parent" >
+
     <LinearLayout
-    	android:layout_width="fill_parent"
-    	android:layout_height="wrap_content" 
-        android:orientation="vertical"
-        android:background="@drawable/bg37">
-        
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- Title -->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#d3d3d3"
+            android:drawableLeft="@drawable/image2"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dip"
+            android:text="  KEGIATAN PKP KECAMATAN"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:textStyle="bold" >
+        </TextView>
+
+        <!-- Garis Pemisah -->
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="2dip"
+            android:background="#696969" />
+
+        <!-- blank -->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="10dp"
+            android:text="" >
+        </TextView>
+
         <!-- Kecamatan -->
-		<TextView
-			android:id="@+id/textKec"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:paddingLeft="10dip"
-		    android:paddingRight="10dip"
-		    android:paddingTop="10dip"
-		    android:textSize="17dip"
-		    android:text="@string/kecamatan" />
-		
-		<EditText
-		    android:id="@+id/editKec"
-		    android:layout_width="fill_parent"
-		    android:layout_height="wrap_content"
-		    android:hint=""
-		    android:singleLine="true"
-		    android:ems="10" >
-		</EditText>
-		    
-		<!--Bulan  -->
-		<TextView
-		 	android:id="@+id/textBulan"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:paddingLeft="10dip"
-		    android:paddingRight="10dip"
-		    android:paddingTop="10dip"
-		    android:textSize="17dip"
-		    android:text="@string/title_bulan" />
-		
-		<EditText
-			android:id="@+id/editBulan"
-		    android:layout_width="fill_parent"
-		    android:layout_height="wrap_content"
-		    android:hint=""
-			android:inputType="number"
-			android:singleLine="true"
-		    android:maxLength="2"
-		    android:ems="10" >
-		</EditText>
-		
-		<!-- Tanggal -->
-		<TextView
-		  	android:id="@+id/textTanggal"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:paddingLeft="10dip"
-		    android:paddingRight="10dip"
-		    android:paddingTop="10dip"
-		    android:textSize="17dip"
-		    android:text="@string/tanggal" />
-		
-		<DatePicker
-		    android:id="@+id/dateTanggal"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content" />
-		    
-		<!-- Uraian Kegiatan -->
-		<TextView
-		    android:id="@+id/textUraianKeg"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:paddingLeft="10dip"
-		    android:paddingRight="10dip"
-		    android:paddingTop="10dip"
-		    android:textSize="17dip"
-		    android:text="@string/uraian_kegiatan" />
-		    
-		<EditText 
-		    android:id="@+id/editUraianKeg"
-		    android:layout_width="fill_parent"
-		    android:layout_height="wrap_content"
-		    android:layout_margin="5dip"
-		    android:layout_marginBottom="15dip"
-		    android:hint=""
-		    android:singleLine="true"
-		    android:lines="4"
-		    android:gravity="top"/>
-		    
-		<!-- Tempat -->
-		<TextView
-		    android:id="@+id/textTempat"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:paddingLeft="10dip"
-		    android:paddingRight="10dip"
-		    android:paddingTop="10dip"
-		    android:textSize="17dip"
-		    android:text="@string/tempat" />
-		
-		<EditText
-		    android:id="@+id/editTempat"
-		    android:layout_width="fill_parent"
-		    android:layout_height="wrap_content"
-		    android:hint=""
-		    android:singleLine="true"
-		    android:ems="10" >
-		</EditText>
-		    
-		<!-- Unsur Terlibat -->
-		<TextView
-		    android:id="@+id/textUnsur"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:paddingLeft="10dip"
-		    android:paddingRight="10dip"
-		    android:paddingTop="10dip"
-		    android:textSize="17dip"
-		    android:text="@string/unsur_terlibat" />
-		    
-		<EditText 
-		    android:id="@+id/editUnsur"
-		    android:layout_width="fill_parent"
-		    android:layout_height="wrap_content"
-		    android:hint=""
-		    android:singleLine="true"
-		    android:layout_margin="5dip"
-		    android:layout_marginBottom="15dip"
-		    android:lines="4"
-		    android:gravity="top"/>
-		    
-		<!-- Masalah Yang Dihadapi -->
-		<TextView
-		    android:id="@+id/textMasalah"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:paddingLeft="10dip"
-		    android:paddingRight="10dip"
-		    android:paddingTop="10dip"
-		    android:textSize="17dip"
-		    android:text="@string/masalah" />
-		    
-		<EditText 
-		    android:id="@+id/editMasalah"
-		    android:layout_width="fill_parent"
-		    android:layout_height="wrap_content"
-		    android:hint=""
-		    android:singleLine="true"
-		    android:layout_margin="5dip"
-		    android:layout_marginBottom="15dip"
-		    android:lines="4"
-		    android:gravity="top"/>
-		    
-		<!-- RTL -->
-		<TextView
-		    android:id="@+id/textRTL"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:paddingLeft="10dip"
-		    android:paddingRight="10dip"
-		    android:paddingTop="10dip"
-		    android:textSize="17dip"
-		    android:text="@string/rtl" />
-		
-		<EditText
-		    android:id="@+id/editRTL"
-		    android:layout_width="fill_parent"
-		    android:layout_height="wrap_content"
-		    android:hint=""
-		    android:singleLine="true"
-		    android:ems="10" >
-		</EditText>
-		
-		<!-- blank -->
-			<TextView 
-			    android:layout_width="fill_parent"  android:layout_height="wrap_content" 
-				android:gravity="center" android:text="" >
-			</TextView>
-		    
-		<LinearLayout
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:gravity="center">
-			
-			<!-- Kirim -->
-			<Button 
-			    android:layout_width="100dp"
-				android:layout_height="wrap_content" 
-				android:id="@+id/kirim" 
-				android:text="@string/btnKirim">
-			</Button>
-			
-			<!-- Kembali -->
-			<Button 
-			    android:layout_width="150dp"
-				android:layout_height="wrap_content" 
-				android:id="@+id/home_report" 
-				android:text="@string/btnKembali">
-			</Button>
-		</LinearLayout>
+
+        <TextView
+            android:id="@+id/textKec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kecamatan"
+            android:textColor="#ffffff" />
+
+        <EditText
+            android:id="@+id/editKec"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint=""
+            android:singleLine="true" >
+        </EditText>
+
+        <!-- Bulan -->
+
+        <TextView
+            android:id="@+id/textBulan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="@string/title_bulan" />
+
+        <EditText
+            android:id="@+id/editBulan"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint=""
+            android:inputType="number"
+            android:maxLength="2"
+            android:singleLine="true" >
+        </EditText>
+
+        <!-- Tanggal -->
+
+        <TextView
+            android:id="@+id/textTanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="@string/tanggal" />
+
+        <DatePicker
+            android:id="@+id/dateTanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Uraian Kegiatan -->
+
+        <TextView
+            android:id="@+id/textUraianKeg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="@string/uraian_kegiatan" />
+
+        <EditText
+            android:id="@+id/editUraianKeg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:hint=""
+            android:lines="4"
+            android:singleLine="true" />
+
+        <!-- Tempat -->
+
+        <TextView
+            android:id="@+id/textTempat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="@string/tempat" />
+
+        <EditText
+            android:id="@+id/editTempat"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint=""
+            android:singleLine="true" >
+        </EditText>
+
+        <!-- Unsur Terlibat -->
+
+        <TextView
+            android:id="@+id/textUnsur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="@string/unsur_terlibat" />
+
+        <EditText
+            android:id="@+id/editUnsur"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:hint=""
+            android:lines="4"
+            android:singleLine="true" />
+
+        <!-- Masalah Yang Dihadapi -->
+
+        <TextView
+            android:id="@+id/textMasalah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="@string/masalah" />
+
+        <EditText
+            android:id="@+id/editMasalah"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:hint=""
+            android:lines="4"
+            android:singleLine="true" />
+
+        <!-- RTL -->
+
+        <TextView
+            android:id="@+id/textRTL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="@string/rtl" />
+
+        <EditText
+            android:id="@+id/editRTL"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint=""
+            android:singleLine="true" >
+        </EditText>
+
+        <!-- blank -->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="10dp"
+            android:text="" >
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <!-- Kirim -->
+
+            <Button
+                android:id="@+id/kirim"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/send_ldpi"
+                android:text="@string/btnKirim" >
+            </Button>
+
+            <!-- Kembali -->
+
+            <Button
+                android:id="@+id/kembali"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/back_ldpi"
+                android:text="@string/btnKembali" >
+            </Button>
+        </LinearLayout>
     </LinearLayout>
+
 </ScrollView>
