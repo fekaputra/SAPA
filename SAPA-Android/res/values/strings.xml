@@ -31,7 +31,7 @@
     <string name="btnNext">Lanjutkan</string>
     
     <!-- data_posyandu.xml -->
-    <string name="title">Data Posyandu</string>
+    <string name="title">  DATA POSYANDU</string>
     <string name="kecamatan">Kecamatan</string>
     <string name="desa">Desa</string>
     <string name="kelurahan">* Kelurahan</string>
@@ -64,11 +64,11 @@
     <string name="uraian_kegiatan">Uraian Kegiatan</string>
     <string name="tempat">Tempat</string>
     <string name="unsur_terlibat">Unsur Terlibat</string>
-    <string name="masalah">Masalah Yang Dihadapi/string</string>
+    <string name="masalah">Masalah Yang Dihadapi</string>
     <string name="rtl">RTL Text	Bulan</string>
     
     <!-- kader.xml -->
-    <string name="title_kader">Kader</string>
+    <string name="title_kader">  KADER</string>
     <string name="jmlTotal">Jumlah Total</string>
     <string name="kaderTerlatih">Kader Terlatih</string>
     
@@ -79,7 +79,6 @@
     <string name="btnTumbuhKembang">Pertumbuhan dan Perkembangan Anak</string>
     <string name="btnImunisasi">Pemberian Imunisasi</string>
     <string name="pkvdt">Pemberian Kapsul Vitamin A Dosis Tinggi</string>
-    <string name="menu_childcare">Menu Childcare</string>
     
     <!-- new_data_anak.xml -->
     <string name="nama_posyandu">Nama Posyandu</string>
@@ -109,7 +108,7 @@
     <string name="btnProgramPokok">Input Data Program Pokok</string>
     
     <!-- program_pokok.xml -->
-    <string name="title_program_pokok">Program Pokok</string>
+    <string name="title_program_pokok">  PROGRAM POKOK</string>
     <string name="kb">KB</string>
     <string name="kia">KIA</string>
     <string name="gizi">Gizi</string>
@@ -118,7 +117,7 @@
     <string name="keterangan3">*) Setelah mengisi data, tekan tombol submit kemudian tekan tombol Perkembangan Posyandu untuk kembali</string>
     
     <!-- register.xml -->
-    <string name="title_register">Register</string>
+    <string name="title_register">  REGISTER</string>
     
     <!-- report_disease.xml -->
     <string name="namaPelapor">Nama Pelapor</string>
@@ -128,7 +127,7 @@
     <string name="keterangan4">*) Pisahkan tag dengan titik koma (;)</string>
     
     <!-- report_tumbuh_kembang.xml -->
-    <string name="title_tumbuh_kembang">Pertumbuhan dan Perkembangan Anak</string>
+    <string name="title_tumbuh_kembang">PERTUMBUHAN DAN PERKEMBANGAN ANAK</string>
     <string name="namaAnak">Nama Anak</string>
     <string name="jk">Jenis Kelamin</string>
     <string name="tgl_pendataan">Tanggal Pendataan</string>
@@ -142,11 +141,14 @@
     <string name="lihatGrafik">Lihat Grafik</string>
     
     <!-- report imunisasi -->
+    <string name="title_imunisasi">  IMUNISASI</string>
     <string name="usia">Usia/ Bulan</string>
     <string name="jenisimunisasi">Jenis Imunisasi</string>
     <string name="tglimunisasi">Tanggal Imunisasi</string>
+    <string name="lihatTabel">Lihat Tabel</string>
     
     <!-- report pemberian vitamin -->
+    <string name="title_pkvdt">PEMBERIAN VITAMIN A DOSIS TINGGI</string>
     <string name="dosis">Dosis</string>
     <string name="tglPemberiannVitamin">Tanggal Pemberian Vitamin</string>
     
@@ -158,7 +160,7 @@
     <string name="topik">Topik</string>
     
     <!-- strata.xml -->
-    <string name="title_strata">Strata Posyandu</string>
+    <string name="title_strata">  STRATA POSYANDU</string>
     <string name="pratama">Pratama</string>
     <string name="madya">Madya</string>
     <string name="purnama">Purnama</string>
