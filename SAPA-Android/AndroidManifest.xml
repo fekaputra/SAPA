@@ -4,7 +4,7 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
-    <uses-sdk android:minSdkVersion="8" />
+    <uses-sdk android:minSdkVersion="7" />
     
     <!-- Permission untuk akses internet -->
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
@@ -32,7 +32,7 @@
         
         <!-- Activity untuk e-gis -->
         <activity
-            android:name=".gis" 
+            android:name=".Gis" 
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="com.halamanlogin.gis" />
@@ -73,7 +73,7 @@
         
         <!-- Activity untuk menu e-report -->
         <activity
-            android:name=".report"
+            android:name=".Report"
             android:label="SAPA - E-Report" 
             android:screenOrientation="portrait">
             <intent-filter>
@@ -106,7 +106,7 @@
         
         <!-- Activity untuk home page admin -->
         <activity 
-            android:name=".homeAdmin"
+            android:name=".HomeAdmin"
             android:label="SAPA - Admin Page"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -117,7 +117,7 @@
         
         <!-- Activity untuk homepage member -->
         <activity 
-            android:name=".homeMember"
+            android:name=".HomeMember"
             android:label="SAPA - Member Page"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -128,7 +128,7 @@
         
         <!-- Activity untuk insert data user baru -->
         <activity 
-            android:name=".insertUser"
+            android:name=".InsertUser"
             android:label="SAPA - Registration"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -139,7 +139,7 @@
         
         <!-- Activity untuk Chat -->
         <activity 
-            android:name=".chat"
+            android:name=".Chat"
             android:label="SAPA - Conversation"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -152,7 +152,7 @@
         
         <!-- Activity untuk menu childcare -->
         <activity
-            android:name=".childcare"
+            android:name=".Childcare"
             android:label="SAPA - Childcare" 
             android:screenOrientation="portrait">
             <intent-filter>
@@ -163,7 +163,7 @@
         
         <!-- Activity untuk insert data anak -->
         <activity
-            android:name=".newDataAnak"
+            android:name=".NewDataAnak"
             android:label="SAPA - Daftar Data Baru" 
             android:screenOrientation="portrait">
             <intent-filter>
@@ -174,7 +174,7 @@
         
         <!-- Activity untuk menampilkan sub-menu childcare -->
         <activity
-            android:name=".reportChildcare"
+            android:name=".ReportChildcare"
             android:label="SAPA - Childcare" 
             android:screenOrientation="portrait">
             <intent-filter>
@@ -185,7 +185,7 @@
         
         <!-- Activity untuk menampilkan data tumbuh kembang anak -->
         <activity
-            android:name=".tumbuhKembangAnak"
+            android:name=".TumbuhKembangAnak"
             android:label="SAPA - Childcare" 
             android:screenOrientation="portrait">
             <intent-filter>
@@ -207,7 +207,7 @@
         
         <!-- Activity untuk menampilkan data imunisasi -->
         <activity
-            android:name=".imunisasi"
+            android:name=".Imunisasi"
             android:label="SAPA - Imunisasi" 
             android:screenOrientation="portrait">
             <intent-filter>
@@ -251,7 +251,7 @@
         
         <!-- Activity untuk menu disease -->
         <activity
-            android:name=".disease"
+            android:name=".Disease"
             android:label="SAPA - Disease" 
             android:screenOrientation="portrait">
             <intent-filter>
