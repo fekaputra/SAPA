@@ -1,165 +1,170 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" >
-
-    <!-- Title -->
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="  PERKEMBANGAN POSYANDU"
-        android:background="#d3d3d3"
-        android:textColor="#000000"
-        android:textSize="15dp"
-        android:textStyle="bold"
-        android:drawableLeft="@drawable/posyandu"
-        android:gravity="center_vertical"
-        android:paddingLeft="5dip" >
-    </TextView>
-
-    <!-- Garis Pemisah -->
-
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="2dip"
-        android:background="#696969" />
+    android:layout_height="fill_parent" >
     
-    <!-- blank -->
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="10dp"
-        android:text="" >
-    </TextView>
-    
-    <!-- blank -->
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="10dp"
-        android:text="" >
-    </TextView>
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center" >
-
-        <!-- Input data baru -->
-
-        <Button
-            android:id="@+id/data_posyandu"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/form_ldpi"
-            android:gravity="center"
-            android:text="@string/btnDataPosyandu" >
-        </Button>
-
-        <!-- Kembali ke menu e-report -->
-
-        <Button
-            android:id="@+id/kembali"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/back_ldpi"
-            android:gravity="center"
-            android:text="@string/btnKembali" >
-        </Button>
-    </LinearLayout>
-
-    <!-- blank -->
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="" >
-    </TextView>
-
-    <!-- Pilih Kelurahan/ Desa -->
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/pilih_kelurahan"
-        android:textColor="#ffffff" >
-    </TextView>
-
-    <!-- Spinner Nama Kelurahan/ Desa -->
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal" >
-
-        <Spinner
-            android:id="@+id/spinner1"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" >
-        </Spinner>
-    </LinearLayout>
-
-    <!-- blank -->
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="" >
-    </TextView>
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/keterangan2"
-        android:textColor="#696969"
-        android:textSize="12dp"
-        android:textStyle="italic" >
-    </TextView>
-
-    <!-- blank -->
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="" >
-    </TextView>
-
-    <!-- Strata -->
-
-    <Button
-        android:id="@+id/strata"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:drawableLeft="@drawable/strata_ldpi"
-        android:gravity="center"
-        android:text="@string/btnStrata" >
-    </Button>
-
-    <!-- Kader -->
-
-    <Button
-        android:id="@+id/kader"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:drawableLeft="@drawable/kader_ldpi"
-        android:gravity="center"
-        android:text="@string/btnKader" >
-    </Button>
-
-    <!-- Program Pokok -->
-
-    <Button
-        android:id="@+id/prog_pokok"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:drawableLeft="@drawable/program_pokok_ldpi"
-        android:gravity="center"
-        android:text="@string/btnProgramPokok" >
-    </Button>
-
-</LinearLayout>
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical" >
+	
+	    <!-- Title -->
+	
+	    <TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="  PERKEMBANGAN POSYANDU"
+	        android:background="#d3d3d3"
+	        android:textColor="#000000"
+	        android:textSize="15dp"
+	        android:textStyle="bold"
+	        android:drawableLeft="@drawable/posyandu"
+	        android:gravity="center_vertical"
+	        android:paddingLeft="5dip" >
+	    </TextView>
+	
+	    <!-- Garis Pemisah -->
+	
+	    <View
+	        android:layout_width="wrap_content"
+	        android:layout_height="2dip"
+	        android:background="#696969" />
+	    
+	    <!-- blank -->
+	
+	    <TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="10dp"
+	        android:text="" >
+	    </TextView>
+	    
+	    <!-- blank -->
+	
+	    <TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="10dp"
+	        android:text="" >
+	    </TextView>
+	
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center" >
+	
+	        <!-- Input data baru -->
+	
+	        <Button
+	            android:id="@+id/data_posyandu"
+	            android:layout_width="150dp"
+	            android:layout_height="wrap_content"
+	            android:drawableLeft="@drawable/form_ldpi"
+	            android:gravity="center"
+	            android:text="@string/btnDataPosyandu" >
+	        </Button>
+	
+	        <!-- Kembali ke menu e-report -->
+	
+	        <Button
+	            android:id="@+id/kembali"
+	            android:layout_width="150dp"
+	            android:layout_height="wrap_content"
+	            android:drawableLeft="@drawable/back_ldpi"
+	            android:gravity="center"
+	            android:text="@string/btnKembali" >
+	        </Button>
+	    </LinearLayout>
+	
+	    <!-- blank -->
+	
+	    <TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="" >
+	    </TextView>
+	
+	    <!-- Pilih Kelurahan/ Desa -->
+	
+	    <TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/pilih_kelurahan"
+	        android:textColor="#ffffff" >
+	    </TextView>
+	
+	    <!-- Spinner Nama Kelurahan/ Desa -->
+	
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_horizontal" >
+	
+	        <Spinner
+	            android:id="@+id/spinner1"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content" >
+	        </Spinner>
+	    </LinearLayout>
+	
+	    <!-- blank -->
+	
+	    <TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="10dp"
+	        android:text="" >
+	    </TextView>
+	
+	    <TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/keterangan2"
+	        android:textColor="#696969"
+	        android:textSize="12dp"
+	        android:textStyle="italic" >
+	    </TextView>
+	
+	    <!-- blank -->
+	
+	    <TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="" >
+	    </TextView>
+	
+	    <!-- Strata -->
+	
+	    <Button
+	        android:id="@+id/strata"
+	        android:layout_width="250dp"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:drawableLeft="@drawable/strata_ldpi"
+	        android:gravity="center"
+	        android:text="@string/btnStrata" >
+	    </Button>
+	
+	    <!-- Kader -->
+	
+	    <Button
+	        android:id="@+id/kader"
+	        android:layout_width="250dp"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:drawableLeft="@drawable/kader_ldpi"
+	        android:gravity="center"
+	        android:text="@string/btnKader" >
+	    </Button>
+	
+	    <!-- Program Pokok -->
+	
+	    <Button
+	        android:id="@+id/prog_pokok"
+	        android:layout_width="250dp"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:drawableLeft="@drawable/program_pokok_ldpi"
+	        android:gravity="center"
+	        android:text="@string/btnProgramPokok" >
+	    </Button>
+	
+	</LinearLayout>
+</ScrollView>

@@ -1,242 +1,246 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical" >
-
-    <!-- Title -->
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="#d3d3d3"
-        android:drawableLeft="@drawable/image4"
-        android:gravity="center_vertical"
-        android:paddingLeft="5dip"
-        android:text="@string/title_imunisasi"
-        android:textColor="#000000"
-        android:textSize="15dp"
-        android:textStyle="bold" >
-    </TextView>
-
-    <!-- blank -->
-
-
-    <!-- Garis Pemisah -->
-
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="2dip"
-        android:background="#696969" />
-
-    <!-- blank -->
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="10dp"
-        android:text="" >
-    </TextView>
-
-    <!-- Nama Anak -->
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
-
-        <TextView
-            android:layout_width="90dp"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:text="@string/namaAnak"
-            android:textColor="#ffffff" >
-        </TextView>
-
-        <TextView
-            android:id="@+id/namaAnak"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#ffffff" >
-        </TextView>
-    </LinearLayout>
-
-    <!-- blank -->
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="10dp"
-        android:text="" >
-    </TextView>
-
-    <!-- Jenis Kelamin -->
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
-
-        <TextView
-            android:layout_width="90dp"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:text="@string/jk"
-            android:textColor="#ffffff" >
-        </TextView>
-
-        <TextView
-            android:id="@+id/jk"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#ffffff" >
-        </TextView>
-    </LinearLayout>
-
-    <!-- blank -->
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="10dp"
-        android:text="" >
-    </TextView>
-
-    <!-- Garis Pemisah -->
-
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="2dip"
-        android:background="#ffffff" />
-
-    <!-- blank -->
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="10dp"
-        android:text="" >
-    </TextView>
-
-    <!-- Title : Pilih Usia/ Bulan -->
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/usia"
-        android:textColor="#ffffff" >
-    </TextView>
-
-    <!-- Spinner Usia/ Bulan -->
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal" >
-
-        <Spinner
-            android:id="@+id/spinner1"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" >
-        </Spinner>
-    </LinearLayout>
-
-    <!-- blank -->
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="10dp"
-        android:text="" >
-    </TextView>
-
-    <!-- Jenis Imunisasi -->
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
-
-        <TextView
-            android:layout_width="90dp"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:text="@string/jenisimunisasi"
-            android:textColor="#ffffff" >
-        </TextView>
-
-        <TextView
-            android:id="@+id/jns_imunisasi"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#ffffff" >
-        </TextView>
-    </LinearLayout>
-
-    <!-- blank -->
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="10dp"
-        android:text="" >
-    </TextView>
-
-    <!-- Tanggal Imunisasi -->
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:text="@string/tglimunisasi"
-        android:textColor="#ffffff" >
-    </TextView>
-
-    <DatePicker
-        android:id="@+id/dateTanggal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <!-- blank -->
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="10dp"
-        android:text="" >
-    </TextView>
-
-    <!-- blank -->
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="10dp"
-        android:text="" >
-    </TextView>
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center" >
-
-        <!-- Kirim -->
-
-        <Button
-            android:id="@+id/kirim"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/send_ldpi"
-            android:text="@string/btnKirim" >
-        </Button>
-
-        <!-- Lihat Tabel -->
-
-        <Button
-            android:id="@+id/grafik"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/table"
-            android:text="@string/lihatTabel" >
-        </Button>
-
-        <!-- Kembali -->
-
-        <Button
-            android:id="@+id/kembali"
-            android:layout_width="110dp"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/back_ldpi"
-            android:text="@string/btnKembali" >
-        </Button>
-    </LinearLayout>
-
-</LinearLayout>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent">
+	
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical" >
+	
+	    <!-- Title -->
+	
+	    <TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:background="#d3d3d3"
+	        android:drawableLeft="@drawable/image4"
+	        android:gravity="center_vertical"
+	        android:paddingLeft="5dip"
+	        android:text="@string/title_imunisasi"
+	        android:textColor="#000000"
+	        android:textSize="15dp"
+	        android:textStyle="bold" >
+	    </TextView>
+	
+	    <!-- blank -->
+	
+	
+	    <!-- Garis Pemisah -->
+	
+	    <View
+	        android:layout_width="wrap_content"
+	        android:layout_height="2dip"
+	        android:background="#696969" />
+	
+	    <!-- blank -->
+	
+	    <TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="10dp"
+	        android:text="" >
+	    </TextView>
+	
+	    <!-- Nama Anak -->
+	
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content" >
+	
+	        <TextView
+	            android:layout_width="90dp"
+	            android:layout_height="wrap_content"
+	            android:gravity="center_vertical"
+	            android:text="@string/namaAnak"
+	            android:textColor="#ffffff" >
+	        </TextView>
+	
+	        <TextView
+	            android:id="@+id/namaAnak"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:textColor="#ffffff" >
+	        </TextView>
+	    </LinearLayout>
+	
+	    <!-- blank -->
+	
+	    <TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="10dp"
+	        android:text="" >
+	    </TextView>
+	
+	    <!-- Jenis Kelamin -->
+	
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content" >
+	
+	        <TextView
+	            android:layout_width="90dp"
+	            android:layout_height="wrap_content"
+	            android:gravity="center_vertical"
+	            android:text="@string/jk"
+	            android:textColor="#ffffff" >
+	        </TextView>
+	
+	        <TextView
+	            android:id="@+id/jk"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:textColor="#ffffff" >
+	        </TextView>
+	    </LinearLayout>
+	
+	    <!-- blank -->
+	
+	    <TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="10dp"
+	        android:text="" >
+	    </TextView>
+	
+	    <!-- Garis Pemisah -->
+	
+	    <View
+	        android:layout_width="wrap_content"
+	        android:layout_height="2dip"
+	        android:background="#ffffff" />
+	
+	    <!-- blank -->
+	
+	    <TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="10dp"
+	        android:text="" >
+	    </TextView>
+	
+	    <!-- Title : Pilih Usia/ Bulan -->
+	
+	    <TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/usia"
+	        android:textColor="#ffffff" >
+	    </TextView>
+	
+	    <!-- Spinner Usia/ Bulan -->
+	
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_horizontal" >
+	
+	        <Spinner
+	            android:id="@+id/spinner1"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content" >
+	        </Spinner>
+	    </LinearLayout>
+	
+	    <!-- blank -->
+	
+	    <TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="10dp"
+	        android:text="" >
+	    </TextView>
+	
+	    <!-- Jenis Imunisasi -->
+	
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content" >
+	
+	        <TextView
+	            android:layout_width="90dp"
+	            android:layout_height="wrap_content"
+	            android:gravity="center_vertical"
+	            android:text="@string/jenisimunisasi"
+	            android:textColor="#ffffff" >
+	        </TextView>
+	
+	        <TextView
+	            android:id="@+id/jns_imunisasi"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:textColor="#ffffff" >
+	        </TextView>
+	    </LinearLayout>
+	
+	    <!-- blank -->
+	
+	    <TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="10dp"
+	        android:text="" >
+	    </TextView>
+	
+	    <!-- Tanggal Imunisasi -->
+	
+	    <TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:text="@string/tglimunisasi"
+	        android:textColor="#ffffff" >
+	    </TextView>
+	
+	    <DatePicker
+	        android:id="@+id/dateTanggal"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" />
+	
+	    <!-- blank -->
+	
+	    <TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="10dp"
+	        android:text="" >
+	    </TextView>
+	
+	    <!-- blank -->
+	
+	    <TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="10dp"
+	        android:text="" >
+	    </TextView>
+	
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center" >
+	
+	        <!-- Kirim -->
+	
+	        <Button
+	            android:id="@+id/kirim"
+	            android:layout_width="100dp"
+	            android:layout_height="wrap_content"
+	            android:drawableLeft="@drawable/send_ldpi"
+	            android:text="@string/btnKirim" >
+	        </Button>
+	
+	        <!-- Lihat Tabel -->
+	
+	        <Button
+	            android:id="@+id/grafik"
+	            android:layout_width="100dp"
+	            android:layout_height="wrap_content"
+	            android:drawableLeft="@drawable/table"
+	            android:text="@string/lihatTabel" >
+	        </Button>
+	
+	        <!-- Kembali -->
+	
+	        <Button
+	            android:id="@+id/kembali"
+	            android:layout_width="110dp"
+	            android:layout_height="wrap_content"
+	            android:drawableLeft="@drawable/back_ldpi"
+	            android:text="@string/btnKembali" >
+	        </Button>
+	    </LinearLayout>
+	</LinearLayout>
+</ScrollView>
